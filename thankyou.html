@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Received | TwinForce Solutions Limited</title>
+    <link rel="stylesheet" href="css/beb7a05aa4d75761.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="refresh" content="5;url=index.html">
+</head>
+
+<body class="bg-[#FCFCFC] text-black flex items-center justify-center min-h-screen">
+
+    <section class="container">
+        <div class="mx-auto max-w-[600px] text-center">
+            
+            <div class="mb-8 flex justify-center">
+                <div class="flex h-20 w-20 items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary">
+                    <svg width="40" height="40" viewBox="0 0 512 512" fill="currentColor">
+                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="mb-5 text-3xl font-bold text-black sm:text-4xl">Application Received!</h1>
+            <p class="mb-10 text-base leading-relaxed text-body-color md:text-lg">
+                Thank you for applying to <strong>TwinForce Solutions Limited</strong>. Your professional details have been successfully synced with our Salesforce recruitment system. Our team will review your qualifications and reach out via email if there is a match.
+            </p>
+
+            <div class="p-4 bg-gray-light rounded-sm border border-stroke inline-block px-8">
+                <p class="text-sm text-body-color">
+                    You will be redirected to the home page in <span id="countdown" class="font-bold text-primary">5</span> seconds...
+                </p>
+            </div>
+
+            <div class="mt-8">
+                <a href="index.html" class="text-primary font-semibold hover:underline">
+                    Click here if you are not redirected automatically
+                </a>
+            </div>
+
+            <div class="mt-16">
+                <img src="images/image.png" alt="TwinForce Logo" width="120" class="mx-auto">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let seconds = 5;
+        const display = document.getElementById('countdown');
+        const interval = setInterval(() => {
+            seconds--;
+            display.innerText = seconds;
+            if (seconds <= 0) clearInterval(interval);
+        }, 1000);
+    </script>
+
+</body>
+</html>
