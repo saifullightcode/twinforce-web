@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +11,6 @@
 </head>
 
 <body class="bg-[#FCFCFC] text-black">
-
     <header class="header left-0 top-0 z-40 flex w-full items-center absolute bg-white shadow-sm">
         <div class="container">
             <div class="relative -mx-4 flex items-center justify-between">
@@ -21,131 +21,159 @@
                 </div>
                 <nav class="hidden lg:block px-4">
                     <ul class="flex space-x-12">
-                        <li><a href="https://twinforce.net/" class="text-base font-medium text-dark hover:text-primary">Home</a></li>
-                        <li><a href="https://twinforce.net/" class="text-base font-medium text-dark hover:text-primary">About</a></li>
-                        <li><a href="#" class="text-base font-bold text-primary">Career</a></li>
+                        <li>
+                            <a href="https://twinforce.net/"
+                                class="text-base font-medium text-dark hover:text-primary">Home</a>
+                        </li>
+                        <li>
+                            <a href="https://twinforce.net/"
+                                class="text-base font-medium text-dark hover:text-primary">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-base font-bold text-primary">Career</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-
     <section class="relative z-10 overflow-hidden pb-16 pt-[120px] md:pb-[120px] md:pt-[150px]">
         <div class="container">
             <div class="mx-auto max-w-[900px]">
-                
                 <div class="text-center mb-12">
                     <h1 class="mb-5 text-3xl font-bold text-black sm:text-4xl md:text-5xl">Join Our Team</h1>
                     <p class="text-base text-body-color md:text-lg">
                         Submit your application for the recruitment.
                     </p>
                 </div>
-
                 <div class="rounded-sm bg-white p-8 shadow-three sm:p-12 border border-body-color/10">
-                    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdN00000roILE" method="POST">
-                        
+                    <form
+                        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdN00000roILE"
+                        method="POST">
                         <input type="hidden" name="oid" value="00DdN00000roILE">
                         <input type="hidden" name="retURL" value="https://twinforce.net/thankyou">
                         <input type="hidden" name="lead_source" value="TwinForce Website (Intern)">
                         <input type="hidden" name="company" value="TwinForce Solutions Limited">
                         <input type="hidden" id="00NOW00000ASK1P" name="00NOW00000ASK1P" value="TF_February_2026">
-
+                        <input type="hidden" id="00NOW00000ASK1H" name="00NOW00000ASK1H">
                         <div class="-mx-4 flex flex-wrap">
-                            
                             <div class="w-full px-4 mb-6">
-                                <h3 class="text-xl font-bold text-black border-b border-body-color/15 pb-2">Personal Information</h3>
+                                <h3 class="text-xl font-bold text-black border-b border-body-color/15 pb-2">Personal
+                                    Information</h3>
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="first_name" class="mb-3 block text-sm font-medium text-dark">First Name</label>
-                                <input type="text" id="first_name" name="first_name" required placeholder="e.g., John" class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <label for="first_name" class="mb-3 block text-sm font-medium text-dark">First
+                                    Name</label>
+                                <input type="text" id="first_name" name="first_name" required placeholder="e.g., John"
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="last_name" class="mb-3 block text-sm font-medium text-dark">Last Name</label>
-                                <input type="text" id="last_name" name="last_name" required placeholder="e.g., Doe" class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <label for="last_name" class="mb-3 block text-sm font-medium text-dark">Last
+                                    Name</label>
+                                <input type="text" id="last_name" name="last_name" required placeholder="e.g., Doe"
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
                                 <label for="email" class="mb-3 block text-sm font-medium text-dark">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="e.g., john.doe@example.com" class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <input type="email" id="email" name="email" required
+                                    placeholder="e.g., john.doe@example.com"
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="mobile" class="mb-3 block text-sm font-medium text-dark">Mobile Number</label>
-                                <input type="text" id="mobile" name="mobile" required placeholder="e.g., +8801XXXXXXXXX" class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <label for="mobile" class="mb-3 block text-sm font-medium text-dark">Mobile
+                                    Number</label>
+                                <input type="text" id="mobile" name="mobile" required placeholder="e.g., +8801XXXXXXXXX"
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASK1H" class="mb-3 block text-sm font-medium text-dark">Date of Birth</label>
-                                <input type="date" id="00NOW00000ASK1H" name="00NOW00000ASK1H" required class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <label for="date_picker" class="mb-3 block text-sm font-medium text-dark">Date of
+                                    Birth</label>
+                                <input type="date" id="date_picker" name="date_picker_visible" required
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASVEP" class="mb-3 block text-sm font-medium text-dark">Gender</label>
-                                <select id="00NOW00000ASVEP" name="00NOW00000ASVEP" required class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <label for="00NOW00000ASVEP"
+                                    class="mb-3 block text-sm font-medium text-dark">Gender</label>
+                                <select id="00NOW00000ASVEP" name="00NOW00000ASVEP" required
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                                     <option value="">--None--</option>
                                     <option value="Male">Male</option>
                                     <option value="Female">Female</option>
                                 </select>
                             </div>
-
                             <div class="w-full px-4 mb-5">
-                                <label for="00NOW00000ASK1G" class="mb-3 block text-sm font-medium text-dark">Present Address</label>
-                                <textarea id="00NOW00000ASK1G" name="00NOW00000ASK1G" required rows="3" placeholder="Enter your full village/house, road, and area details" class="w-full resize-none rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"></textarea>
+                                <label for="00NOW00000ASK1G" class="mb-3 block text-sm font-medium text-dark">Present
+                                    Address</label>
+                                <textarea id="00NOW00000ASK1G" name="00NOW00000ASK1G" required rows="3"
+                                    placeholder="Enter your full village/house, road, and area details"
+                                    class="w-full resize-none rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"></textarea>
                             </div>
-
                             <div class="w-full px-4 mt-8 mb-6">
-                                <h3 class="text-xl font-bold text-black border-b border-body-color/15 pb-2">Academic Qualification</h3>
+                                <h3 class="text-xl font-bold text-black border-b border-body-color/15 pb-2">Academic
+                                    Qualification</h3>
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASK1Q" class="mb-3 block text-sm font-medium text-dark">University Name</label>
-                                <input type="text" id="00NOW00000ASK1Q" name="00NOW00000ASK1Q" required placeholder="e.g., University of Dhaka" class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <label for="00NOW00000ASK1Q" class="mb-3 block text-sm font-medium text-dark">University
+                                    Name</label>
+                                <input type="text" id="00NOW00000ASK1Q" name="00NOW00000ASK1Q" required
+                                    placeholder="e.g., University of Dhaka"
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASK1I" class="mb-3 block text-sm font-medium text-dark">Degree</label>
-                                <input type="text" id="00NOW00000ASK1I" name="00NOW00000ASK1I" required placeholder="e.g., B.Sc. in CSE" class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <label for="00NOW00000ASK1I"
+                                    class="mb-3 block text-sm font-medium text-dark">Degree</label>
+                                <input type="text" id="00NOW00000ASK1I" name="00NOW00000ASK1I" required
+                                    placeholder="e.g., B.Sc. in CSE"
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASK1O" class="mb-3 block text-sm font-medium text-dark">Graduation Year</label>
-                                <input type="text" id="00NOW00000ASK1O" name="00NOW00000ASK1O" placeholder="e.g., 2025" required class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
+                                <label for="00NOW00000ASK1O" class="mb-3 block text-sm font-medium text-dark">Graduation
+                                    Year</label>
+                                <input type="text" id="00NOW00000ASK1O" name="00NOW00000ASK1O" placeholder="e.g., 2025"
+                                    required
+                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
                             </div>
-
                             <div class="w-full px-4 md:w-1/2 mb-5 flex items-end pb-3">
                                 <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1N" name="00NOW00000ASK1N" value="1" class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1N" class="text-base text-body-color">I have already graduated</label>
+                                    <input type="checkbox" id="00NOW00000ASK1N" name="00NOW00000ASK1N" value="1"
+                                        class="h-5 w-5 rounded border-stroke accent-primary">
+                                    <label for="00NOW00000ASK1N" class="text-base text-body-color">I have already
+                                        graduated</label>
                                 </div>
                             </div>
-
                             <div class="w-full px-4 mt-8 mb-6">
-                                <h4 class="text-lg font-bold text-black border-b border-body-color/15 pb-2">Technical Proficiency</h4>
+                                <h4 class="text-lg font-bold text-black border-b border-body-color/15 pb-2">Technical
+                                    Proficiency</h4>
                             </div>
-
                             <div class="w-full px-4 grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                                 <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1M" name="00NOW00000ASK1M" value="1" class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1M" class="text-base text-body-color">Experience in OOP</label>
+                                    <input type="checkbox" id="00NOW00000ASK1M" name="00NOW00000ASK1M" value="1"
+                                        class="h-5 w-5 rounded border-stroke accent-primary">
+                                    <label for="00NOW00000ASK1M" class="text-base text-body-color">Experience in
+                                        OOP</label>
                                 </div>
                                 <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1J" name="00NOW00000ASK1J" value="1" class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1J" class="text-base text-body-color">Experience in HTML & CSS</label>
+                                    <input type="checkbox" id="00NOW00000ASK1J" name="00NOW00000ASK1J" value="1"
+                                        class="h-5 w-5 rounded border-stroke accent-primary">
+                                    <label for="00NOW00000ASK1J" class="text-base text-body-color">Experience in HTML &
+                                        CSS</label>
                                 </div>
                                 <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1K" name="00NOW00000ASK1K" value="1" class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1K" class="text-base text-body-color">Experience in JavaScript</label>
+                                    <input type="checkbox" id="00NOW00000ASK1K" name="00NOW00000ASK1K" value="1"
+                                        class="h-5 w-5 rounded border-stroke accent-primary">
+                                    <label for="00NOW00000ASK1K" class="text-base text-body-color">Experience in
+                                        JavaScript</label>
                                 </div>
                                 <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1L" name="00NOW00000ASK1L" value="1" class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1L" class="text-base text-body-color">Experience in MySQL / SQL</label>
+                                    <input type="checkbox" id="00NOW00000ASK1L" name="00NOW00000ASK1L" value="1"
+                                        class="h-5 w-5 rounded border-stroke accent-primary">
+                                    <label for="00NOW00000ASK1L" class="text-base text-body-color">Experience in MySQL /
+                                        SQL</label>
                                 </div>
                             </div>
-
                             <div class="w-full px-4 text-center">
-                                <button type="submit" name="submit" class="rounded-md bg-primary px-12 py-4 text-base font-bold text-white shadow-submit transition-all hover:bg-opacity-90">
+                                <button type="submit" name="submit"
+                                    class="rounded-md bg-primary px-12 py-4 text-base font-bold text-white shadow-submit transition-all hover:bg-opacity-90">
                                     Submit Application
                                 </button>
                             </div>
@@ -155,7 +183,6 @@
             </div>
         </div>
     </section>
-
     <footer class="bg-white border-t border-body-color/10 py-12">
         <div class="container text-center">
             <a href="https://twinforce.net/" class="inline-block mb-6">
@@ -166,6 +193,17 @@
             </p>
         </div>
     </footer>
+    <script>
+        document.getElementById('careerForm').addEventListener('submit', function (e) {
+            const picker = document.getElementById('date_picker');
+            const hiddenField = document.getElementById('00NOW00000ASK1H');
 
+            if (picker.value) {
+                const [year, month, day] = picker.value.split('-');
+                hiddenField.value = `${month}/${day}/${year}`;
+            }
+        });
+    </script>
 </body>
+
 </html>
