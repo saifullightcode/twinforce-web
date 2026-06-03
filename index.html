@@ -10,13 +10,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link rel="preconnect" href="https://res.cloudinary.com"/>
-<link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
 <link rel="preload" as="image" href="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1775490671/T_1_zpzl6l.png" fetchpriority="high"/>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
 <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" rel="stylesheet"/></noscript>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/></noscript>
 <style>
+.icon{width:1em;height:1em;display:inline-block;vertical-align:-.125em;fill:currentColor;flex-shrink:0}
 @font-face{font-family:'PJS Fallback';src:local('Segoe UI'),local('Arial');size-adjust:105%;ascent-override:95%;descent-override:24%;line-gap-override:0%}
 :root{
   --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
@@ -537,6 +535,7 @@ button{font-family:inherit;cursor:pointer}
 </style>
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true"><symbol id="i-arrow-down" viewBox="0 0 384 512"><path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></symbol><symbol id="i-arrow-right" viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></symbol><symbol id="i-arrow-up" viewBox="0 0 384 512"><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></symbol><symbol id="i-arrow-up-right-from-square" viewBox="0 0 512 512"><path d="M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32h82.7L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3V192c0 17.7 14.3 32 32 32s32-14.3 32-32V32c0-17.7-14.3-32-32-32H320zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></symbol><symbol id="i-arrows-rotate" viewBox="0 0 512 512"><path d="M105.1 202.6c7.7-21.8 20.2-42.3 37.8-59.8c62.5-62.5 163.8-62.5 226.3 0L386.3 160H352c-17.7 0-32 14.3-32 32s14.3 32 32 32H463.5c0 0 0 0 0 0h.4c17.7 0 32-14.3 32-32V80c0-17.7-14.3-32-32-32s-32 14.3-32 32v35.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0C73.2 122 55.6 150.7 44.8 181.4c-5.9 16.7 2.9 34.9 19.5 40.8s34.9-2.9 40.8-19.5zM39 289.3c-5 1.5-9.8 4.2-13.7 8.2c-4 4-6.7 8.8-8.1 14c-.3 1.2-.6 2.5-.8 3.8c-.3 1.7-.4 3.4-.4 5.1V432c0 17.7 14.3 32 32 32s32-14.3 32-32V396.9l17.6 17.5 0 0c87.5 87.4 229.3 87.4 316.7 0c24.4-24.4 42.1-53.1 52.9-83.7c5.9-16.7-2.9-34.9-19.5-40.8s-34.9 2.9-40.8 19.5c-7.7 21.8-20.2 42.3-37.8 59.8c-62.5 62.5-163.8 62.5-226.3 0l-.1-.1L125.6 352H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H48.4c-1.6 0-3.2 .1-4.8 .3s-3.1 .5-4.6 1z"/></symbol><symbol id="i-award" viewBox="0 0 384 512"><path d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z"/></symbol><symbol id="i-bolt" viewBox="0 0 448 512"><path d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z"/></symbol><symbol id="i-book-open" viewBox="0 0 576 512"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></symbol><symbol id="i-briefcase" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></symbol><symbol id="i-building" viewBox="0 0 384 512"><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/></symbol><symbol id="i-building-columns" viewBox="0 0 512 512"><path d="M243.4 2.6l-224 96c-14 6-21.8 21-18.7 35.8S16.8 160 32 160v8c0 13.3 10.7 24 24 24H456c13.3 0 24-10.7 24-24v-8c15.2 0 28.3-10.7 31.3-25.6s-4.8-29.9-18.7-35.8l-224-96c-8-3.4-17.2-3.4-25.2 0zM128 224H64V420.3c-.6 .3-1.2 .7-1.8 1.1l-48 32c-11.7 7.8-17 22.4-12.9 35.9S17.9 512 32 512H480c14.1 0 26.5-9.2 30.6-22.7s-1.1-28.1-12.9-35.9l-48-32c-.6-.4-1.2-.7-1.8-1.1V224H384V416H344V224H280V416H232V224H168V416H128V224zM256 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></symbol><symbol id="i-bullhorn" viewBox="0 0 512 512"><path d="M480 32c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9L381.7 53c-48 48-113.1 75-181 75H192 160 64c-35.3 0-64 28.7-64 64v96c0 35.3 28.7 64 64 64l0 128c0 17.7 14.3 32 32 32h64c17.7 0 32-14.3 32-32V352l8.7 0c67.9 0 133 27 181 75l43.6 43.6c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V300.4c18.6-8.8 32-32.5 32-60.4s-13.4-51.6-32-60.4V32zm-64 76.7V240 371.3C357.2 317.8 280.5 288 200.7 288H192V192h8.7c79.8 0 156.5-29.8 215.3-83.3z"/></symbol><symbol id="i-calendar-check" viewBox="0 0 448 512"><path d="M128 0c17.7 0 32 14.3 32 32V64H288V32c0-17.7 14.3-32 32-32s32 14.3 32 32V64h48c26.5 0 48 21.5 48 48v48H0V112C0 85.5 21.5 64 48 64H96V32c0-17.7 14.3-32 32-32zM0 192H448V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V192zM329 305c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-95 95-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L329 305z"/></symbol><symbol id="i-cart-shopping" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></symbol><symbol id="i-certificate" viewBox="0 0 512 512"><path d="M211 7.3C205 1 196-1.4 187.6 .8s-14.9 8.9-17.1 17.3L154.7 80.6l-62-17.5c-8.4-2.4-17.4 0-23.5 6.1s-8.5 15.1-6.1 23.5l17.5 62L18.1 170.6c-8.4 2.1-15 8.7-17.3 17.1S1 205 7.3 211l46.2 45L7.3 301C1 307-1.4 316 .8 324.4s8.9 14.9 17.3 17.1l62.5 15.8-17.5 62c-2.4 8.4 0 17.4 6.1 23.5s15.1 8.5 23.5 6.1l62-17.5 15.8 62.5c2.1 8.4 8.7 15 17.1 17.3s17.3-.2 23.4-6.4l45-46.2 45 46.2c6.1 6.2 15 8.7 23.4 6.4s14.9-8.9 17.1-17.3l15.8-62.5 62 17.5c8.4 2.4 17.4 0 23.5-6.1s8.5-15.1 6.1-23.5l-17.5-62 62.5-15.8c8.4-2.1 15-8.7 17.3-17.1s-.2-17.4-6.4-23.4l-46.2-45 46.2-45c6.2-6.1 8.7-15 6.4-23.4s-8.9-14.9-17.3-17.1l-62.5-15.8 17.5-62c2.4-8.4 0-17.4-6.1-23.5s-15.1-8.5-23.5-6.1l-62 17.5L341.4 18.1c-2.1-8.4-8.7-15-17.1-17.3S307 1 301 7.3L256 53.5 211 7.3z"/></symbol><symbol id="i-chart-line" viewBox="0 0 512 512"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></symbol><symbol id="i-chevron-right" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></symbol><symbol id="i-circle-check" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></symbol><symbol id="i-cloud" viewBox="0 0 640 512"><path d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/></symbol><symbol id="i-code" viewBox="0 0 640 512"><path d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></symbol><symbol id="i-earth-americas" viewBox="0 0 512 512"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></symbol><symbol id="i-earth-asia" viewBox="0 0 512 512"><path d="M51.7 295.1l31.7 6.3c7.9 1.6 16-.9 21.7-6.6l15.4-15.4c11.6-11.6 31.1-8.4 38.4 6.2l9.3 18.5c4.8 9.6 14.6 15.7 25.4 15.7c15.2 0 26.1-14.6 21.7-29.2l-6-19.9c-4.6-15.4 6.9-30.9 23-30.9h2.3c13.4 0 25.9-6.7 33.3-17.8l10.7-16.1c5.6-8.5 5.3-19.6-.8-27.7l-16.1-21.5c-10.3-13.7-3.3-33.5 13.4-37.7l17-4.3c7.5-1.9 13.6-7.2 16.5-14.4l16.4-40.9C303.4 52.1 280.2 48 256 48C141.1 48 48 141.1 48 256c0 13.4 1.3 26.5 3.7 39.1zm407.7 4.6c-3-.3-6-.1-9 .8l-15.8 4.4c-6.7 1.9-13.8-.9-17.5-6.7l-2-3.1c-6-9.4-16.4-15.1-27.6-15.1s-21.6 5.7-27.6 15.1l-6.1 9.5c-1.4 2.2-3.4 4.1-5.7 5.3L312 330.1c-18.1 10.1-25.5 32.4-17 51.3l5.5 12.4c8.6 19.2 30.7 28.5 50.5 21.1l2.6-1c10-3.7 21.3-2.2 29.9 4.1l1.5 1.1c37.2-29.5 64.1-71.4 74.4-119.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm144.5 92.1c-2.1 8.6 3.1 17.3 11.6 19.4l32 8c8.6 2.1 17.3-3.1 19.4-11.6s-3.1-17.3-11.6-19.4l-32-8c-8.6-2.1-17.3 3.1-19.4 11.6zm92-20c-2.1 8.6 3.1 17.3 11.6 19.4s17.3-3.1 19.4-11.6l8-32c2.1-8.6-3.1-17.3-11.6-19.4s-17.3 3.1-19.4 11.6l-8 32zM343.2 113.7c-7.9-4-17.5-.7-21.5 7.2l-16 32c-4 7.9-.7 17.5 7.2 21.5s17.5 .7 21.5-7.2l16-32c4-7.9 .7-17.5-7.2-21.5z"/></symbol><symbol id="i-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol><symbol id="i-gear" viewBox="0 0 512 512"><path d="M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"/></symbol><symbol id="i-globe" viewBox="0 0 512 512"><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64H348.7c2.2 20.4 3.3 41.8 3.3 64zm28.8-64H503.9c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0H18.6C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192H131.2c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6H344.3c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352H135.3zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6H493.4z"/></symbol><symbol id="i-graduation-cap" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></symbol><symbol id="i-handshake" viewBox="0 0 640 512"><path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8V128h-.7l-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48V352h28.2l91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM16 128c-8.8 0-16 7.2-16 16V352c0 17.7 14.3 32 32 32H64c17.7 0 32-14.3 32-32V128H16zM48 320a16 16 0 1 1 0 32 16 16 0 1 1 0-32zM544 128V352c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V144c0-8.8-7.2-16-16-16H544zm32 208a16 16 0 1 1 32 0 16 16 0 1 1 -32 0z"/></symbol><symbol id="i-headset" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256v40c0 13.3-10.7 24-24 24s-24-10.7-24-24V256C0 114.6 114.6 0 256 0S512 114.6 512 256V400.1c0 48.6-39.4 88-88.1 88L313.6 488c-8.3 14.3-23.8 24-41.6 24H240c-26.5 0-48-21.5-48-48s21.5-48 48-48h32c17.8 0 33.3 9.7 41.6 24l110.4 .1c22.1 0 40-17.9 40-40V256c0-114.9-93.1-208-208-208zM144 208h16c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H144c-35.3 0-64-28.7-64-64V272c0-35.3 28.7-64 64-64zm224 0c35.3 0 64 28.7 64 64v48c0 35.3-28.7 64-64 64H352c-17.7 0-32-14.3-32-32V240c0-17.7 14.3-32 32-32h16z"/></symbol><symbol id="i-heart-circle-plus" viewBox="0 0 576 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9l2.6-2.4C267.2 438.6 256 404.6 256 368c0-97.2 78.8-176 176-176c28.3 0 55 6.7 78.7 18.5c.9-6.5 1.3-13 1.3-19.6v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5zM432 512a144 144 0 1 0 0-288 144 144 0 1 0 0 288zm16-208v48h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V384H368c-8.8 0-16-7.2-16-16s7.2-16 16-16h48V304c0-8.8 7.2-16 16-16s16 7.2 16 16z"/></symbol><symbol id="i-heart-pulse" viewBox="0 0 512 512"><path d="M228.3 469.1L47.6 300.4c-4.2-3.9-8.2-8.1-11.9-12.4h87c22.6 0 43-13.6 51.7-34.5l10.5-25.2 49.3 109.5c3.8 8.5 12.1 14 21.4 14.1s17.8-5 22-13.3L320 253.7l1.7 3.4c9.5 19 28.9 31 50.1 31H476.3c-3.7 4.3-7.7 8.5-11.9 12.4L283.7 469.1c-7.5 7-17.4 10.9-27.7 10.9s-20.2-3.9-27.7-10.9zM503.7 240h-132c-3 0-5.8-1.7-7.2-4.4l-23.2-46.3c-4.1-8.1-12.4-13.3-21.5-13.3s-17.4 5.1-21.5 13.3l-41.4 82.8L205.9 158.2c-3.9-8.7-12.7-14.3-22.2-14.1s-18.1 5.9-21.8 14.8l-31.8 76.3c-1.2 3-4.2 4.9-7.4 4.9H16c-2.6 0-5 .4-7.3 1.1C3 225.2 0 208.2 0 190.9v-5.8c0-69.9 50.5-129.5 119.4-141C165 36.5 211.4 51.4 244 84l12 12 12-12c32.6-32.6 79-47.5 124.6-39.9C461.5 55.6 512 115.2 512 185.1v5.8c0 16.9-2.8 33.5-8.3 49.1z"/></symbol><symbol id="i-layer-group" viewBox="0 0 576 512"><path d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"/></symbol><symbol id="i-lightbulb" viewBox="0 0 384 512"><path d="M272 384c9.6-31.9 29.5-59.1 49.2-86.2l0 0c5.2-7.1 10.4-14.2 15.4-21.4c19.8-28.5 31.4-63 31.4-100.3C368 78.8 289.2 0 192 0S16 78.8 16 176c0 37.3 11.6 71.9 31.4 100.3c5 7.2 10.2 14.3 15.4 21.4l0 0c19.8 27.1 39.7 54.4 49.2 86.2H272zM192 512c44.2 0 80-35.8 80-80V416H112v16c0 44.2 35.8 80 80 80zM112 176c0 8.8-7.2 16-16 16s-16-7.2-16-16c0-61.9 50.1-112 112-112c8.8 0 16 7.2 16 16s-7.2 16-16 16c-44.2 0-80 35.8-80 80z"/></symbol><symbol id="i-location-dot" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></symbol><symbol id="i-network-wired" viewBox="0 0 640 512"><path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/></symbol><symbol id="i-plug" viewBox="0 0 384 512"><path d="M96 0C78.3 0 64 14.3 64 32v96h64V32c0-17.7-14.3-32-32-32zM288 0c-17.7 0-32 14.3-32 32v96h64V32c0-17.7-14.3-32-32-32zM32 160c-17.7 0-32 14.3-32 32s14.3 32 32 32v32c0 77.4 55 142 128 156.8V480c0 17.7 14.3 32 32 32s32-14.3 32-32V412.8C297 398 352 333.4 352 256V224c17.7 0 32-14.3 32-32s-14.3-32-32-32H32z"/></symbol><symbol id="i-rocket" viewBox="0 0 512 512"><path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></symbol><symbol id="i-shield-halved" viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"/></symbol><symbol id="i-star" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></symbol><symbol id="i-truck-fast" viewBox="0 0 640 512"><path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z"/></symbol><symbol id="i-up-right-from-square" viewBox="0 0 512 512"><path d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"/></symbol><symbol id="i-users" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></symbol><symbol id="i-users-rectangle" viewBox="0 0 640 512"><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H544c53 0 96-43 96-96V96c0-53-43-96-96-96H96zM64 96c0-17.7 14.3-32 32-32H544c17.7 0 32 14.3 32 32V416c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32V96zm159.8 80a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM96 309.3c0 14.7 11.9 26.7 26.7 26.7h56.1c8-34.1 32.8-61.7 65.2-73.6c-7.5-4.1-16.2-6.4-25.3-6.4H149.3C119.9 256 96 279.9 96 309.3zM461.2 336h56.1c14.7 0 26.7-11.9 26.7-26.7c0-29.5-23.9-53.3-53.3-53.3H421.3c-9.2 0-17.8 2.3-25.3 6.4c32.4 11.9 57.2 39.5 65.2 73.6zM372 289c-3.9-.7-7.9-1-12-1H280c-4.1 0-8.1 .3-12 1c-26 4.4-47.3 22.7-55.9 47c-2.7 7.5-4.1 15.6-4.1 24c0 13.3 10.7 24 24 24H408c13.3 0 24-10.7 24-24c0-8.4-1.4-16.5-4.1-24c-8.6-24.3-29.9-42.6-55.9-47zM512 176a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM320 256a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></symbol><symbol id="i-facebook-f" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></symbol><symbol id="i-linkedin-in" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></symbol><symbol id="i-youtube" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></symbol></svg>
 
 <!-- ================================================
      NAVBAR — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
@@ -590,19 +589,19 @@ button{font-family:inherit;cursor:pointer}
   </div>
   <div class="container hero-in">
     <div>
-      <div class="hbadge"><i class="fa-solid fa-circle-check"></i>Salesforce Consulting Partner &middot; BASIS Member &middot; Japan IT Week 2025</div>
+      <div class="hbadge"><svg class="icon" aria-hidden="true"><use href="#i-circle-check"/></svg>Salesforce Consulting Partner &middot; BASIS Member &middot; Japan IT Week 2025</div>
       <h1>Your Trusted<br/><span class="hlite">Salesforce</span><br/>Consulting Agency</h1>
       <p class="hdesc">TwinForce delivers tailored Salesforce solutions including Sales Cloud, MuleSoft integration, and custom Apex development, helping businesses accelerate growth and maximize CRM ROI.</p>
       <div class="hbtns">
-        <a href="project.html" class="btn btn-or"><i class="fa-solid fa-briefcase"></i>View Our Projects</a>
-        <a href="contact.html" class="btn btn-wo"><i class="fa-solid fa-envelope"></i>Talk to an Expert</a>
+        <a href="project.html" class="btn btn-or"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>View Our Projects</a>
+        <a href="contact.html" class="btn btn-wo"><svg class="icon" aria-hidden="true"><use href="#i-envelope"/></svg>Talk to an Expert</a>
       </div>
       <div class="htrust">
-        <div class="ht-item"><i class="fa-solid fa-award"></i>Certified Team</div>
+        <div class="ht-item"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg>Certified Team</div>
         <div class="ht-div"></div>
-        <div class="ht-item"><i class="fa-solid fa-earth-asia"></i>5+ Countries</div>
+        <div class="ht-item"><svg class="icon" aria-hidden="true"><use href="#i-earth-asia"/></svg>5+ Countries</div>
         <div class="ht-div"></div>
-        <div class="ht-item"><i class="fa-solid fa-bolt"></i>Agile Delivery</div>
+        <div class="ht-item"><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg>Agile Delivery</div>
       </div>
     </div>
     <div id="statsPanel">
@@ -611,7 +610,7 @@ button{font-family:inherit;cursor:pointer}
         <div class="sblk"><div class="snum" data-target="5">0<span>+</span></div><div class="slbl">Countries Served</div></div>
         <div class="sblk"><div class="snum" data-target="20">0<span>+</span></div><div class="slbl">Expert Members</div></div>
         <div class="sblk"><div class="snum" data-target="30">0<span>+</span></div><div class="slbl">Projects Done</div></div>
-        <div class="spart"><i class="fa-solid fa-award"></i><span>Salesforce Consulting Partner with multiple certified developers and consultants</span></div>
+        <div class="spart"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg><span>Salesforce Consulting Partner with multiple certified developers and consultants</span></div>
       </div>
     </div>
   </div>
@@ -625,18 +624,18 @@ button{font-family:inherit;cursor:pointer}
     <p class="clbl">Trusted by leading organizations worldwide</p>
     <div class="mq-out">
       <div class="mq-track">
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_10_m60nvs.png" alt="Bear Robotics" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_11_xmljr7.png" alt="AgVantage" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_8_kl6jkd.png" alt="Travel Raro" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_1_kflqjw.jpg" alt="Flash Funding" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_9_hdlvdf.png" alt="Victory Disability" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_6_e7vb7k.png" alt="Rouxbe" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_10_m60nvs.png" alt="Bear Robotics" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_11_xmljr7.png" alt="AgVantage" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_8_kl6jkd.png" alt="Travel Raro" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_1_kflqjw.jpg" alt="Flash Funding" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_9_hdlvdf.png" alt="Victory Disability" loading="lazy" width="160" height="60"/>
-        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto/v1780405606/image_6_e7vb7k.png" alt="Rouxbe" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_10_m60nvs.png" alt="Bear Robotics" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_11_xmljr7.png" alt="AgVantage" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_8_kl6jkd.png" alt="Travel Raro" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_1_kflqjw.jpg" alt="Flash Funding" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_9_hdlvdf.png" alt="Victory Disability" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_6_e7vb7k.png" alt="Rouxbe" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_10_m60nvs.png" alt="Bear Robotics" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_11_xmljr7.png" alt="AgVantage" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_8_kl6jkd.png" alt="Travel Raro" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_1_kflqjw.jpg" alt="Flash Funding" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_9_hdlvdf.png" alt="Victory Disability" loading="lazy" width="160" height="60"/>
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto:eco,w_320/v1780405606/image_6_e7vb7k.png" alt="Rouxbe" loading="lazy" width="160" height="60"/>
       </div>
     </div>
   </div>
@@ -648,18 +647,18 @@ button{font-family:inherit;cursor:pointer}
   <div class="container">
     <div class="why-hdr">
       <div class="reveal-left">
-        <div class="eyebrow"><i class="fa-solid fa-star"></i>Why Choose Us</div>
+        <div class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>Why Choose Us</div>
         <h2 class="stitle">Why Work With TwinForce</h2>
       </div>
       <p class="ssub reveal-right">We combine deep Salesforce expertise with a client-first, agile approach delivering solutions that drive real, measurable results.</p>
     </div>
     <div class="why-grid">
-      <div class="wcard reveal"><div class="wi"><i class="fa-solid fa-cloud"></i></div><h3>Salesforce Expertise</h3><p>Deep specialization across the entire Salesforce ecosystem including Sales Cloud, Service Cloud, Field Service, Marketing Cloud, Nonprofit Cloud, and MuleSoft.</p></div>
-      <div class="wcard reveal"><div class="wi"><i class="fa-solid fa-shield-halved"></i></div><h3>Quality Assurance</h3><p>TwinForce enforces rigorous QA standards at every development stage, delivering thoroughly tested, production-ready solutions with zero compromise on quality.</p></div>
-      <div class="wcard reveal"><div class="wi"><i class="fa-solid fa-arrows-rotate"></i></div><h3>Agile Delivery</h3><p>Iterative Agile methodology ensures flexibility, continuous client feedback, and rapid adaptation, keeping your project aligned with evolving business needs.</p></div>
-      <div class="wcard reveal"><div class="wi"><i class="fa-solid fa-rocket"></i></div><h3>On-Time Delivery</h3><p>Solutions only create value when live. Our efficient workflows ensure every project ships on schedule without sacrificing quality.</p></div>
-      <div class="wcard reveal"><div class="wi"><i class="fa-solid fa-handshake"></i></div><h3>Client-Centric Approach</h3><p>We invest time understanding your unique challenges and objectives, crafting tailored Salesforce strategies that deliver measurable ROI and lasting value.</p></div>
-      <div class="wcard reveal"><div class="wi"><i class="fa-solid fa-certificate"></i></div><h3>Certified Professionals</h3><p>Our team holds certifications including Platform Developer I and II, Administrator, Sales and Service Cloud Consultant, Field Service, and MuleSoft Developer.</p></div>
+      <div class="wcard reveal"><div class="wi"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg></div><h3>Salesforce Expertise</h3><p>Deep specialization across the entire Salesforce ecosystem including Sales Cloud, Service Cloud, Field Service, Marketing Cloud, Nonprofit Cloud, and MuleSoft.</p></div>
+      <div class="wcard reveal"><div class="wi"><svg class="icon" aria-hidden="true"><use href="#i-shield-halved"/></svg></div><h3>Quality Assurance</h3><p>TwinForce enforces rigorous QA standards at every development stage, delivering thoroughly tested, production-ready solutions with zero compromise on quality.</p></div>
+      <div class="wcard reveal"><div class="wi"><svg class="icon" aria-hidden="true"><use href="#i-arrows-rotate"/></svg></div><h3>Agile Delivery</h3><p>Iterative Agile methodology ensures flexibility, continuous client feedback, and rapid adaptation, keeping your project aligned with evolving business needs.</p></div>
+      <div class="wcard reveal"><div class="wi"><svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg></div><h3>On-Time Delivery</h3><p>Solutions only create value when live. Our efficient workflows ensure every project ships on schedule without sacrificing quality.</p></div>
+      <div class="wcard reveal"><div class="wi"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></div><h3>Client-Centric Approach</h3><p>We invest time understanding your unique challenges and objectives, crafting tailored Salesforce strategies that deliver measurable ROI and lasting value.</p></div>
+      <div class="wcard reveal"><div class="wi"><svg class="icon" aria-hidden="true"><use href="#i-certificate"/></svg></div><h3>Certified Professionals</h3><p>Our team holds certifications including Platform Developer I and II, Administrator, Sales and Service Cloud Consultant, Field Service, and MuleSoft Developer.</p></div>
     </div>
   </div>
 </section>
@@ -669,17 +668,17 @@ button{font-family:inherit;cursor:pointer}
 <section class="services" id="services">
   <div class="container">
     <div class="svc-hdr reveal">
-      <div class="eyebrow"><i class="fa-solid fa-gear"></i>What We Do</div>
+      <div class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-gear"/></svg>What We Do</div>
       <h2 class="stitle">Our Core Services</h2>
       <p class="ssub">From initial consulting to ongoing support, we cover every stage of your Salesforce journey with precision and dedication.</p>
     </div>
     <div class="svc-grid">
-      <div class="sc reveal"><div class="si"><i class="fa-solid fa-lightbulb"></i></div><h3>Salesforce Consulting &amp; Implementation</h3><p>Strategic guidance and end-to-end execution for Salesforce projects, ensuring perfect alignment with your business goals and growth strategy.</p></div>
-      <div class="sc reveal"><div class="si"><i class="fa-solid fa-code"></i></div><h3>Custom Salesforce Development</h3><p>Tailored solutions using Apex, Lightning Web Components, and Visualforce to extend Salesforce capabilities for your unique requirements.</p></div>
-      <div class="sc reveal"><div class="si"><i class="fa-solid fa-plug"></i></div><h3>Integration Services</h3><p>Seamless Salesforce integration with third-party apps via MuleSoft Anypoint Platform and REST/SOAP APIs for unified data and streamlined operations.</p></div>
-      <div class="sc reveal"><div class="si"><i class="fa-solid fa-headset"></i></div><h3>Salesforce Support &amp; Maintenance</h3><p>Reliable ongoing support ensuring optimal Salesforce performance, user adoption, and continuous improvement as your business evolves.</p></div>
-      <div class="sc reveal"><div class="si"><i class="fa-solid fa-graduation-cap"></i></div><h3>Training &amp; Enablement</h3><p>Comprehensive programs including our TwinForce Tutorials YouTube channel, empowering your team to fully leverage Salesforce capabilities.</p></div>
-      <div class="sc reveal"><div class="si"><i class="fa-solid fa-layer-group"></i></div><h3>Customized Solutions</h3><p>Every business is different. We architect personalized Salesforce solutions uniquely fitted to your workflows, industry, and long-term vision.</p></div>
+      <div class="sc reveal"><div class="si"><svg class="icon" aria-hidden="true"><use href="#i-lightbulb"/></svg></div><h3>Salesforce Consulting &amp; Implementation</h3><p>Strategic guidance and end-to-end execution for Salesforce projects, ensuring perfect alignment with your business goals and growth strategy.</p></div>
+      <div class="sc reveal"><div class="si"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></div><h3>Custom Salesforce Development</h3><p>Tailored solutions using Apex, Lightning Web Components, and Visualforce to extend Salesforce capabilities for your unique requirements.</p></div>
+      <div class="sc reveal"><div class="si"><svg class="icon" aria-hidden="true"><use href="#i-plug"/></svg></div><h3>Integration Services</h3><p>Seamless Salesforce integration with third-party apps via MuleSoft Anypoint Platform and REST/SOAP APIs for unified data and streamlined operations.</p></div>
+      <div class="sc reveal"><div class="si"><svg class="icon" aria-hidden="true"><use href="#i-headset"/></svg></div><h3>Salesforce Support &amp; Maintenance</h3><p>Reliable ongoing support ensuring optimal Salesforce performance, user adoption, and continuous improvement as your business evolves.</p></div>
+      <div class="sc reveal"><div class="si"><svg class="icon" aria-hidden="true"><use href="#i-graduation-cap"/></svg></div><h3>Training &amp; Enablement</h3><p>Comprehensive programs including our TwinForce Tutorials YouTube channel, empowering your team to fully leverage Salesforce capabilities.</p></div>
+      <div class="sc reveal"><div class="si"><svg class="icon" aria-hidden="true"><use href="#i-layer-group"/></svg></div><h3>Customized Solutions</h3><p>Every business is different. We architect personalized Salesforce solutions uniquely fitted to your workflows, industry, and long-term vision.</p></div>
     </div>
   </div>
 </section>
@@ -689,17 +688,17 @@ button{font-family:inherit;cursor:pointer}
 <section class="ind" id="industries">
   <div class="container">
     <div class="ind-hdr reveal">
-      <div class="eyebrow"><i class="fa-solid fa-building-office"></i>Industries</div>
+      <div class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>Industries</div>
       <h2 class="stitle">Built for Your Industry</h2>
       <p class="ssub">Battle-tested Salesforce expertise across a wide range of sectors worldwide.</p>
     </div>
     <div class="ind-grid">
-      <div class="ii reveal"><i class="fa-solid fa-heart-pulse"></i><span>Healthcare</span></div>
-      <div class="ii reveal"><i class="fa-solid fa-cart-shopping"></i><span>E-commerce &amp; Retail</span></div>
-      <div class="ii reveal"><i class="fa-solid fa-building-columns"></i><span>Finance &amp; Fintech</span></div>
-      <div class="ii reveal"><i class="fa-solid fa-heart-circle-plus"></i><span>Nonprofit &amp; NGOs</span></div>
-      <div class="ii reveal"><i class="fa-solid fa-book-open"></i><span>Education &amp; Training</span></div>
-      <div class="ii reveal"><i class="fa-solid fa-truck-fast"></i><span>Field Services</span></div>
+      <div class="ii reveal"><svg class="icon" aria-hidden="true"><use href="#i-heart-pulse"/></svg><span>Healthcare</span></div>
+      <div class="ii reveal"><svg class="icon" aria-hidden="true"><use href="#i-cart-shopping"/></svg><span>E-commerce &amp; Retail</span></div>
+      <div class="ii reveal"><svg class="icon" aria-hidden="true"><use href="#i-building-columns"/></svg><span>Finance &amp; Fintech</span></div>
+      <div class="ii reveal"><svg class="icon" aria-hidden="true"><use href="#i-heart-circle-plus"/></svg><span>Nonprofit &amp; NGOs</span></div>
+      <div class="ii reveal"><svg class="icon" aria-hidden="true"><use href="#i-book-open"/></svg><span>Education &amp; Training</span></div>
+      <div class="ii reveal"><svg class="icon" aria-hidden="true"><use href="#i-truck-fast"/></svg><span>Field Services</span></div>
     </div>
   </div>
 </section>
@@ -710,16 +709,16 @@ button{font-family:inherit;cursor:pointer}
   <div class="container">
     <div class="proj-hdr">
       <div class="reveal-left">
-        <div class="eyebrow"><i class="fa-solid fa-briefcase"></i>Our Work</div>
+        <div class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>Our Work</div>
         <h2 class="stitle">Notable Projects</h2>
       </div>
-      <a href="project.html" class="btn btn-ghost reveal-right"><i class="fa-solid fa-arrow-right"></i>View All Projects</a>
+      <a href="project.html" class="btn btn-ghost reveal-right"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>View All Projects</a>
     </div>
     <div class="proj-grid">
-      <div class="pc reveal"><span class="ptag">Robotics &middot; US</span><h4>Bear Robotics</h4><p>Enhanced Salesforce sales processes by configuring product line items, pricing workflows, and business automation to improve operational efficiency.</p><div class="pcf"><span>Sales Cloud &middot; Automation</span><div class="parr"><i class="fa-solid fa-arrow-right"></i></div></div></div>
-      <div class="pc reveal"><span class="ptag">Agriculture &middot; Australia</span><h4>AgVantage Commodities</h4><p>Developed a Salesforce-based commodity trading marketplace with Experience Cloud portal access, trading workflow automation, and Marketing Cloud email communications.</p><div class="pcf"><span>Experience Cloud &middot; Marketing Cloud</span><div class="parr"><i class="fa-solid fa-arrow-right"></i></div></div></div>
-      <div class="pc reveal"><span class="ptag">Finance &middot; US</span><h4>Flash Funding Mortgage</h4><p>Developed and customized Salesforce solutions for mortgage operations including loan application forms, workflow automation, and email notification processes.</p><div class="pcf"><span>Service Cloud &middot; Flow Automation</span><div class="parr"><i class="fa-solid fa-arrow-right"></i></div></div></div>
-      <div class="pc reveal"><span class="ptag">Travel &middot; Europe</span><h4>Travel Raro</h4><p>Designed Salesforce-based booking workflows, customer self-service portals, and agent dashboards to streamline travel reservations and payment management.</p><div class="pcf"><span>Experience Cloud &middot; Automation</span><div class="parr"><i class="fa-solid fa-arrow-right"></i></div></div></div>
+      <div class="pc reveal"><span class="ptag">Robotics &middot; US</span><h4>Bear Robotics</h4><p>Enhanced Salesforce sales processes by configuring product line items, pricing workflows, and business automation to improve operational efficiency.</p><div class="pcf"><span>Sales Cloud &middot; Automation</span><div class="parr"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></div></div></div>
+      <div class="pc reveal"><span class="ptag">Agriculture &middot; Australia</span><h4>AgVantage Commodities</h4><p>Developed a Salesforce-based commodity trading marketplace with Experience Cloud portal access, trading workflow automation, and Marketing Cloud email communications.</p><div class="pcf"><span>Experience Cloud &middot; Marketing Cloud</span><div class="parr"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></div></div></div>
+      <div class="pc reveal"><span class="ptag">Finance &middot; US</span><h4>Flash Funding Mortgage</h4><p>Developed and customized Salesforce solutions for mortgage operations including loan application forms, workflow automation, and email notification processes.</p><div class="pcf"><span>Service Cloud &middot; Flow Automation</span><div class="parr"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></div></div></div>
+      <div class="pc reveal"><span class="ptag">Travel &middot; Europe</span><h4>Travel Raro</h4><p>Designed Salesforce-based booking workflows, customer self-service portals, and agent dashboards to streamline travel reservations and payment management.</p><div class="pcf"><span>Experience Cloud &middot; Automation</span><div class="parr"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></div></div></div>
     </div>
   </div>
 </section>
@@ -730,43 +729,43 @@ button{font-family:inherit;cursor:pointer}
   <div class="sec-blob"></div>
   <div class="container">
     <div class="stack-hdr reveal">
-      <div class="eyebrow"><i class="fa-solid fa-layer-group"></i>Our Salesforce Stack</div>
+      <div class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-layer-group"/></svg>Our Salesforce Stack</div>
       <h2 class="stitle">Everything in the Salesforce Ecosystem</h2>
       <p class="ssub">From core clouds to advanced integrations, we cover the full Salesforce platform with certified depth.</p>
     </div>
     <div class="stack-grid">
       <div class="stk reveal">
-        <div class="stk-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="stk-icon"><svg class="icon" aria-hidden="true"><use href="#i-chart-line"/></svg></div>
         <h3>Sales Cloud</h3>
         <p>Lead-to-deal automation, pipeline management, CPQ, and AI-driven forecasting to accelerate your revenue cycle.</p>
         <div class="stk-tags"><span class="stk-tag">Apex</span><span class="stk-tag">LWC</span><span class="stk-tag">CPQ</span></div>
       </div>
       <div class="stk reveal">
-        <div class="stk-icon"><i class="fa-solid fa-headset"></i></div>
+        <div class="stk-icon"><svg class="icon" aria-hidden="true"><use href="#i-headset"/></svg></div>
         <h3>Service Cloud</h3>
         <p>Omnichannel case management, knowledge base, and automation workflows that elevate customer support.</p>
         <div class="stk-tags"><span class="stk-tag">Flows</span><span class="stk-tag">Omni-Channel</span></div>
       </div>
       <div class="stk reveal">
-        <div class="stk-icon"><i class="fa-solid fa-users-rectangle"></i></div>
+        <div class="stk-icon"><svg class="icon" aria-hidden="true"><use href="#i-users-rectangle"/></svg></div>
         <h3>Experience Cloud</h3>
         <p>Custom portals and self-service communities for customers, partners, and employees built on Experience Cloud.</p>
         <div class="stk-tags"><span class="stk-tag">Portals</span><span class="stk-tag">Communities</span></div>
       </div>
       <div class="stk reveal">
-        <div class="stk-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <div class="stk-icon"><svg class="icon" aria-hidden="true"><use href="#i-bullhorn"/></svg></div>
         <h3>Marketing Cloud</h3>
         <p>Personalized email journeys, automation studio, and data-driven campaign management at scale.</p>
         <div class="stk-tags"><span class="stk-tag">Journey Builder</span><span class="stk-tag">Pardot</span></div>
       </div>
       <div class="stk reveal">
-        <div class="stk-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <div class="stk-icon"><svg class="icon" aria-hidden="true"><use href="#i-network-wired"/></svg></div>
         <h3>MuleSoft Integration</h3>
         <p>Enterprise-grade API management and seamless third-party system integration using MuleSoft Anypoint Platform.</p>
         <div class="stk-tags"><span class="stk-tag">API</span><span class="stk-tag">REST</span><span class="stk-tag">SOAP</span></div>
       </div>
       <div class="stk reveal">
-        <div class="stk-icon"><i class="fa-solid fa-hands-holding-heart"></i></div>
+        <div class="stk-icon"><svg class="icon" aria-hidden="true"><use href="#i-handshake"/></svg></div>
         <h3>Nonprofit Cloud</h3>
         <p>NPSP donor management, fundraising automation, volunteer coordination, and grant tracking for nonprofits.</p>
         <div class="stk-tags"><span class="stk-tag">NPSP</span><span class="stk-tag">Donations</span></div>
@@ -782,42 +781,42 @@ button{font-family:inherit;cursor:pointer}
   <div class="container">
     <div class="about-inner">
       <div class="about-left reveal-left">
-        <div class="eyebrow"><i class="fa-solid fa-building"></i>About TwinForce</div>
+        <div class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>About TwinForce</div>
         <h2>A Salesforce Partner Built on Real-World Expertise</h2>
         <p>Founded in 2022 and headquartered in Dhaka, Bangladesh, TwinForce Solutions Limited is a Salesforce Consulting Partner with a team of 20+ certified professionals. We have served clients across the US, Australia, Europe, and Canada.</p>
         <p>Members of BASIS and proud representatives of Bangladesh at Japan IT Week 2025, we bring global standards with a client-first mindset to every engagement.</p>
         <div class="about-pills">
-          <div class="about-pill"><i class="fa-solid fa-circle-check"></i>Salesforce Consulting Partner</div>
-          <div class="about-pill"><i class="fa-solid fa-certificate"></i>Multiple Certified Developers</div>
-          <div class="about-pill"><i class="fa-solid fa-globe"></i>BASIS Member</div>
-          <div class="about-pill"><i class="fa-solid fa-earth-asia"></i>Japan IT Week 2025</div>
+          <div class="about-pill"><svg class="icon" aria-hidden="true"><use href="#i-circle-check"/></svg>Salesforce Consulting Partner</div>
+          <div class="about-pill"><svg class="icon" aria-hidden="true"><use href="#i-certificate"/></svg>Multiple Certified Developers</div>
+          <div class="about-pill"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg>BASIS Member</div>
+          <div class="about-pill"><svg class="icon" aria-hidden="true"><use href="#i-earth-asia"/></svg>Japan IT Week 2025</div>
         </div>
-        <a href="about.html" class="btn btn-sf"><i class="fa-solid fa-arrow-right"></i>Learn More About Us</a>
+        <a href="about.html" class="btn btn-sf"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>Learn More About Us</a>
       </div>
       <div class="about-cards reveal-right">
         <div class="about-card">
-          <div class="about-card-icon aci-blue"><i class="fa-solid fa-calendar-check"></i></div>
+          <div class="about-card-icon aci-blue"><svg class="icon" aria-hidden="true"><use href="#i-calendar-check"/></svg></div>
           <div class="about-card-text">
             <h4>Founded 2022</h4>
             <p>4+ years of Salesforce consulting and delivery excellence</p>
           </div>
         </div>
         <div class="about-card">
-          <div class="about-card-icon aci-orange"><i class="fa-solid fa-users"></i></div>
+          <div class="about-card-icon aci-orange"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></div>
           <div class="about-card-text">
             <h4>20+ Expert Team Members</h4>
             <p>Salesforce developers, consultants, architects, and business specialists</p>
           </div>
         </div>
         <div class="about-card">
-          <div class="about-card-icon aci-green"><i class="fa-solid fa-earth-americas"></i></div>
+          <div class="about-card-icon aci-green"><svg class="icon" aria-hidden="true"><use href="#i-earth-americas"/></svg></div>
           <div class="about-card-text">
             <h4>5+ Countries Served</h4>
             <p>Clients across the US, Australia, Canada, Europe and beyond</p>
           </div>
         </div>
         <div class="about-card">
-          <div class="about-card-icon aci-purple"><i class="fa-solid fa-award"></i></div>
+          <div class="about-card-icon aci-purple"><svg class="icon" aria-hidden="true"><use href="#i-award"/></svg></div>
           <div class="about-card-text">
             <h4>Certified Across 6+ Tracks</h4>
             <p>Platform Developer, Admin, Sales Cloud, Service Cloud, Field Service, MuleSoft</p>
@@ -833,14 +832,14 @@ button{font-family:inherit;cursor:pointer}
 <div class="yt-strip">
   <div class="container yt-inner">
     <div class="yt-left">
-      <div class="yt-icon-wrap"><i class="fa-brands fa-youtube"></i></div>
+      <div class="yt-icon-wrap"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></div>
       <div>
         <h3>TwinForce Tutorials</h3>
         <p>Free Salesforce video tutorials, tips, and best practices on our YouTube channel</p>
       </div>
     </div>
     <a href="https://www.youtube.com/@TwinforceTutorials" target="_blank" rel="noopener" class="yt-btn">
-      <i class="fa-brands fa-youtube"></i>Watch on YouTube
+      <svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg>Watch on YouTube
     </a>
   </div>
 </div>
@@ -850,7 +849,7 @@ button{font-family:inherit;cursor:pointer}
 <section class="loc-section" id="location">
   <div class="container">
     <div class="loc-hdr reveal">
-      <div class="eyebrow"><i class="fa-solid fa-location-dot"></i>Find Us</div>
+      <div class="eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg>Find Us</div>
       <h2 class="stitle">Office Location</h2>
       <p class="ssub">Ramzannesa Super Market, 2 No. Harunabad, Mirpur Cantonment Road, Mirpur-12, Pallabi, Dhaka - 1216</p>
     </div>
@@ -858,22 +857,22 @@ button{font-family:inherit;cursor:pointer}
       <!-- Two big colorful widget cards matching map height -->
       <div class="loc-details">
         <a href="https://maps.app.goo.gl/h9MjUb4MiiFvVcXZ9" target="_blank" rel="noopener" class="loc-widget loc-widget-blue reveal">
-          <div class="lw-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="lw-icon"><svg class="icon" aria-hidden="true"><use href="#i-location-dot"/></svg></div>
           <div class="lw-body">
             <div class="lw-label">Our Office</div>
             <div class="lw-title">Get Directions</div>
             <div class="lw-sub">Ramzannesa Super Market, 2 No. Harunabad, Mirpur-12, Pallabi, Dhaka - 1216, Bangladesh</div>
           </div>
-          <i class="fa-solid fa-arrow-up-right-from-square lw-ext"></i>
+          <svg class="icon lw-ext" aria-hidden="true"><use href="#i-arrow-up-right-from-square"/></svg>
         </a>
         <a href="https://twinforce.net" target="_blank" rel="noopener" class="loc-widget loc-widget-orange reveal">
-          <div class="lw-icon"><i class="fa-solid fa-globe"></i></div>
+          <div class="lw-icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></div>
           <div class="lw-body">
             <div class="lw-label">Visit Our Website</div>
             <div class="lw-title">twinforce.net</div>
             <div class="lw-sub">Salesforce consulting, custom development, integration and training services.</div>
           </div>
-          <i class="fa-solid fa-arrow-up-right-from-square lw-ext"></i>
+          <svg class="icon lw-ext" aria-hidden="true"><use href="#i-arrow-up-right-from-square"/></svg>
         </a>
       </div>
       <!-- Map with correct embed showing red pin -->
@@ -887,7 +886,7 @@ button{font-family:inherit;cursor:pointer}
             title="TwinForce Solutions Limited Office Location">
           </iframe>
           <a href="https://maps.app.goo.gl/h9MjUb4MiiFvVcXZ9" target="_blank" rel="noopener" class="map-overlay-btn">
-            <i class="fa-solid fa-up-right-from-square"></i>Open in Maps
+            <svg class="icon" aria-hidden="true"><use href="#i-up-right-from-square"/></svg>Open in Maps
           </a>
         </div>
       </div>
@@ -902,8 +901,8 @@ button{font-family:inherit;cursor:pointer}
     <h2>Ready to Unlock Your Salesforce Potential?</h2>
     <p>Let's discuss how TwinForce can build a tailored Salesforce strategy that drives growth and delivers measurable ROI for your business.</p>
     <div class="cta-btns">
-      <a href="contact.html" class="btn btn-or"><i class="fa-solid fa-envelope"></i>Get In Touch</a>
-      <a href="project.html" class="btn btn-wo"><i class="fa-solid fa-briefcase"></i>See Our Work</a>
+      <a href="contact.html" class="btn btn-or"><svg class="icon" aria-hidden="true"><use href="#i-envelope"/></svg>Get In Touch</a>
+      <a href="project.html" class="btn btn-wo"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg>See Our Work</a>
     </div>
   </div>
 </section>
@@ -924,29 +923,29 @@ button{font-family:inherit;cursor:pointer}
         </div>
         <p>Helping businesses unlock their Salesforce potential with customized, results-driven solutions.</p>
         <div class="fsc">
-          <a href="https://www.facebook.com/twinforcesolutions" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://www.youtube.com/@TwinforceTutorials" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://bd.linkedin.com/company/twinforce-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/twinforcesolutions" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook-f"/></svg></a>
+          <a href="https://www.youtube.com/@TwinforceTutorials" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a>
+          <a href="https://bd.linkedin.com/company/twinforce-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin-in"/></svg></a>
         </div>
       </div>
       <div class="fcol">
         <h5>Useful Links</h5>
         <ul>
-          <li><a href="project.html"><i class="fa-solid fa-chevron-right"></i>Projects</a></li>
-          <li><a href="career.html"><i class="fa-solid fa-chevron-right"></i>Career</a></li>
+          <li><a href="project.html"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>Projects</a></li>
+          <li><a href="career.html"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>Career</a></li>
         </ul>
       </div>
       <div class="fcol">
         <h5>Legal</h5>
         <ul>
-          <li><a href="privacy.html"><i class="fa-solid fa-chevron-right"></i>Privacy Policy</a></li>
+          <li><a href="privacy.html"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>Privacy Policy</a></li>
         </ul>
       </div>
       <div class="fcol">
         <h5>Support &amp; Help</h5>
         <ul>
-          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact Us</a></li>
-          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+          <li><a href="contact.html"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>Contact Us</a></li>
+          <li><a href="about.html"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"/></svg>About Us</a></li>
         </ul>
       </div>
     </div>
@@ -1154,11 +1153,12 @@ if("requestIdleCallback" in window){requestIdleCallback(initHeroCanvas,{timeout:
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     atBottom = scrolled > maxScroll - 80;
     fab.classList.toggle('visible', scrolled > 300);
+    const useEl = icon.querySelector('use');
     if(atBottom){
-      icon.className = 'fa-solid fa-arrow-down';
+      useEl.setAttribute('href','#i-arrow-down');
       fab.setAttribute('aria-label','Scroll to bottom');
     } else {
-      icon.className = 'fa-solid fa-arrow-up';
+      useEl.setAttribute('href','#i-arrow-up');
       fab.setAttribute('aria-label','Scroll to top');
     }
   }, {passive:true});
@@ -1174,7 +1174,7 @@ if("requestIdleCallback" in window){requestIdleCallback(initHeroCanvas,{timeout:
 
 <!-- Scroll to top/bottom button -->
 <button class="scroll-fab" id="scrollFab" aria-label="Scroll to top">
-  <i class="fa-solid fa-arrow-up" id="scrollFabIcon"></i>
+  <svg class="icon" id="scrollFabIcon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
 </button>
 </body>
 </html>
