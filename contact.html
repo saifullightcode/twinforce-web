@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Get in touch with TwinForce Solutions Limited. Contact our Salesforce consulting team for development, integration, and training services."/>
+<title>Contact Us | TwinForce Solutions Limited</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{
+  --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
+  --acc:#ff6b35;--acc-h:#e55a26;
+  --t9:#0a1628;--t7:#1e3a5f;--t5:#4a6080;--t4:#8099b3;
+  --bg:#f0f6fc;--bw:#ffffff;--bd:#cce1f5;
+  --r1:8px;--r2:12px;--r3:18px;--r4:24px;
+  --s1:0 2px 8px rgba(1,118,211,.08);
+  --s2:0 8px 32px rgba(1,118,211,.12);
+  --s3:0 20px 60px rgba(1,118,211,.16);
+  --tr:.25s cubic-bezier(.4,0,.2,1);
+  --font:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);color:var(--t9);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.73rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sf);background:var(--sf-l);border:1px solid var(--bd);padding:5px 14px;border-radius:50px;margin-bottom:14px}
+.eyebrow i{font-size:.68rem}
+.stitle{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;line-height:1.2;color:var(--t9);margin-bottom:14px;letter-spacing:-.5px}
+.ssub{font-size:1rem;color:var(--t5);line-height:1.75;max-width:570px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--r1);font-weight:700;font-size:.93rem;transition:all var(--tr);border:2px solid transparent;white-space:nowrap}
+.btn-sf{background:var(--sf);color:#fff;border-color:var(--sf)}
+.btn-sf:hover{background:var(--sf-d);border-color:var(--sf-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(1,118,211,.35)}
+.btn-or{background:var(--acc);color:#fff;border-color:var(--acc)}
+.btn-or:hover{background:var(--acc-h);border-color:var(--acc-h);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,107,53,.35)}
+.btn-ghost{background:transparent;color:var(--sf);border-color:var(--sf)}
+.btn-ghost:hover{background:var(--sf-l)}
+.btn-wo{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-wo:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+/* =============================================
+   NAVBAR — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+============================================= */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:999;padding:12px 20px;transition:padding .35s ease}
+.nw{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  background:#fff;
+  border:1px solid var(--bd);border-radius:var(--r4);
+  padding:0 28px;height:68px;
+  box-shadow:var(--s1);
+  transition:all .35s ease;
+  gap:16px;
+}
+.navbar.scrolled{padding:0}
+.navbar.scrolled .nw{
+  border-radius:0;max-width:100%;padding:0 40px;
+  border-top:none;border-left:none;border-right:none;
+  border-bottom:1px solid var(--bd);
+  box-shadow:0 4px 20px rgba(1,118,211,.1);
+}
+.nl img{height:48px;width:auto;display:block}
+.nlinks{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nlinks a,.ndrop-btn{font-size:.88rem;font-weight:600;color:var(--t7);padding:8px 13px;border-radius:var(--r1);transition:all var(--tr);background:none;border:none;display:flex;align-items:center;gap:4px;cursor:pointer}
+.nlinks a:hover,.ndrop-btn:hover,.nlinks a.active{color:var(--sf);background:var(--sf-l)}
+.ndrop-btn i{font-size:.58rem;transition:transform var(--tr)}
+.ndrop:hover .ndrop-btn i{transform:rotate(180deg)}
+.ndrop{position:relative}
+.nactions{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:12px}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:1px solid var(--bd);border-radius:var(--r1);padding:7px;width:38px;height:38px;align-items:center;justify-content:center;cursor:pointer}
+.hbg span{display:block;width:18px;height:2px;background:var(--t7);border-radius:2px;transition:all var(--tr)}
+.mobnav{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,.45)}
+.mobnav.open{display:block}
+.mobpanel{position:absolute;right:0;top:0;bottom:0;width:280px;background:#fff;padding:80px 20px 32px;overflow-y:auto;display:flex;flex-direction:column;gap:3px;box-shadow:-20px 0 60px rgba(1,118,211,.15)}
+.mobpanel a{font-size:.95rem;font-weight:600;color:var(--t7);padding:11px 14px;border-radius:var(--r1);display:block;transition:all var(--tr)}
+.mobpanel a:hover{background:var(--sf-l);color:var(--sf)}
+.mobsec{font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--t4);padding:16px 14px 6px;display:block}
+/* END NAVBAR */
+
+/* =============================================
+   COMPACT HERO — 1/3 height, reactive background
+   KEEP THIS BLOCK IDENTICAL ON ALL SUBPAGES
+============================================= */
+.hero{
+  min-height:33vh;
+  background:linear-gradient(140deg,#001e42 0%,#003d82 35%,#0176d3 65%,#0ea8f0 100%);
+  display:flex;align-items:center;
+  padding:118px 0 44px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(14,168,240,.25) 0%,transparent 70%),
+             radial-gradient(ellipse 50% 50% at 20% 70%,rgba(255,107,53,.12) 0%,transparent 60%);
+  pointer-events:none;
+}
+.hbg-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.15) 1.5px,transparent 1.5px);background-size:40px 40px;mask-image:radial-gradient(ellipse at 60% 50%,black 30%,transparent 80%)}
+.hblob{position:absolute;border-radius:50%;opacity:.12;mix-blend-mode:screen}
+.hblob.b1{width:600px;height:600px;background:radial-gradient(circle,#7dd3fc,transparent 70%);top:-260px;right:-180px;animation:blobmove 14s ease-in-out infinite}
+.hblob.b2{width:360px;height:360px;background:radial-gradient(circle,#ff6b35,transparent 70%);bottom:-180px;left:-80px;animation:blobmove 18s ease-in-out infinite reverse;opacity:.1}
+.hblob.b3{width:220px;height:220px;background:radial-gradient(circle,#38bdf8,transparent 70%);top:20%;left:42%;animation:blobmove 10s ease-in-out infinite;opacity:.15}
+@keyframes blobmove{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-20px) scale(1.05)}50%{transform:translate(-10px,30px) scale(.95)}75%{transform:translate(-30px,-10px) scale(1.03)}}
+.hgeo{position:absolute;pointer-events:none}
+.hgeo.g1{width:54px;height:54px;border:2px solid rgba(255,255,255,.12);border-radius:0;top:24%;right:18%;animation:geospin 20s linear infinite}
+.hgeo.g2{width:36px;height:36px;border:2px solid rgba(255,107,53,.2);border-radius:50%;bottom:24%;right:30%;animation:geospin 15s linear infinite reverse}
+.hgeo.g3{width:70px;height:2px;background:rgba(255,255,255,.1);top:60%;left:8%;animation:geospin 25s linear infinite;transform-origin:center}
+@keyframes geospin{0%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(180deg) translateY(-15px)}100%{transform:rotate(360deg) translateY(0)}}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+/* Centered single-column content */
+.hero-in{position:relative;z-index:1;text-align:center;width:100%}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 15px;border-radius:50px;margin-bottom:16px}
+.hbadge i{color:#7dd3fc}
+.hero h1{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:14px;letter-spacing:-.6px}
+.hlite{background:linear-gradient(100deg,#7dd3fc 0%,#bae6fd 50%,#e0f2fe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdesc{font-size:1.02rem;color:rgba(255,255,255,.8);margin:0 auto;max-width:560px;line-height:1.75}
+.hbreadcrumb{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;font-size:.84rem;color:rgba(255,255,255,.6)}
+.hbreadcrumb a{color:rgba(255,255,255,.82);transition:color var(--tr)}
+.hbreadcrumb a:hover{color:#fff}
+.hbreadcrumb i{font-size:.6rem}
+
+/* =============================================
+   CONTACT MAIN
+— form + info cards
+============================================= */
+.contact-main{padding:80px 0;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);position:relative;overflow:hidden}
+.contact-main::before{content:"";position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(1,118,211,.06),transparent 70%);top:-100px;right:-100px;pointer-events:none}
+.contact-main::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,53,.05),transparent 70%);bottom:-80px;left:-80px;pointer-events:none}
+.contact-grid{position:relative;z-index:1}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:36px;align-items:start}
+
+/* Info column */
+.contact-info{display:flex;flex-direction:column;gap:16px}
+.info-card{
+  background:#fff;border:1px solid var(--bd);border-radius:var(--r3);
+  padding:22px;display:flex;align-items:flex-start;gap:16px;transition:all var(--tr);
+  position:relative;overflow:hidden;
+}
+.info-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent-bar,var(--sf));transform:scaleY(0);transform-origin:top;transition:transform var(--tr)}
+.info-card:hover::before{transform:scaleY(1)}
+.info-card:hover{box-shadow:var(--s2);border-color:transparent;transform:translateX(4px)}
+.info-card.blue{--accent-bar:#0176d3}
+.info-card.orange{--accent-bar:#ff6b35}
+.info-card.green{--accent-bar:#10b981}
+.info-card.purple{--accent-bar:#7c3aed}
+.info-icon{
+  width:50px;height:50px;border-radius:var(--r2);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:#fff;
+  transition:transform var(--tr);box-shadow:0 6px 16px rgba(1,118,211,.2);
+}
+.info-card:hover .info-icon{transform:rotate(-8deg) scale(1.08)}
+.ii-blue{background:linear-gradient(135deg,#0176d3,#38bdf8)}
+.ii-orange{background:linear-gradient(135deg,#ff6b35,#ffb38a)}
+.ii-green{background:linear-gradient(135deg,#10b981,#6ee7b7)}
+.ii-purple{background:linear-gradient(135deg,#7c3aed,#c4b5fd)}
+.info-card h3{font-size:.93rem;font-weight:700;color:var(--t9);margin-bottom:4px}
+.info-card p,.info-card a{font-size:.86rem;color:var(--t5);line-height:1.6}
+.info-card a{color:var(--sf);font-weight:600}
+.info-card a:hover{text-decoration:underline}
+/* social row */
+.contact-social{display:flex;gap:10px;margin-top:4px}
+.contact-social a{
+  width:44px;height:44px;border-radius:var(--r2);background:#fff;border:1px solid var(--bd);
+  display:flex;align-items:center;justify-content:center;color:var(--sf);font-size:1rem;transition:all var(--tr);
+}
+.contact-social a:hover{background:var(--sf);color:#fff;border-color:var(--sf);transform:translateY(-3px)}
+
+/* Form column */
+.contact-form-wrap{
+  background:#fff;border:1px solid var(--bd);border-radius:var(--r4);
+  padding:36px;box-shadow:var(--s2);position:relative;overflow:hidden;
+}
+.contact-form-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--sf),#38bdf8,var(--acc))}
+.form-head{margin-bottom:26px}
+.form-head h2{font-size:1.4rem;font-weight:800;color:var(--t9);margin-bottom:6px;letter-spacing:-.3px}
+.form-head p{font-size:.9rem;color:var(--t5)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:18px;display:flex;flex-direction:column}
+.form-group label{font-size:.82rem;font-weight:700;color:var(--t7);margin-bottom:7px;display:flex;align-items:center;gap:4px}
+.form-group label .req{color:var(--acc);font-size:.9rem}
+.form-group input,.form-group select,.form-group textarea{
+  font-family:var(--font);font-size:.9rem;color:var(--t9);
+  background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r1);
+  padding:12px 14px;transition:all var(--tr);width:100%;
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--sf);background:#fff;box-shadow:0 0 0 3px rgba(1,118,211,.12);
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--t4)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234a6080' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.form-submit{width:100%;justify-content:center;margin-top:6px;font-size:1rem;padding:15px}
+.form-note{font-size:.78rem;color:var(--t4);text-align:center;margin-top:14px}
+
+/* =============================================
+   MAP SECTION
+============================================= */
+.map-section{padding:0 0 90px}
+.map-hdr{text-align:center;margin-bottom:40px}
+.map-hdr .ssub{margin:0 auto}
+.map-frame-wrap{border-radius:var(--r3);overflow:hidden;border:2px solid var(--bd);box-shadow:var(--s2);position:relative;line-height:0}
+.map-frame-wrap iframe{width:100%;height:420px;border:0;display:block}
+.map-overlay-btn{position:absolute;top:14px;left:14px;background:#fff;border:1px solid var(--bd);border-radius:var(--r1);padding:9px 16px;font-size:.84rem;font-weight:700;color:var(--sf);display:inline-flex;align-items:center;gap:7px;box-shadow:var(--s1);transition:all var(--tr)}
+.map-overlay-btn:hover{background:var(--sf);color:#fff;border-color:var(--sf)}
+
+/* =============================================
+   FOOTER — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+============================================= */
+.footer{background:#5d5d5e;color:rgba(255,255,255,.6);padding:40px 0 0}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.2);align-items:start}
+.fblogo-wrap{display:inline-block;background:#fff;border-radius:var(--r1);padding:8px 16px;margin-bottom:14px;line-height:0}
+.fblogo{height:32px;width:auto;display:block}
+.fb p{font-size:.83rem;line-height:1.7;max-width:250px;color:rgba(255,255,255,.75);margin-bottom:0}
+.fsc{display:flex;gap:8px;margin-top:14px}
+.fsc a{width:32px;height:32px;border-radius:var(--r1);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:.85rem;transition:all var(--tr)}
+.fsc a:hover{background:var(--sf);border-color:var(--sf);color:#fff;transform:translateY(-2px)}
+.fcol h5{font-size:.71rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px}
+.fcol ul li{margin-bottom:8px}
+.fcol ul li a{font-size:.82rem;color:rgba(255,255,255,.72);transition:color var(--tr);display:flex;align-items:center;gap:6px}
+.fcol ul li a i{font-size:.58rem;color:var(--sf);flex-shrink:0}
+.fcol ul li a:hover{color:var(--sf)}
+.fbot{padding:14px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fbot p{font-size:.78rem;color:rgba(255,255,255,.55)}
+.fbot a{color:rgba(255,255,255,.6);transition:color var(--tr)}
+.fbot a:hover{color:var(--sf)}
+/* END FOOTER */
+
+
+/* =============================================
+   WHY REACH OUT — colorful band
+============================================= */
+.why-reach{padding:80px 0;background:var(--bg)}
+.wr-hdr{text-align:center;margin-bottom:48px}
+.wr-hdr .ssub{margin:0 auto}
+.wr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.wr-card{
+  border-radius:var(--r3);padding:32px 26px;color:#fff;
+  position:relative;overflow:hidden;transition:all var(--tr);
+}
+.wr-card:hover{transform:translateY(-6px);box-shadow:var(--s3)}
+.wr-card::after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;background:rgba(255,255,255,.1);bottom:-50px;right:-30px;transition:transform var(--tr)}
+.wr-card:hover::after{transform:scale(1.4)}
+.wr-blue{background:linear-gradient(135deg,#0176d3,#0ea8f0)}
+.wr-orange{background:linear-gradient(135deg,#ff6b35,#ff9a62)}
+.wr-purple{background:linear-gradient(135deg,#6d3fd4,#9d7bf0)}
+.wr-icon{width:54px;height:54px;background:rgba(255,255,255,.2);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px;position:relative;z-index:1;transition:transform var(--tr)}
+.wr-card:hover .wr-icon{transform:rotate(-8deg) scale(1.1)}
+.wr-card h3{font-size:1.1rem;font-weight:800;margin-bottom:8px;position:relative;z-index:1}
+.wr-card p{font-size:.88rem;color:rgba(255,255,255,.85);line-height:1.7;position:relative;z-index:1}
+@media(max-width:820px){.wr-grid{grid-template-columns:1fr}}
+
+/* =============================================
+   SCROLL REVEAL
+============================================= */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media(max-width:920px){
+  .contact-grid{grid-template-columns:1fr;gap:28px}
+  .fg{grid-template-columns:1fr 1fr;gap:24px}
+}
+@media(max-width:680px){
+  .nlinks,.nactions .btn-sf,.nactions .btn-ghost{display:none}
+  .hbg{display:flex}
+  .form-row{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr 1fr;gap:24px}
+  .navbar.scrolled .nw{padding:0 16px}
+  .hero{padding:115px 0 55px;min-height:auto}
+  .contact-main{padding:60px 0}
+  .contact-form-wrap{padding:26px 22px}
+  .map-frame-wrap iframe{height:300px}
+}
+
+/* Gray logo-color floating boxes — square like logo, no border-radius */
+.hbox{
+  position:absolute;
+  border-radius:0;
+  pointer-events:none;
+  z-index:1;
+  will-change:transform;
+  transition:transform .12s cubic-bezier(.25,.46,.45,.94);
+}
+.hbox.filled{background:rgba(93,93,94,.28);border:none;}
+.hbox.outline{background:rgba(93,93,94,.08);border:2px solid rgba(93,93,94,.5);}
+.hbox.bx1{width:60px;height:60px;bottom:20%;right:12%;animation:boxfloat1 7s ease-in-out infinite}
+.hbox.bx2{width:38px;height:38px;bottom:8%;right:26%;animation:boxfloat2 9.5s ease-in-out infinite}
+.hbox.bx3{width:48px;height:48px;top:28%;right:5%;animation:boxfloat3 11s ease-in-out infinite}
+@keyframes boxfloat1{
+  0%,100%{transform:translateY(0) rotate(12deg)}
+  33%{transform:translateY(-14px) rotate(20deg)}
+  66%{transform:translateY(8px) rotate(6deg)}
+}
+@keyframes boxfloat2{
+  0%,100%{transform:translateY(0) rotate(-8deg)}
+  40%{transform:translateY(10px) rotate(-18deg)}
+  70%{transform:translateY(-8px) rotate(0deg)}
+}
+@keyframes boxfloat3{
+  0%,100%{transform:translateY(0) rotate(16deg)}
+  25%{transform:translateY(-10px) rotate(26deg)}
+  75%{transform:translateY(12px) rotate(8deg)}
+}
+</style>
+</head>
+<body>
+
+<!-- ================================================
+     NAVBAR — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+================================================ -->
+<nav class="navbar" id="navbar">
+  <div class="nw">
+    <a href="index.html" class="nl" aria-label="TwinForce Home">
+      <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="150" height="48"/>
+    </a>
+    <ul class="nlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="career.html">Career</a></li>
+    </ul>
+    <div class="nactions">
+      <a href="project.html" class="btn btn-ghost" style="padding:9px 20px;font-size:.87rem">Projects</a>
+      <a href="contact.html" class="btn btn-sf" style="padding:9px 20px;font-size:.87rem">Get In Touch</a>
+      <button class="hbg" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobnav" id="mobnav">
+  <div class="mobpanel">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="project.html">Projects</a>
+    <a href="career.html">Career</a>
+    <a href="contact.html" style="color:var(--sf);margin-top:8px">Contact Us</a>
+  </div>
+</div>
+<!-- END NAVBAR -->
+
+
+<!-- ================================================
+     COMPACT HERO — reactive background, page content
+================================================ -->
+<section class="hero">
+  <div class="hbg-wrap">
+    <div class="hdots"></div>
+    <div class="hblob b1"></div>
+    <div class="hblob b2"></div>
+    <div class="hblob b3"></div>
+    <div class="hgeo g1"></div>
+    <div class="hgeo g2"></div>
+    <div class="hgeo g3"></div>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hbox filled bx1"></div>
+    <div class="hbox outline bx2"></div>
+    <div class="hbox filled bx3"></div>
+  </div>
+  <div class="container hero-in">
+    <div class="hbadge"><i class="fa-solid fa-envelope"></i>Get In Touch</div>
+    <h1>Contact <span class="hlite">TwinForce</span></h1>
+    <p class="hdesc">Have a Salesforce project in mind or just want to learn more? Reach out to our team and we'll get back to you as soon as possible.</p>
+    <div class="hbreadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Contact Us</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT MAIN -->
+<section class="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- INFO COLUMN -->
+      <div class="contact-info">
+        <div class="info-card blue reveal">
+          <div class="info-icon ii-blue"><i class="fa-solid fa-envelope"></i></div>
+          <div>
+            <h3>Email Us</h3>
+            <a href="mailto:info@twinforce.net">info@twinforce.net</a>
+          </div>
+        </div>
+        <div class="info-card orange reveal">
+          <div class="info-icon ii-orange"><i class="fa-solid fa-location-dot"></i></div>
+          <div>
+            <h3>Our Office</h3>
+            <p>Ramzannesa Super Market, 2 No. Harunabad, Mirpur Cantonment Road, Mirpur-12, Pallabi, Dhaka - 1216, Bangladesh</p>
+          </div>
+        </div>
+        <div class="info-card green reveal">
+          <div class="info-icon ii-green"><i class="fa-solid fa-globe"></i></div>
+          <div>
+            <h3>Website</h3>
+            <a href="https://twinforce.net" target="_blank" rel="noopener">twinforce.net</a>
+          </div>
+        </div>
+        <div class="info-card purple reveal" style="flex-direction:column;align-items:flex-start;gap:14px">
+          <div>
+            <h3 style="margin-bottom:2px">Follow Us</h3>
+            <p style="font-size:.84rem">Stay connected on social media</p>
+          </div>
+          <div class="contact-social">
+            <a href="https://www.facebook.com/twinforcesolutions" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@TwinforceTutorials" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://bd.linkedin.com/company/twinforce-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM COLUMN — Salesforce Web-to-Lead -->
+      <div class="contact-form-wrap reveal" id="contactForm">
+        <div class="form-head">
+          <h2>Send Us a Message</h2>
+          <p>Fill out the form below and our team will get back to you via email.</p>
+        </div>
+
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdN00000roILE" method="POST">
+          <input type="hidden" name="oid" value="00DdN00000roILE"/>
+          <input type="hidden" name="retURL" value="http://twinforce.net/contact.html"/>
+          <!-- Lead Source — hidden, auto-filled -->
+          <input type="hidden" id="lead_source" name="lead_source" value="twinforce_contact"/>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first_name">First Name <span class="req">*</span></label>
+              <input id="first_name" name="first_name" maxlength="40" type="text" placeholder="John" required/>
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name <span class="req">*</span></label>
+              <input id="last_name" name="last_name" maxlength="80" type="text" placeholder="Doe" required/>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email <span class="req">*</span></label>
+              <input id="email" name="email" maxlength="80" type="email" placeholder="john@company.com" required/>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" maxlength="40" type="text" placeholder="+1 555 000 0000"/>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input id="company" name="company" maxlength="40" type="text" placeholder="Your company name"/>
+          </div>
+
+          <div class="form-group">
+            <label for="00NOW00000ASK1G">Address</label>
+            <input id="00NOW00000ASK1G" name="00NOW00000ASK1G" type="text" placeholder="Your address"/>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Message</label>
+            <textarea id="description" name="description" placeholder="Tell us about your project or inquiry..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-sf form-submit">
+            <i class="fa-solid fa-paper-plane"></i>Send Message
+          </button>
+          <p class="form-note">We'll respond to your inquiry via email as soon as possible.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WHY REACH OUT -->
+<section class="why-reach">
+  <div class="container">
+    <div class="wr-hdr reveal">
+      <div class="eyebrow"><i class="fa-solid fa-comments"></i>Why Reach Out</div>
+      <h2 class="stitle">What Happens Next</h2>
+      <p class="ssub">From first message to project kickoff, here is how working with TwinForce begins.</p>
+    </div>
+    <div class="wr-grid">
+      <div class="wr-card wr-blue reveal">
+        <div class="wr-icon"><i class="fa-solid fa-paper-plane"></i></div>
+        <h3>1. You Reach Out</h3>
+        <p>Send us your project details or questions through the form or by email. No commitment, just a conversation about your needs.</p>
+      </div>
+      <div class="wr-card wr-orange reveal">
+        <div class="wr-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>2. We Discuss</h3>
+        <p>Our Salesforce experts review your requirements and reach back via email to understand your goals and explore the best approach.</p>
+      </div>
+      <div class="wr-card wr-purple reveal">
+        <div class="wr-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3>3. We Deliver</h3>
+        <p>We craft a tailored Salesforce strategy and get to work, keeping you in the loop at every stage with agile, on-time delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="map-section">
+  <div class="container">
+    <div class="map-hdr reveal">
+      <div class="eyebrow"><i class="fa-solid fa-location-dot"></i>Find Us</div>
+      <h2 class="stitle">Visit Our Office</h2>
+      <p class="ssub">Ramzannesa Super Market, 2 No. Harunabad, Mirpur Cantonment Road, Mirpur-12, Pallabi, Dhaka - 1216</p>
+    </div>
+    <div class="map-frame-wrap reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.1557399648607!2d90.36869317605697!3d23.825216985678217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14c4b9ae755%3A0x2a09fe91c1d66e44!2sTwinForce%20Solutions%20Limited!5e0!3m2!1sen!2sbd!4v1748880000000!5m2!1sen!2sbd"
+        width="100%" height="420"
+        style="border:0" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="TwinForce Solutions Limited Office Location">
+      </iframe>
+      <a href="https://maps.app.goo.gl/h9MjUb4MiiFvVcXZ9" target="_blank" rel="noopener" class="map-overlay-btn">
+        <i class="fa-solid fa-up-right-from-square"></i>Open in Maps
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FOOTER — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="fg">
+      <div class="fb">
+        <div class="fblogo-wrap">
+          <img class="fblogo" src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="130" height="32" style="height:32px;width:auto;display:block"/>
+        </div>
+        <p>Helping businesses unlock their Salesforce potential with customized, results-driven solutions.</p>
+        <div class="fsc">
+          <a href="https://www.facebook.com/twinforcesolutions" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@TwinforceTutorials" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://bd.linkedin.com/company/twinforce-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h5>Useful Links</h5>
+        <ul>
+          <li><a href="project.html"><i class="fa-solid fa-chevron-right"></i>Projects</a></li>
+          <li><a href="career.html"><i class="fa-solid fa-chevron-right"></i>Career</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html"><i class="fa-solid fa-chevron-right"></i>Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Support &amp; Help</h5>
+        <ul>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact Us</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>&copy; 2025 TwinForce Solutions Limited. All rights reserved.</p>
+      <p>Mirpur-12, Pallabi, Dhaka &nbsp;&middot;&nbsp; <a href="https://twinforce.net">twinforce.net</a></p>
+    </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<script>
+/* ── Navbar scroll ── */
+const nb=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+/* ── Mobile nav ── */
+const hbg=document.getElementById('hamburger'),mn=document.getElementById('mobnav');
+hbg.addEventListener('click',()=>mn.classList.toggle('open'));
+mn.addEventListener('click',e=>{if(e.target===mn)mn.classList.remove('open')});
+
+/* ── Scroll reveal ── */
+const allReveal=document.querySelectorAll('.reveal');
+const revIO=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revIO.unobserve(e.target);}});
+},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+allReveal.forEach(el=>revIO.observe(el));
+
+/* ── FIX 3+4: Interactive canvas particle network ── */
+(function(){
+  const canvas=document.getElementById('heroCanvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  let W,H,pts=[],mouse={x:-9999,y:-9999},raf;
+  function resize(){
+    W=canvas.width=canvas.offsetWidth;
+    H=canvas.height=canvas.offsetHeight;
+  }
+  resize();
+  new ResizeObserver(resize).observe(canvas.parentElement);
+
+  /* Reduced particle count for performance */
+  const count=window.innerWidth<680?40:65;
+  for(let i=0;i<count;i++){
+    pts.push({
+      x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,
+      r:Math.random()*1.8+.8,
+      pulse:Math.random()*Math.PI*2
+    });
+  }
+  window.addEventListener('mousemove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    mouse.x=e.clientX-rect.left;
+    mouse.y=e.clientY-rect.top;
+  },{passive:true});
+  /* Touch support */
+  canvas.addEventListener('touchmove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    mouse.x=e.touches[0].clientX-rect.left;
+    mouse.y=e.touches[0].clientY-rect.top;
+  },{passive:true});
+
+  let frame=0;
+  function draw(){
+    raf=requestAnimationFrame(draw);
+    ctx.clearRect(0,0,W,H);
+    frame++;
+    for(let i=0;i<pts.length;i++){
+      const p=pts[i];
+      p.pulse+=.02;
+      /* Mouse repel */
+      const dx=p.x-mouse.x,dy=p.y-mouse.y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<90&&d>0){const f=(.9-d/90);p.x+=dx/d*f*1.5;p.y+=dy/d*f*1.5;}
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;
+      if(p.y<0||p.y>H)p.vy*=-1;
+      /* Connections */
+      for(let j=i+1;j<pts.length;j++){
+        const dx2=p.x-pts[j].x,dy2=p.y-pts[j].y;
+        const d2=Math.sqrt(dx2*dx2+dy2*dy2);
+        if(d2<130){
+          ctx.beginPath();
+          ctx.moveTo(p.x,p.y);ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle='rgba(125,211,252,'+(1-d2/130)*.2+')';
+          ctx.lineWidth=.7;ctx.stroke();
+        }
+      }
+      /* Pulsing dot */
+      const r=p.r+(Math.sin(p.pulse)*.4);
+      ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,255,255,.5)';ctx.fill();
+    }
+  }
+  draw();
+  /* Pause when tab hidden to save battery */
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden)cancelAnimationFrame(raf);else draw();
+  });
+})();
+
+
+/* ── Gray boxes mouse parallax ── */
+(function(){
+  const boxes = document.querySelectorAll('.hbox');
+  if(!boxes.length) return;
+  const hero = document.querySelector('.hero');
+  if(!hero) return;
+  const cfg = [
+    {depth:22, rot:12},
+    {depth:34, rot:-8},
+    {depth:16, rot:16}
+  ];
+  window.addEventListener('mousemove', e => {
+    const r = hero.getBoundingClientRect();
+    if(e.clientY < r.top || e.clientY > r.bottom) return;
+    const cx = r.left + r.width / 2;
+    const cy = r.top  + r.height / 2;
+    const dx = (e.clientX - cx) / (r.width  / 2);
+    const dy = (e.clientY - cy) / (r.height / 2);
+    boxes.forEach((box, i) => {
+      const {depth, rot} = cfg[i];
+      const tx = dx * depth;
+      const ty = dy * depth;
+      const extraRot = dx * 6;
+      box.style.transform = `translate(${tx}px,${ty}px) rotate(${rot + extraRot}deg)`;
+    });
+  }, {passive:true});
+  hero.addEventListener('mouseleave', () => {
+    const rots = [12, -8, 16];
+    boxes.forEach((box,i) => {
+      box.style.transform = `rotate(${rots[i]}deg)`;
+    });
+  });
+})();
+
+</script>
+</body>
+</html>

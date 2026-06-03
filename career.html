@@ -1,208 +1,662 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Career Application | TwinForce Solutions Limited</title>
-    <link rel="stylesheet" href="css/beb7a05aa4d75761.css">
-    <script src="js/main-app-2ac9bdf73a600be9.js" async=""></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Join TwinForce Solutions Limited, apply for Salesforce developer and consulting roles at a growing Salesforce consulting partner in Dhaka, Bangladesh."/>
+<title>Career | TwinForce Solutions Limited</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{
+  --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
+  --acc:#ff6b35;--acc-h:#e55a26;
+  --t9:#0a1628;--t7:#1e3a5f;--t5:#4a6080;--t4:#8099b3;
+  --bg:#f0f6fc;--bw:#ffffff;--bd:#cce1f5;
+  --r1:8px;--r2:12px;--r3:18px;--r4:24px;
+  --s1:0 2px 8px rgba(1,118,211,.08);
+  --s2:0 8px 32px rgba(1,118,211,.12);
+  --s3:0 20px 60px rgba(1,118,211,.16);
+  --tr:.25s cubic-bezier(.4,0,.2,1);
+  --font:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);color:var(--t9);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.73rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sf);background:var(--sf-l);border:1px solid var(--bd);padding:5px 14px;border-radius:50px;margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--r1);font-weight:700;font-size:.93rem;transition:all var(--tr);border:2px solid transparent;white-space:nowrap}
+.btn-sf{background:var(--sf);color:#fff;border-color:var(--sf)}
+.btn-sf:hover{background:var(--sf-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(1,118,211,.35)}
+.btn-ghost{background:transparent;color:var(--sf);border-color:var(--sf)}
+.btn-ghost:hover{background:var(--sf-l)}
+.btn-wo{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-wo:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+/* =============================================
+   NAVBAR - KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+============================================= */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:999;padding:12px 20px;transition:padding .35s ease}
+.nw{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--bd);border-radius:var(--r4);padding:0 28px;height:68px;box-shadow:var(--s1);transition:all .35s ease;gap:16px}
+.navbar.scrolled{padding:0}
+.navbar.scrolled .nw{border-radius:0;max-width:100%;padding:0 40px;border-top:none;border-left:none;border-right:none;border-bottom:1px solid var(--bd);box-shadow:0 4px 20px rgba(1,118,211,.1)}
+.nl img{height:48px;width:auto;display:block}
+.nlinks{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nlinks a{font-size:.88rem;font-weight:600;color:var(--t7);padding:8px 13px;border-radius:var(--r1);transition:all var(--tr)}
+.nlinks a:hover,.nlinks a.active{color:var(--sf);background:var(--sf-l)}
+.nactions{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:12px}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:1px solid var(--bd);border-radius:var(--r1);padding:7px;width:38px;height:38px;align-items:center;justify-content:center;cursor:pointer}
+.hbg span{display:block;width:18px;height:2px;background:var(--t7);border-radius:2px;transition:all var(--tr)}
+.mobnav{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,.45)}
+.mobnav.open{display:block}
+.mobpanel{position:absolute;right:0;top:0;bottom:0;width:280px;background:#fff;padding:80px 20px 32px;overflow-y:auto;display:flex;flex-direction:column;gap:3px;box-shadow:-20px 0 60px rgba(1,118,211,.15)}
+.mobpanel a{font-size:.95rem;font-weight:600;color:var(--t7);padding:11px 14px;border-radius:var(--r1);display:block;transition:all var(--tr)}
+.mobpanel a:hover{background:var(--sf-l);color:var(--sf)}
+/* END NAVBAR */
+
+/* =============================================
+   COMPACT HERO
+============================================= */
+.hero{min-height:33vh;background:linear-gradient(140deg,#001e42 0%,#003d82 35%,#0176d3 65%,#0ea8f0 100%);display:flex;align-items:center;padding:118px 0 44px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(14,168,240,.25) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 20% 70%,rgba(255,107,53,.12) 0%,transparent 60%);pointer-events:none}
+.hbg-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.15) 1.5px,transparent 1.5px);background-size:40px 40px;mask-image:radial-gradient(ellipse at 60% 50%,black 30%,transparent 80%)}
+.hblob{position:absolute;border-radius:50%;opacity:.12;mix-blend-mode:screen}
+.hblob.b1{width:600px;height:600px;background:radial-gradient(circle,#7dd3fc,transparent 70%);top:-260px;right:-180px;animation:blobmove 14s ease-in-out infinite}
+.hblob.b2{width:360px;height:360px;background:radial-gradient(circle,#ff6b35,transparent 70%);bottom:-180px;left:-80px;animation:blobmove 18s ease-in-out infinite reverse;opacity:.1}
+.hblob.b3{width:220px;height:220px;background:radial-gradient(circle,#38bdf8,transparent 70%);top:20%;left:42%;animation:blobmove 10s ease-in-out infinite;opacity:.15}
+@keyframes blobmove{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-20px) scale(1.05)}50%{transform:translate(-10px,30px) scale(.95)}75%{transform:translate(-30px,-10px) scale(1.03)}}
+.hgeo{position:absolute;pointer-events:none}
+.hgeo.g1{width:54px;height:54px;border:2px solid rgba(255,255,255,.12);border-radius:0;top:24%;right:18%;animation:geospin 20s linear infinite}
+.hgeo.g2{width:36px;height:36px;border:2px solid rgba(255,107,53,.2);border-radius:50%;bottom:24%;right:30%;animation:geospin 15s linear infinite reverse}
+.hgeo.g3{width:70px;height:2px;background:rgba(255,255,255,.1);top:60%;left:8%;animation:geospin 25s linear infinite;transform-origin:center}
+@keyframes geospin{0%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(180deg) translateY(-15px)}100%{transform:rotate(360deg) translateY(0)}}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hbox{position:absolute;border-radius:0;pointer-events:none;z-index:1;will-change:transform;transition:transform .12s cubic-bezier(.25,.46,.45,.94)}
+.hbox.filled{background:rgba(93,93,94,.28)}
+.hbox.outline{background:rgba(93,93,94,.08);border:2px solid rgba(93,93,94,.5)}
+.hbox.bx1{width:60px;height:60px;bottom:20%;right:12%;animation:boxfloat1 7s ease-in-out infinite}
+.hbox.bx2{width:38px;height:38px;bottom:8%;right:26%;animation:boxfloat2 9.5s ease-in-out infinite}
+.hbox.bx3{width:48px;height:48px;top:28%;right:5%;animation:boxfloat3 11s ease-in-out infinite}
+@keyframes boxfloat1{0%,100%{transform:translateY(0) rotate(12deg)}33%{transform:translateY(-14px) rotate(20deg)}66%{transform:translateY(8px) rotate(6deg)}}
+@keyframes boxfloat2{0%,100%{transform:translateY(0) rotate(-8deg)}40%{transform:translateY(10px) rotate(-18deg)}70%{transform:translateY(-8px) rotate(0deg)}}
+@keyframes boxfloat3{0%,100%{transform:translateY(0) rotate(16deg)}25%{transform:translateY(-10px) rotate(26deg)}75%{transform:translateY(12px) rotate(8deg)}}
+.hero-in{position:relative;z-index:1;text-align:center;width:100%}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 15px;border-radius:50px;margin-bottom:16px}
+.hbadge i{color:#7dd3fc}
+.hero h1{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:14px;letter-spacing:-.6px}
+.hlite{background:linear-gradient(100deg,#7dd3fc,#bae6fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdesc{font-size:1.02rem;color:rgba(255,255,255,.8);margin:0 auto;max-width:560px;line-height:1.75}
+.hbreadcrumb{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;font-size:.84rem;color:rgba(255,255,255,.6)}
+.hbreadcrumb a{color:rgba(255,255,255,.82);transition:color var(--tr)}
+.hbreadcrumb a:hover{color:#fff}
+.hbreadcrumb i{font-size:.6rem}
+
+/* =============================================
+   WHY JOIN SECTION
+============================================= */
+.why-join{padding:80px 0;background:#fff}
+.why-join-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.wj-card{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r3);padding:28px 24px;transition:all var(--tr);position:relative;overflow:hidden}
+.wj-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sf),#38bdf8);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.wj-card:hover{transform:translateY(-5px);box-shadow:var(--s2);background:#fff;border-color:transparent}
+.wj-card:hover::before{transform:scaleX(1)}
+.wj-icon{width:48px;height:48px;background:var(--sf-l);border-radius:var(--r1);display:flex;align-items:center;justify-content:center;font-size:1.15rem;color:var(--sf);margin-bottom:16px;transition:all var(--tr)}
+.wj-card:hover .wj-icon{background:var(--sf);color:#fff;transform:rotate(-6deg) scale(1.1)}
+.wj-card h3{font-size:.97rem;font-weight:700;color:var(--t9);margin-bottom:8px}
+.wj-card p{font-size:.87rem;color:var(--t5);line-height:1.7}
+
+/* =============================================
+   FORM SECTION
+============================================= */
+.form-section{padding:80px 0 100px;background:var(--bg)}
+.form-layout{display:grid;grid-template-columns:1fr 1.6fr;gap:40px;align-items:start}
+
+/* Info sidebar */
+.form-sidebar{position:sticky;top:100px}
+.form-sidebar h2{font-size:clamp(1.6rem,2.5vw,2.1rem);font-weight:800;color:var(--t9);line-height:1.2;margin-bottom:14px;letter-spacing:-.4px}
+.form-sidebar p{font-size:.93rem;color:var(--t5);line-height:1.8;margin-bottom:24px}
+.sidebar-info{display:flex;flex-direction:column;gap:14px}
+.si-item{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--t7);font-weight:600}
+.si-item i{width:36px;height:36px;background:var(--sf-l);border-radius:var(--r1);display:flex;align-items:center;justify-content:center;color:var(--sf);font-size:.9rem;flex-shrink:0}
+
+/* Form card */
+.form-card{background:#fff;border:1px solid var(--bd);border-radius:var(--r4);overflow:hidden;box-shadow:var(--s2)}
+.form-card-header{background:linear-gradient(135deg,var(--sf),var(--sf-d));padding:28px 32px}
+.form-card-header h3{font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:4px}
+.form-card-header p{font-size:.87rem;color:rgba(255,255,255,.8)}
+.form-card-body{padding:32px}
+
+/* Form elements */
+.form-section-title{font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sf);margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--sf-l);display:flex;align-items:center;gap:8px}
+.form-section-title i{font-size:.8rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:18px;display:flex;flex-direction:column}
+.form-group label{font-size:.82rem;font-weight:700;color:var(--t7);margin-bottom:7px;display:flex;align-items:center;gap:4px}
+.form-group label .req{color:var(--acc);font-size:.9rem}
+.form-group input,.form-group select,.form-group textarea{font-family:var(--font);font-size:.9rem;color:var(--t9);background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r1);padding:11px 14px;transition:all var(--tr);width:100%}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--sf);background:#fff;box-shadow:0 0 0 3px rgba(1,118,211,.12)}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--t4)}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-group select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234a6080' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:var(--bg);padding-right:38px}
+
+/* Checkbox group */
+.checkbox-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
+.checkbox-item{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r1);padding:11px 14px;cursor:pointer;transition:all var(--tr);user-select:none}
+.checkbox-item:hover{border-color:var(--sf);background:var(--sf-l)}
+.checkbox-item.checked{border-color:var(--sf);background:var(--sf-l)}
+.checkbox-item input[type=checkbox]{width:16px;height:16px;accent-color:var(--sf);cursor:pointer;flex-shrink:0}
+.checkbox-item span{font-size:.85rem;font-weight:600;color:var(--t7)}
+
+/* Graduated checkbox */
+.grad-row{display:flex;align-items:center;gap:12px;background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r1);padding:11px 14px;cursor:pointer;transition:all var(--tr)}
+.grad-row:hover{border-color:var(--sf)}
+.grad-row input[type=checkbox]{width:16px;height:16px;accent-color:var(--sf);cursor:pointer}
+.grad-row label{font-size:.87rem;font-weight:600;color:var(--t7);cursor:pointer}
+
+/* Submit button */
+.form-submit-btn{width:100%;justify-content:center;margin-top:8px;font-size:1rem;padding:15px;border-radius:var(--r2);background:linear-gradient(135deg,var(--sf),var(--sf-d));border:none;color:#fff;font-weight:700;cursor:pointer;transition:all var(--tr);font-family:var(--font)}
+.form-submit-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(1,118,211,.4)}
+.form-submit-btn:disabled{opacity:.7;cursor:not-allowed;transform:none}
+
+/* =============================================
+   SUCCESS TOAST
+============================================= */
+.toast{
+  position:fixed;top:90px;left:50%;transform:translateX(-50%) translateY(-20px);
+  background:#fff;border:1px solid var(--bd);border-radius:var(--r2);
+  padding:18px 28px;box-shadow:var(--s3);
+  display:flex;align-items:center;gap:14px;
+  opacity:0;pointer-events:none;z-index:9999;
+  transition:all .4s cubic-bezier(.34,1.56,.64,1);
+  min-width:320px;max-width:480px;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);pointer-events:auto}
+.toast-icon{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;flex-shrink:0}
+.toast h4{font-size:.95rem;font-weight:700;color:var(--t9);margin-bottom:2px}
+.toast p{font-size:.82rem;color:var(--t5)}
+.toast-progress{position:absolute;bottom:0;left:0;height:3px;background:linear-gradient(90deg,var(--sf),#38bdf8);border-radius:0 0 var(--r2) var(--r2);animation:none}
+.toast.show .toast-progress{animation:progress 3s linear forwards}
+@keyframes progress{0%{width:100%}100%{width:0%}}
+
+/* =============================================
+   FOOTER - KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+============================================= */
+.footer{background:#5d5d5e;color:rgba(255,255,255,.6);padding:40px 0 0}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.2);align-items:start}
+.fblogo-wrap{display:inline-block;background:#fff;border-radius:var(--r1);padding:8px 16px;margin-bottom:14px;line-height:0}
+.fblogo{height:32px;width:auto;display:block}
+.fb p{font-size:.83rem;line-height:1.7;max-width:250px;color:rgba(255,255,255,.75);margin-bottom:0}
+.fsc{display:flex;gap:8px;margin-top:14px}
+.fsc a{width:32px;height:32px;border-radius:var(--r1);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:.85rem;transition:all var(--tr)}
+.fsc a:hover{background:var(--sf);border-color:var(--sf);color:#fff;transform:translateY(-2px)}
+.fcol h5{font-size:.71rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px}
+.fcol ul li{margin-bottom:8px}
+.fcol ul li a{font-size:.82rem;color:rgba(255,255,255,.72);transition:color var(--tr);display:flex;align-items:center;gap:6px}
+.fcol ul li a i{font-size:.58rem;color:var(--sf);flex-shrink:0}
+.fcol ul li a:hover{color:var(--sf)}
+.fbot{padding:14px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fbot p{font-size:.78rem;color:rgba(255,255,255,.55)}
+.fbot a{color:rgba(255,255,255,.6);transition:color var(--tr)}
+.fbot a:hover{color:var(--sf)}
+/* END FOOTER */
+
+/* =============================================
+   SCROLL REVEAL
+============================================= */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .6s ease,transform .6s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media(max-width:1024px){
+  .form-layout{grid-template-columns:1fr;gap:32px}
+  .form-sidebar{position:static}
+  .fg{grid-template-columns:1fr 1fr;gap:24px}
+  .why-join-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  .nlinks,.nactions .btn-sf,.nactions .btn-ghost{display:none}
+  .hbg{display:flex}
+  .form-row{grid-template-columns:1fr}
+  .checkbox-group{grid-template-columns:1fr}
+  .fg{grid-template-columns:1fr}
+  .why-join-grid{grid-template-columns:1fr}
+  .navbar.scrolled .nw{padding:0 16px}
+  .hero{padding:115px 0 55px;min-height:auto}
+  .form-card-body{padding:22px 18px}
+}
+</style>
 </head>
+<body>
 
-<body class="bg-[#FCFCFC] text-black">
-    <header class="header left-0 top-0 z-40 flex w-full items-center absolute bg-white shadow-sm">
-        <div class="container">
-            <div class="relative -mx-4 flex items-center justify-between">
-                <div class="w-60 max-w-full px-4">
-                    <a class="block w-full py-5" href="https://twinforce.net/">
-                        <img src="images/image.png" alt="TwinForce Logo" width="140" height="30" class="w-full">
-                    </a>
-                </div>
-                <nav class="hidden lg:block px-4">
-                    <ul class="flex space-x-12">
-                        <li>
-                            <a href="https://twinforce.net/"
-                                class="text-base font-medium text-dark hover:text-primary">Home</a>
-                        </li>
-                        <li>
-                            <a href="https://twinforce.net/"
-                                class="text-base font-medium text-dark hover:text-primary">About</a>
-                        </li>
-                        <li>
-                            <a href="#" class="text-base font-bold text-primary">Career</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <section class="relative z-10 overflow-hidden pb-16 pt-[120px] md:pb-[120px] md:pt-[150px]">
-        <div class="container">
-            <div class="mx-auto max-w-[900px]">
-                <div class="text-center mb-12">
-                    <h1 class="mb-5 text-3xl font-bold text-black sm:text-4xl md:text-5xl">Join Our Team</h1>
-                    <p class="text-base text-body-color md:text-lg">
-                        Submit your application for the recruitment.
-                    </p>
-                </div>
-                <div class="rounded-sm bg-white p-8 shadow-three sm:p-12 border border-body-color/10">
-                    <form
-                        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdN00000roILE"
-                        method="POST">
-                        <input type="hidden" name="oid" value="00DdN00000roILE">
-                        <input type="hidden" name="retURL" value="https://twinforce.net/thankyou">
-                        <input type="hidden" name="lead_source" value="TwinForce Website (Intern)">
-                        <input type="hidden" name="company" value="TwinForce Solutions Limited">
-                        <input type="hidden" id="00NOW00000ASK1P" name="00NOW00000ASK1P" value="TF_February_2026">
-                        <input type="hidden" id="00NOW00000ASK1H" name="00NOW00000ASK1H">
-                        <div class="-mx-4 flex flex-wrap">
-                            <div class="w-full px-4 mb-6">
-                                <h3 class="text-xl font-bold text-black border-b border-body-color/15 pb-2">Personal
-                                    Information</h3>
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="first_name" class="mb-3 block text-sm font-medium text-dark">First
-                                    Name</label>
-                                <input type="text" id="first_name" name="first_name" required placeholder="e.g., TwinForce"
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="last_name" class="mb-3 block text-sm font-medium text-dark">Last
-                                    Name</label>
-                                <input type="text" id="last_name" name="last_name" required placeholder="e.g., Solutions"
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="email" class="mb-3 block text-sm font-medium text-dark">Email</label>
-                                <input type="email" id="email" name="email" required
-                                    placeholder="e.g., twinforce.solutions@example.com"
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="mobile" class="mb-3 block text-sm font-medium text-dark">Mobile
-                                    Number</label>
-                                <input type="text" id="mobile" name="mobile" required placeholder="e.g., +8801XXXXXXXXX"
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="date_picker" class="mb-3 block text-sm font-medium text-dark">Date of
-                                    Birth</label>
-                                <input type="date" id="date_picker" name="date_picker_visible" required
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASVEP"
-                                    class="mb-3 block text-sm font-medium text-dark">Gender</label>
-                                <select id="00NOW00000ASVEP" name="00NOW00000ASVEP" required
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                                    <option value="">--None--</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                            </div>
-                            <div class="w-full px-4 mb-5">
-                                <label for="00NOW00000ASK1G" class="mb-3 block text-sm font-medium text-dark">Present
-                                    Address</label>
-                                <textarea id="00NOW00000ASK1G" name="00NOW00000ASK1G" required rows="3"
-                                    placeholder="Enter your full village/house, road, and area details"
-                                    class="w-full resize-none rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"></textarea>
-                            </div>
-                            <div class="w-full px-4 mt-8 mb-6">
-                                <h3 class="text-xl font-bold text-black border-b border-body-color/15 pb-2">Academic
-                                    Qualification</h3>
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASK1Q" class="mb-3 block text-sm font-medium text-dark">University
-                                    Name</label>
-                                <input type="text" id="00NOW00000ASK1Q" name="00NOW00000ASK1Q" required
-                                    placeholder="e.g., University of Dhaka"
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASK1I"
-                                    class="mb-3 block text-sm font-medium text-dark">Degree</label>
-                                <input type="text" id="00NOW00000ASK1I" name="00NOW00000ASK1I" required
-                                    placeholder="e.g., B.Sc. in CSE"
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5">
-                                <label for="00NOW00000ASK1O" class="mb-3 block text-sm font-medium text-dark">Graduation
-                                    Year</label>
-                                <input type="text" id="00NOW00000ASK1O" name="00NOW00000ASK1O" placeholder="e.g., 2025"
-                                    class="w-full rounded-sm border border-stroke bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary">
-                            </div>
-                            <div class="w-full px-4 md:w-1/2 mb-5 flex items-end pb-3">
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1N" name="00NOW00000ASK1N" value="1"
-                                        class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1N" class="text-base text-body-color">I have already
-                                        graduated</label>
-                                </div>
-                            </div>
-                            <div class="w-full px-4 mt-8 mb-6">
-                                <h4 class="text-lg font-bold text-black border-b border-body-color/15 pb-2">Technical
-                                    Proficiency</h4>
-                            </div>
-                            <div class="w-full px-4 grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1M" name="00NOW00000ASK1M" value="1"
-                                        class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1M" class="text-base text-body-color">Experience in
-                                        OOP</label>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1J" name="00NOW00000ASK1J" value="1"
-                                        class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1J" class="text-base text-body-color">Experience in HTML &
-                                        CSS</label>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1K" name="00NOW00000ASK1K" value="1"
-                                        class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1K" class="text-base text-body-color">Experience in
-                                        JavaScript</label>
-                                </div>
-                                <div class="flex items-center space-x-3">
-                                    <input type="checkbox" id="00NOW00000ASK1L" name="00NOW00000ASK1L" value="1"
-                                        class="h-5 w-5 rounded border-stroke accent-primary">
-                                    <label for="00NOW00000ASK1L" class="text-base text-body-color">Experience in MySQL /
-                                        SQL</label>
-                                </div>
-                            </div>
-                            <div class="w-full px-4 text-center">
-                                <button type="submit" name="submit"
-                                    class="rounded-md bg-primary px-12 py-4 text-base font-bold text-white shadow-submit transition-all hover:bg-opacity-90">
-                                    Submit Application
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="bg-white border-t border-body-color/10 py-12">
-        <div class="container text-center">
-            <a href="https://twinforce.net/" class="inline-block mb-6">
-                <img src="images/image.png" alt="logo" width="140">
-            </a>
-            <p class="text-sm text-body-color">
-                © 2026 TwinForce Solutions Limited.
-            </p>
-        </div>
-    </footer>
-    <script>
-        document.getElementById('careerForm').addEventListener('submit', function (e) {
-            const picker = document.getElementById('date_picker');
-            const hiddenField = document.getElementById('00NOW00000ASK1H');
+<!-- SUCCESS TOAST -->
+<div class="toast" id="toast" role="alert" aria-live="polite">
+  <div class="toast-icon"><i class="fa-solid fa-check"></i></div>
+  <div>
+    <h4>Application Submitted!</h4>
+    <p>Thanks for applying. We'll review your application and get back to you soon.</p>
+  </div>
+  <div class="toast-progress" id="toastProgress"></div>
+</div>
 
-            if (picker.value) {
-                const [year, month, day] = picker.value.split('-');
-                hiddenField.value = `${month}/${day}/${year}`;
-            }
-        });
-    </script>
+<!-- ================================================
+     NAVBAR - KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+================================================ -->
+<nav class="navbar" id="navbar">
+  <div class="nw">
+    <a href="index.html" class="nl" aria-label="TwinForce Home">
+      <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="150" height="48"/>
+    </a>
+    <ul class="nlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="career.html" class="active">Career</a></li>
+    </ul>
+    <div class="nactions">
+      <a href="project.html" class="btn btn-ghost" style="padding:9px 20px;font-size:.87rem">Projects</a>
+      <a href="contact.html" class="btn btn-sf" style="padding:9px 20px;font-size:.87rem">Get In Touch</a>
+      <button class="hbg" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobnav" id="mobnav">
+  <div class="mobpanel">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="project.html">Projects</a>
+    <a href="career.html">Career</a>
+    <a href="contact.html" style="color:var(--sf);margin-top:8px">Contact Us</a>
+  </div>
+</div>
+<!-- END NAVBAR -->
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hbg-wrap">
+    <div class="hdots"></div>
+    <div class="hblob b1"></div><div class="hblob b2"></div><div class="hblob b3"></div>
+    <div class="hgeo g1"></div><div class="hgeo g2"></div><div class="hgeo g3"></div>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hbox filled bx1"></div>
+    <div class="hbox outline bx2"></div>
+    <div class="hbox filled bx3"></div>
+  </div>
+  <div class="container hero-in">
+    <div class="hbadge"><i class="fa-solid fa-briefcase"></i>We Are Hiring</div>
+    <h1>Join the <span class="hlite">TwinForce</span> Team</h1>
+    <p class="hdesc">Be part of a certified Salesforce consulting team delivering real impact for clients across the globe. Submit your application below.</p>
+    <div class="hbreadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Career</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHY JOIN US -->
+<section class="why-join">
+  <div class="container">
+    <div style="text-align:center" class="reveal">
+      <div class="eyebrow"><i class="fa-solid fa-star"></i>Why TwinForce</div>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--t9);letter-spacing:-.5px;margin-bottom:8px">Why Work With Us</h2>
+      <p style="color:var(--t5);max-width:520px;margin:0 auto">A place to grow your Salesforce career with real projects, real clients, and a team that invests in you.</p>
+    </div>
+    <div class="why-join-grid">
+      <div class="wj-card reveal">
+        <div class="wj-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h3>Learn and Grow</h3>
+        <p>Work on complex, real-world Salesforce projects across Sales Cloud, Service Cloud, MuleSoft, and more, with mentorship from certified senior developers.</p>
+      </div>
+      <div class="wj-card reveal">
+        <div class="wj-icon"><i class="fa-solid fa-earth-asia"></i></div>
+        <h3>Global Client Exposure</h3>
+        <p>Collaborate directly with clients across the US, Australia, Europe, and Canada, gaining international project experience from day one.</p>
+      </div>
+      <div class="wj-card reveal">
+        <div class="wj-icon"><i class="fa-solid fa-certificate"></i></div>
+        <h3>Certification Support</h3>
+        <p>We invest in your Salesforce certifications. Our team holds credentials across Platform Developer, Admin, Sales Cloud, Service Cloud, and MuleSoft tracks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- APPLICATION FORM -->
+<section class="form-section" id="apply">
+  <div class="container">
+    <div class="form-layout">
+
+      <!-- Sidebar -->
+      <div class="form-sidebar reveal-left">
+        <div class="eyebrow"><i class="fa-solid fa-paper-plane"></i>Apply Now</div>
+        <h2>Submit Your Application</h2>
+        <p>Fill out the form to apply for a role at TwinForce. Our team reviews every application and will reach out via email if your profile is a match.</p>
+        <div class="sidebar-info">
+          <div class="si-item"><i class="fa-solid fa-location-dot"></i>Mirpur-12, Dhaka, Bangladesh</div>
+          <div class="si-item"><i class="fa-solid fa-envelope"></i>info@twinforce.net</div>
+          <div class="si-item"><i class="fa-solid fa-clock"></i>Full-time &amp; Internship positions</div>
+          <div class="si-item"><i class="fa-solid fa-globe"></i>twinforce.net</div>
+        </div>
+      </div>
+
+      <!-- Form Card -->
+      <div class="reveal-right">
+        <div class="form-card" id="formCard">
+          <div class="form-card-header">
+            <h3>Career Application</h3>
+            <p>TwinForce Solutions Limited , Join Our Team</p>
+          </div>
+          <div class="form-card-body">
+
+            <form id="careerForm"
+              action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdN00000roILE"
+              method="POST">
+
+              <!-- Hidden Salesforce fields -->
+              <input type="hidden" name="oid" value="00DdN00000roILE"/>
+              <input type="hidden" name="retURL" value="http://twinforce.net/career.html"/>
+              <input type="hidden" name="lead_source" value="TwinForce Website (Intern)"/>
+              <!-- Technical proficiency collected into description -->
+              <input type="hidden" id="techHidden" name="description" value=""/>
+
+              <!-- Personal Information -->
+              <div class="form-section-title"><i class="fa-solid fa-user"></i>Personal Information</div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="first_name">First Name <span class="req">*</span></label>
+                  <input id="first_name" name="first_name" maxlength="40" type="text" placeholder="e.g., TwinForce" required/>
+                </div>
+                <div class="form-group">
+                  <label for="last_name">Last Name <span class="req">*</span></label>
+                  <input id="last_name" name="last_name" maxlength="80" type="text" placeholder="e.g., Solutions" required/>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email <span class="req">*</span></label>
+                  <input id="email" name="email" maxlength="80" type="email" placeholder="e.g., you@example.com" required/>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Mobile Number <span class="req">*</span></label>
+                  <input id="phone" name="phone" maxlength="40" type="text" placeholder="e.g., +8801XXXXXXXXX" required/>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="dob">Date of Birth <span class="req">*</span></label>
+                  <input id="dob" name="00NOW00000ASK1H" type="date" required/>
+                </div>
+                <div class="form-group">
+                  <label for="gender">Gender <span class="req">*</span></label>
+                  <select id="gender" name="00NOW00000ASVEP" title="Gender" required>
+                    <option value="">-- None --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="address">Present Address <span class="req">*</span></label>
+                <textarea id="address" name="00NOW00000ASK1G" placeholder="Enter your full village/house, road, and area details" rows="2" required></textarea>
+              </div>
+
+              <!-- Academic Qualification -->
+              <div class="form-section-title" style="margin-top:12px"><i class="fa-solid fa-book-open"></i>Academic Qualification</div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="university">University Name <span class="req">*</span></label>
+                  <input id="university" name="00NOW00000ASK1Q" maxlength="255" type="text" placeholder="e.g., University of Dhaka" required/>
+                </div>
+                <div class="form-group">
+                  <label for="degree">Degree <span class="req">*</span></label>
+                  <textarea id="degree" name="00NOW00000ASK1I" placeholder="e.g., B.Sc. in CSE" rows="1" style="min-height:44px;resize:none" required></textarea>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="gradyear">Graduation Year <span class="req">*</span></label>
+                  <input id="gradyear" name="00NOW00000ASK1O" type="text" placeholder="e.g., 2025" required/>
+                </div>
+                <div class="form-group" style="justify-content:flex-end;padding-bottom:2px">
+                  <div class="grad-row">
+                    <input type="checkbox" id="graduated" name="00NOW00000ASK1N" value="1"/>
+                    <label for="graduated">I have already graduated</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technical Proficiency -->
+              <div class="form-section-title" style="margin-top:12px"><i class="fa-solid fa-code"></i>Technical Proficiency</div>
+              <p style="font-size:.82rem;color:var(--t5);margin-bottom:14px">Select all areas where you have experience:</p>
+
+              <div class="checkbox-group" id="techCheckboxes">
+                <div class="checkbox-item" onclick="toggleCheck(this)">
+                  <input type="checkbox" value="OOP" tabindex="-1"/>
+                  <span>Experience in OOP</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleCheck(this)">
+                  <input type="checkbox" value="HTML &amp; CSS" tabindex="-1"/>
+                  <span>Experience in HTML &amp; CSS</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleCheck(this)">
+                  <input type="checkbox" value="JavaScript" tabindex="-1"/>
+                  <span>Experience in JavaScript</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleCheck(this)">
+                  <input type="checkbox" value="MySQL / SQL" tabindex="-1"/>
+                  <span>Experience in MySQL / SQL</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleCheck(this)">
+                  <input type="checkbox" value="Apex" tabindex="-1"/>
+                  <span>Experience in Apex</span>
+                </div>
+                <div class="checkbox-item" onclick="toggleCheck(this)">
+                  <input type="checkbox" value="Lightning Web Components" tabindex="-1"/>
+                  <span>Experience in LWC</span>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="form-submit-btn" id="submitBtn" style="margin-top:28px">
+                <i class="fa-solid fa-paper-plane"></i>&nbsp; Submit Application
+              </button>
+              <p style="font-size:.78rem;color:var(--t4);text-align:center;margin-top:12px">We'll review your application and respond via email.</p>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FOOTER - KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="fg">
+      <div class="fb">
+        <div class="fblogo-wrap">
+          <img class="fblogo" src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="130" height="32" style="height:32px;width:auto;display:block"/>
+        </div>
+        <p>Helping businesses unlock their Salesforce potential with customized, results-driven solutions.</p>
+        <div class="fsc">
+          <a href="https://www.facebook.com/twinforcesolutions" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@TwinforceTutorials" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://bd.linkedin.com/company/twinforce-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h5>Useful Links</h5>
+        <ul>
+          <li><a href="project.html"><i class="fa-solid fa-chevron-right"></i>Projects</a></li>
+          <li><a href="career.html"><i class="fa-solid fa-chevron-right"></i>Career</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html"><i class="fa-solid fa-chevron-right"></i>Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Support &amp; Help</h5>
+        <ul>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact Us</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>&copy; 2025 TwinForce Solutions Limited. All rights reserved.</p>
+      <p>Mirpur-12, Pallabi, Dhaka &nbsp;&middot;&nbsp; <a href="https://twinforce.net">twinforce.net</a></p>
+    </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<script>
+/* ── Navbar scroll ── */
+const nb=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+/* ── Mobile nav ── */
+const hbg=document.getElementById('hamburger'),mn=document.getElementById('mobnav');
+hbg.addEventListener('click',()=>mn.classList.toggle('open'));
+mn.addEventListener('click',e=>{if(e.target===mn)mn.classList.remove('open')});
+
+/* ── Scroll reveal ── */
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>{
+  new IntersectionObserver(([e])=>{
+    if(e.isIntersecting)e.target.classList.add('visible');
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'}).observe(el);
+});
+
+/* ── Checkbox toggle ── */
+function toggleCheck(el){
+  const cb = el.querySelector('input[type=checkbox]');
+  cb.checked = !cb.checked;
+  el.classList.toggle('checked', cb.checked);
+}
+// Also handle direct checkbox clicks
+document.querySelectorAll('.checkbox-item input').forEach(cb=>{
+  cb.addEventListener('change', e=>{
+    e.stopPropagation();
+    cb.closest('.checkbox-item').classList.toggle('checked', cb.checked);
+  });
+});
+
+/* ── On submit: collect tech checkboxes into hidden field, show toast ── */
+document.getElementById('careerForm').addEventListener('submit', function(e){
+  // Validate at least one tech skill selected
+  const selected = [...document.querySelectorAll('.checkbox-item input:checked')]
+    .map(cb => cb.value);
+  if(selected.length === 0){
+    e.preventDefault();
+    // Highlight the checkbox group
+    const grp = document.getElementById('techCheckboxes');
+    grp.style.outline = '2px solid #ef4444';
+    grp.style.borderRadius = '8px';
+    grp.scrollIntoView({behavior:'smooth', block:'center'});
+    // Show inline error
+    let err = document.getElementById('techError');
+    if(!err){
+      err = document.createElement('p');
+      err.id = 'techError';
+      err.style.cssText = 'color:#ef4444;font-size:.82rem;font-weight:600;margin-top:8px';
+      err.textContent = 'Please select at least one technical proficiency.';
+      grp.parentNode.insertBefore(err, grp.nextSibling);
+    }
+    return;
+  }
+  // Clear any previous error
+  const grp2 = document.getElementById('techCheckboxes');
+  grp2.style.outline = '';
+  const prevErr = document.getElementById('techError');
+  if(prevErr) prevErr.remove();
+  document.getElementById('techHidden').value = 'Technical Proficiency: ' + selected.join(', ');
+
+  // Show toast after short delay (let form submit first)
+  setTimeout(()=>{
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(()=>toast.classList.remove('show'), 3400);
+  }, 200);
+  // Note: form submits normally to Salesforce. Do NOT call e.preventDefault()
+});
+
+/* ── Hero particle canvas ── */
+(function(){
+  const canvas=document.getElementById('heroCanvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  let W,H,pts=[],mouse={x:-9999,y:-9999},raf;
+  function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
+  resize();
+  new ResizeObserver(resize).observe(canvas.parentElement);
+  const count=window.innerWidth<680?40:65;
+  for(let i=0;i<count;i++){pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.8+.8,pulse:Math.random()*Math.PI*2});}
+  window.addEventListener('mousemove',e=>{const r=canvas.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top;},{passive:true});
+  function draw(){
+    raf=requestAnimationFrame(draw);ctx.clearRect(0,0,W,H);
+    for(let i=0;i<pts.length;i++){
+      const p=pts[i];p.pulse+=.02;
+      const dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<90&&d>0){p.x+=dx/d*.9;p.y+=dy/d*.9;}
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      for(let j=i+1;j<pts.length;j++){const dx2=p.x-pts[j].x,dy2=p.y-pts[j].y,d2=Math.sqrt(dx2*dx2+dy2*dy2);if(d2<130){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle='rgba(125,211,252,'+(1-d2/130)*.2+')';ctx.lineWidth=.7;ctx.stroke();}}
+      const r=p.r+(Math.sin(p.pulse)*.4);ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,.5)';ctx.fill();
+    }
+  }
+  draw();
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else draw();});
+})();
+
+/* ── Gray boxes mouse parallax ── */
+(function(){
+  const boxes=document.querySelectorAll('.hbox');
+  if(!boxes.length)return;
+  const hero=document.querySelector('.hero');
+  if(!hero)return;
+  const cfg=[{depth:22,rot:12},{depth:34,rot:-8},{depth:16,rot:16}];
+  window.addEventListener('mousemove',e=>{
+    const r=hero.getBoundingClientRect();
+    if(e.clientY<r.top||e.clientY>r.bottom)return;
+    const cx=r.left+r.width/2,cy=r.top+r.height/2;
+    const dx=(e.clientX-cx)/(r.width/2),dy=(e.clientY-cy)/(r.height/2);
+    boxes.forEach((box,i)=>{const{depth,rot}=cfg[i];box.style.transform=`translate(${dx*depth}px,${dy*depth}px) rotate(${rot+dx*6}deg)`;});
+  },{passive:true});
+  hero.addEventListener('mouseleave',()=>{const rots=[12,-8,16];boxes.forEach((box,i)=>{box.style.transform=`rotate(${rots[i]}deg)`;});});
+})();
+</script>
 </body>
-
 </html>

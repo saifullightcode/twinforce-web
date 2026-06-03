@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Learn about TwinForce Solutions Limited — a Salesforce consulting partner founded in 2022, with a certified team of 20+ professionals serving clients across the globe."/>
+<title>About Us | TwinForce Solutions Limited</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{
+  --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
+  --acc:#ff6b35;--acc-h:#e55a26;
+  --t9:#0a1628;--t7:#1e3a5f;--t5:#4a6080;--t4:#8099b3;
+  --bg:#f0f6fc;--bw:#ffffff;--bd:#cce1f5;
+  --r1:8px;--r2:12px;--r3:18px;--r4:24px;
+  --s1:0 2px 8px rgba(1,118,211,.08);
+  --s2:0 8px 32px rgba(1,118,211,.12);
+  --s3:0 20px 60px rgba(1,118,211,.16);
+  --tr:.25s cubic-bezier(.4,0,.2,1);
+  --font:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);color:var(--t9);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.73rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sf);background:var(--sf-l);border:1px solid var(--bd);padding:5px 14px;border-radius:50px;margin-bottom:14px}
+.eyebrow i{font-size:.68rem}
+.stitle{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;line-height:1.2;color:var(--t9);margin-bottom:14px;letter-spacing:-.5px}
+.ssub{font-size:1rem;color:var(--t5);line-height:1.75;max-width:570px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--r1);font-weight:700;font-size:.93rem;transition:all var(--tr);border:2px solid transparent;white-space:nowrap}
+.btn-sf{background:var(--sf);color:#fff;border-color:var(--sf)}
+.btn-sf:hover{background:var(--sf-d);border-color:var(--sf-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(1,118,211,.35)}
+.btn-or{background:var(--acc);color:#fff;border-color:var(--acc)}
+.btn-or:hover{background:var(--acc-h);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,107,53,.35)}
+.btn-ghost{background:transparent;color:var(--sf);border-color:var(--sf)}
+.btn-ghost:hover{background:var(--sf-l)}
+.btn-wo{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-wo:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+/* =============================================
+   NAVBAR — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+============================================= */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:999;padding:12px 20px;transition:padding .35s ease}
+.nw{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--bd);border-radius:var(--r4);padding:0 28px;height:68px;box-shadow:var(--s1);transition:all .35s ease;gap:16px}
+.navbar.scrolled{padding:0}
+.navbar.scrolled .nw{border-radius:0;max-width:100%;padding:0 40px;border-top:none;border-left:none;border-right:none;border-bottom:1px solid var(--bd);box-shadow:0 4px 20px rgba(1,118,211,.1)}
+.nl img{height:48px;width:auto;display:block}
+.nlinks{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nlinks a{font-size:.88rem;font-weight:600;color:var(--t7);padding:8px 13px;border-radius:var(--r1);transition:all var(--tr);display:flex;align-items:center;gap:4px}
+.nlinks a:hover,.nlinks a.active{color:var(--sf);background:var(--sf-l)}
+.nactions{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:12px}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:1px solid var(--bd);border-radius:var(--r1);padding:7px;width:38px;height:38px;align-items:center;justify-content:center;cursor:pointer}
+.hbg span{display:block;width:18px;height:2px;background:var(--t7);border-radius:2px;transition:all var(--tr)}
+.mobnav{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,.45)}
+.mobnav.open{display:block}
+.mobpanel{position:absolute;right:0;top:0;bottom:0;width:280px;background:#fff;padding:80px 20px 32px;overflow-y:auto;display:flex;flex-direction:column;gap:3px;box-shadow:-20px 0 60px rgba(1,118,211,.15)}
+.mobpanel a{font-size:.95rem;font-weight:600;color:var(--t7);padding:11px 14px;border-radius:var(--r1);display:block;transition:all var(--tr)}
+.mobpanel a:hover{background:var(--sf-l);color:var(--sf)}
+/* END NAVBAR */
+
+/* =============================================
+   COMPACT HERO — same animated bg as other pages
+============================================= */
+.hero{min-height:33vh;background:linear-gradient(140deg,#001e42 0%,#003d82 35%,#0176d3 65%,#0ea8f0 100%);display:flex;align-items:center;padding:118px 0 44px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(14,168,240,.25) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 20% 70%,rgba(255,107,53,.12) 0%,transparent 60%);pointer-events:none}
+.hbg-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.15) 1.5px,transparent 1.5px);background-size:40px 40px;mask-image:radial-gradient(ellipse at 60% 50%,black 30%,transparent 80%)}
+.hblob{position:absolute;border-radius:50%;opacity:.12;mix-blend-mode:screen}
+.hblob.b1{width:600px;height:600px;background:radial-gradient(circle,#7dd3fc,transparent 70%);top:-260px;right:-180px;animation:blobmove 14s ease-in-out infinite}
+.hblob.b2{width:360px;height:360px;background:radial-gradient(circle,#ff6b35,transparent 70%);bottom:-180px;left:-80px;animation:blobmove 18s ease-in-out infinite reverse;opacity:.1}
+.hblob.b3{width:220px;height:220px;background:radial-gradient(circle,#38bdf8,transparent 70%);top:20%;left:42%;animation:blobmove 10s ease-in-out infinite;opacity:.15}
+@keyframes blobmove{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-20px) scale(1.05)}50%{transform:translate(-10px,30px) scale(.95)}75%{transform:translate(-30px,-10px) scale(1.03)}}
+.hgeo{position:absolute;pointer-events:none}
+.hgeo.g1{width:54px;height:54px;border:2px solid rgba(255,255,255,.12);border-radius:0;top:24%;right:18%;animation:geospin 20s linear infinite}
+.hgeo.g2{width:36px;height:36px;border:2px solid rgba(255,107,53,.2);border-radius:50%;bottom:24%;right:30%;animation:geospin 15s linear infinite reverse}
+.hgeo.g3{width:70px;height:2px;background:rgba(255,255,255,.1);top:60%;left:8%;animation:geospin 25s linear infinite;transform-origin:center}
+@keyframes geospin{0%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(180deg) translateY(-15px)}100%{transform:rotate(360deg) translateY(0)}}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.hbox{position:absolute;border-radius:0;pointer-events:none;z-index:1;will-change:transform;transition:transform .12s cubic-bezier(.25,.46,.45,.94)}
+.hbox.filled{background:rgba(93,93,94,.28);border:none}
+.hbox.outline{background:rgba(93,93,94,.08);border:2px solid rgba(93,93,94,.5)}
+.hbox.bx1{width:60px;height:60px;bottom:20%;right:12%;animation:boxfloat1 7s ease-in-out infinite}
+.hbox.bx2{width:38px;height:38px;bottom:8%;right:26%;animation:boxfloat2 9.5s ease-in-out infinite}
+.hbox.bx3{width:48px;height:48px;top:28%;right:5%;animation:boxfloat3 11s ease-in-out infinite}
+@keyframes boxfloat1{0%,100%{transform:translateY(0) rotate(12deg)}33%{transform:translateY(-14px) rotate(20deg)}66%{transform:translateY(8px) rotate(6deg)}}
+@keyframes boxfloat2{0%,100%{transform:translateY(0) rotate(-8deg)}40%{transform:translateY(10px) rotate(-18deg)}70%{transform:translateY(-8px) rotate(0deg)}}
+@keyframes boxfloat3{0%,100%{transform:translateY(0) rotate(16deg)}25%{transform:translateY(-10px) rotate(26deg)}75%{transform:translateY(12px) rotate(8deg)}}
+.hero-in{position:relative;z-index:1;text-align:center;width:100%}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 15px;border-radius:50px;margin-bottom:16px}
+.hbadge i{color:#7dd3fc}
+.hero h1{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:14px;letter-spacing:-.6px}
+.hlite{background:linear-gradient(100deg,#7dd3fc,#bae6fd);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdesc{font-size:1.02rem;color:rgba(255,255,255,.8);margin:0 auto;max-width:560px;line-height:1.75}
+.hbreadcrumb{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;font-size:.84rem;color:rgba(255,255,255,.6)}
+.hbreadcrumb a{color:rgba(255,255,255,.82);transition:color var(--tr)}
+.hbreadcrumb a:hover{color:#fff}
+.hbreadcrumb i{font-size:.6rem}
+
+/* =============================================
+   REVEAL ANIMATIONS
+============================================= */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity .6s ease,transform .6s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity .6s ease,transform .6s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* =============================================
+   STORY SECTION
+============================================= */
+.story{padding:90px 0;background:#fff}
+.story-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.story-left h2{font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:800;color:var(--t9);line-height:1.2;margin-bottom:18px;letter-spacing:-.4px}
+.story-left p{font-size:.97rem;color:var(--t5);line-height:1.85;margin-bottom:14px}
+.story-pills{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 32px}
+.story-pill{display:flex;align-items:center;gap:7px;font-size:.82rem;font-weight:700;color:var(--sf);background:var(--sf-l);border:1px solid var(--bd);padding:6px 14px;border-radius:50px}
+.story-pill i{font-size:.75rem}
+.story-img{border-radius:var(--r3);overflow:hidden;box-shadow:var(--s3);position:relative}
+.story-img img{width:100%;height:360px;object-fit:cover;display:block;transition:transform .6s ease}
+.story-img:hover img{transform:scale(1.03)}
+.story-img-badge{position:absolute;bottom:20px;left:20px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:var(--r2);padding:12px 18px;display:flex;align-items:center;gap:12px;box-shadow:var(--s2)}
+.story-img-badge .num{font-size:1.6rem;font-weight:800;color:var(--sf);line-height:1}
+.story-img-badge .lbl{font-size:.78rem;color:var(--t5);font-weight:600}
+
+/* =============================================
+   STATS BAND
+============================================= */
+.stats-band{background:linear-gradient(135deg,#001e42 0%,#003d82 50%,#0176d3 100%);padding:52px 0;position:relative;overflow:hidden}
+.stats-band::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:30px 30px}
+.stats-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:0;text-align:center}
+.stat-item{padding:20px 16px;border-right:1px solid rgba(255,255,255,.12)}
+.stat-item:last-child{border-right:none}
+.stat-item .num{font-size:2.6rem;font-weight:800;color:#fff;line-height:1;margin-bottom:6px}
+.stat-item .num span{color:#7dd3fc}
+.stat-item .lbl{font-size:.78rem;color:rgba(255,255,255,.7);font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+
+/* =============================================
+   MISSION / VISION
+============================================= */
+.mv-section{padding:90px 0;background:var(--bg)}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:52px}
+.mv-card{border-radius:var(--r3);padding:36px 32px;position:relative;overflow:hidden;transition:transform var(--tr),box-shadow var(--tr)}
+.mv-card:hover{transform:translateY(-5px);box-shadow:var(--s3)}
+.mv-card.mission{background:linear-gradient(135deg,#0176d3,#014486);color:#fff}
+.mv-card.vision{background:linear-gradient(135deg,#ff6b35,#c2410c);color:#fff}
+.mv-card::after{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.08);bottom:-60px;right:-40px;pointer-events:none}
+.mv-icon{width:56px;height:56px;background:rgba(255,255,255,.18);border-radius:var(--r2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px;position:relative;z-index:1}
+.mv-card h3{font-size:1.25rem;font-weight:800;margin-bottom:14px;position:relative;z-index:1}
+.mv-card p{font-size:.93rem;line-height:1.8;color:rgba(255,255,255,.88);position:relative;z-index:1}
+
+/* =============================================
+   VALUES
+============================================= */
+.values-section{padding:90px 0;background:#fff}
+.values-hdr{text-align:center;margin-bottom:52px}
+.values-hdr .ssub{margin:0 auto}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.val-card{background:var(--bg);border:1px solid var(--bd);border-radius:var(--r3);padding:30px 26px;transition:all var(--tr);position:relative;overflow:hidden}
+.val-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sf),#38bdf8);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.val-card:hover{transform:translateY(-6px);box-shadow:var(--s3);border-color:transparent;background:#fff}
+.val-card:hover::before{transform:scaleX(1)}
+.val-icon{width:50px;height:50px;background:var(--sf-l);border-radius:var(--r1);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--sf);margin-bottom:16px;transition:all var(--tr)}
+.val-card:hover .val-icon{background:var(--sf);color:#fff;transform:rotate(-6deg) scale(1.1)}
+.val-card h3{font-size:.97rem;font-weight:700;color:var(--t9);margin-bottom:8px}
+.val-card p{font-size:.87rem;color:var(--t5);line-height:1.7}
+
+/* =============================================
+   TEAM PHOTO + INDOOR PHOTO
+============================================= */
+
+
+/* =============================================
+   TECH STACK
+============================================= */
+.tech-section{padding:90px 0;background:var(--bg)}
+.tech-hdr{text-align:center;margin-bottom:52px}
+.tech-hdr .ssub{margin:0 auto}
+.tech-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.tech-block{background:#fff;border:1px solid var(--bd);border-radius:var(--r2);padding:26px}
+.tech-block h4{font-size:.82rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sf);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.tech-block h4 i{font-size:.85rem}
+.tech-tags{display:flex;flex-wrap:wrap;gap:8px}
+.tech-tag{font-size:.78rem;font-weight:600;color:var(--t7);background:var(--bg);border:1px solid var(--bd);padding:5px 12px;border-radius:50px;transition:all var(--tr)}
+.tech-tag:hover{background:var(--sf-l);border-color:var(--sf);color:var(--sf)}
+
+/* =============================================
+   CERTIFICATIONS
+============================================= */
+.certs-section{padding:90px 0;background:#fff}
+.certs-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.cert-list{display:flex;flex-direction:column;gap:14px}
+.cert-item{display:flex;align-items:center;gap:14px;background:var(--bg);border:1px solid var(--bd);border-radius:var(--r2);padding:16px 18px;transition:all var(--tr)}
+.cert-item:hover{border-color:var(--sf);box-shadow:var(--s1);transform:translateX(4px)}
+.cert-icon{width:38px;height:38px;background:linear-gradient(135deg,var(--sf),#38bdf8);border-radius:var(--r1);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem}
+.cert-item span{font-size:.88rem;font-weight:600;color:var(--t7)}
+
+/* =============================================
+   TEAM SECTION
+============================================= */
+.team-section{padding:90px 0;background:var(--bg)}
+.team-hdr{text-align:center;margin-bottom:52px}
+.team-hdr .ssub{margin:0 auto}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.team-card{background:#fff;border:1px solid var(--bd);border-radius:var(--r3);padding:24px 20px;text-align:center;transition:all var(--tr);position:relative;overflow:hidden}
+.team-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sf),#38bdf8);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.team-card:hover{transform:translateY(-6px);box-shadow:var(--s2);border-color:transparent}
+.team-card:hover::before{transform:scaleX(1)}
+.team-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--sf),#38bdf8);margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:800;color:#fff;transition:transform var(--tr)}
+.team-card:hover .team-avatar{transform:scale(1.08)}
+.team-card h3{font-size:.93rem;font-weight:700;color:var(--t9);margin-bottom:4px}
+.team-role{font-size:.78rem;font-weight:700;color:var(--sf);background:var(--sf-l);padding:3px 10px;border-radius:50px;display:inline-block;margin-bottom:8px}
+.team-exp{font-size:.75rem;color:var(--t4);font-weight:500}
+.team-skills{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;justify-content:center}
+.team-skill{font-size:.68rem;color:var(--t5);background:var(--bg);border:1px solid var(--bd);padding:2px 8px;border-radius:50px}
+
+/* =============================================
+   CTA
+============================================= */
+.cta-s{padding:90px 0;background:linear-gradient(150deg,#001e42 0%,#0176d3 55%,#0ea8f0 100%);position:relative;overflow:hidden;text-align:center}
+.cta-s::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:32px 32px}
+.cta-in{position:relative;z-index:1}
+.cta-s h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-.5px}
+.cta-s p{font-size:1.05rem;color:rgba(255,255,255,.8);max-width:540px;margin:0 auto 34px;line-height:1.75}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* =============================================
+   FOOTER — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+============================================= */
+.footer{background:#5d5d5e;color:rgba(255,255,255,.6);padding:40px 0 0}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.2);align-items:start}
+.fblogo-wrap{display:inline-block;background:#fff;border-radius:var(--r1);padding:8px 16px;margin-bottom:14px;line-height:0}
+.fblogo{height:32px;width:auto;display:block}
+.fb p{font-size:.83rem;line-height:1.7;max-width:250px;color:rgba(255,255,255,.75);margin-bottom:0}
+.fsc{display:flex;gap:8px;margin-top:14px}
+.fsc a{width:32px;height:32px;border-radius:var(--r1);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:.85rem;transition:all var(--tr)}
+.fsc a:hover{background:var(--sf);border-color:var(--sf);color:#fff;transform:translateY(-2px)}
+.fcol h5{font-size:.71rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px}
+.fcol ul li{margin-bottom:8px}
+.fcol ul li a{font-size:.82rem;color:rgba(255,255,255,.72);transition:color var(--tr);display:flex;align-items:center;gap:6px}
+.fcol ul li a i{font-size:.58rem;color:var(--sf);flex-shrink:0}
+.fcol ul li a:hover{color:var(--sf)}
+.fbot{padding:14px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fbot p{font-size:.78rem;color:rgba(255,255,255,.55)}
+.fbot a{color:rgba(255,255,255,.6);transition:color var(--tr)}
+.fbot a:hover{color:var(--sf)}
+/* END FOOTER */
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media(max-width:1024px){
+  .story-inner,.certs-inner{grid-template-columns:1fr;gap:40px}
+  .mv-grid,.photos-grid{grid-template-columns:1fr}
+  .tech-grid{grid-template-columns:repeat(2,1fr)}
+  .team-grid{grid-template-columns:repeat(3,1fr)}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:1fr 1fr;gap:24px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.12)}
+  .stat-item:nth-child(2n){border-right:none}
+}
+@media(max-width:680px){
+  .nlinks,.nactions .btn-sf,.nactions .btn-ghost{display:none}
+  .hbg{display:flex}
+  .values-grid,.tech-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:1fr}
+  .navbar.scrolled .nw{padding:0 16px}
+  .hero{padding:115px 0 55px;min-height:auto}
+  section{padding:64px 0}
+}
+@media(max-width:420px){
+  .team-grid{grid-template-columns:1fr}
+  .mv-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================================================
+     NAVBAR — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+================================================ -->
+<nav class="navbar" id="navbar">
+  <div class="nw">
+    <a href="index.html" class="nl" aria-label="TwinForce Home">
+      <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="150" height="48"/>
+    </a>
+    <ul class="nlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="career.html">Career</a></li>
+    </ul>
+    <div class="nactions">
+      <a href="project.html" class="btn btn-ghost" style="padding:9px 20px;font-size:.87rem">Projects</a>
+      <a href="contact.html" class="btn btn-sf" style="padding:9px 20px;font-size:.87rem">Get In Touch</a>
+      <button class="hbg" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobnav" id="mobnav">
+  <div class="mobpanel">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="project.html">Projects</a>
+    <a href="career.html">Career</a>
+    <a href="contact.html" style="color:var(--sf);margin-top:8px">Contact Us</a>
+  </div>
+</div>
+<!-- END NAVBAR -->
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hbg-wrap">
+    <div class="hdots"></div>
+    <div class="hblob b1"></div><div class="hblob b2"></div><div class="hblob b3"></div>
+    <div class="hgeo g1"></div><div class="hgeo g2"></div><div class="hgeo g3"></div>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hbox filled bx1"></div>
+    <div class="hbox outline bx2"></div>
+    <div class="hbox filled bx3"></div>
+  </div>
+  <div class="container hero-in">
+    <div class="hbadge"><i class="fa-solid fa-building"></i>About TwinForce</div>
+    <h1>Who We <span class="hlite">Are</span></h1>
+    <p class="hdesc">A certified Salesforce consulting partner founded in 2022, built by passionate experts and dedicated to delivering real results for businesses worldwide.</p>
+    <div class="hbreadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>About Us</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- STORY -->
+<section class="story">
+  <div class="container">
+    <div class="story-inner">
+      <div class="story-left reveal-left">
+        <div class="eyebrow"><i class="fa-solid fa-flag"></i>Our Story</div>
+        <h2>Built on Expertise, Driven by Results</h2>
+        <p>TwinForce Solutions Limited was founded in 2022 in Dhaka, Bangladesh, with a single focus: delivering high-quality, results-driven Salesforce solutions that help businesses reach their full CRM potential.</p>
+        <p>From our first project to a growing portfolio spanning the US, Australia, Canada, and Europe, we have stayed true to our promise of pairing deep technical expertise with a client-first mindset. Every solution we build is tailored, every delivery is on time, and every relationship is built to last.</p>
+        <div class="story-pills">
+          <div class="story-pill"><i class="fa-solid fa-circle-check"></i>Salesforce Consulting Partner</div>
+          <div class="story-pill"><i class="fa-solid fa-certificate"></i>Multiple Certified Developers</div>
+          <div class="story-pill"><i class="fa-solid fa-globe"></i>BASIS Member</div>
+          <div class="story-pill"><i class="fa-solid fa-earth-asia"></i>Japan IT Week 2025</div>
+        </div>
+        <a href="contact.html" class="btn btn-sf"><i class="fa-solid fa-envelope"></i>Work With Us</a>
+      </div>
+      <div class="reveal-right">
+        <div class="story-img">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780484829/company_pics_km15wr.png" alt="TwinForce office" loading="lazy"/>
+          <div class="story-img-badge">
+            <div><div class="num">2022</div><div class="lbl">Founded</div></div>
+            <div style="width:1px;height:36px;background:var(--bd);margin:0 4px"></div>
+            <div><div class="num" style="font-size:1.4rem">20+</div><div class="lbl">Team Members</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="num">4<span>+</span></div><div class="lbl">Years Experience</div></div>
+      <div class="stat-item"><div class="num">5<span>+</span></div><div class="lbl">Countries Served</div></div>
+      <div class="stat-item"><div class="num">12<span>+</span></div><div class="lbl">Projects Delivered</div></div>
+      <div class="stat-item"><div class="num">20<span>+</span></div><div class="lbl">Team Members</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- MISSION & VISION -->
+<section class="mv-section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:0" class="reveal">
+      <div class="eyebrow"><i class="fa-solid fa-compass"></i>Our Direction</div>
+      <h2 class="stitle">Mission &amp; Vision</h2>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-card mission reveal-left">
+        <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To deliver high-quality, results-driven Salesforce solutions that help our clients achieve their business objectives. Whether through development and customization, system integration, ongoing support, or training programs, we are committed to helping every client get the maximum value from their Salesforce investment.</p>
+      </div>
+      <div class="mv-card vision reveal-right">
+        <div class="mv-icon"><i class="fa-solid fa-binoculars"></i></div>
+        <h3>Our Vision</h3>
+        <p>To become a globally trusted partner in Salesforce innovation, empowering organizations of all sizes with scalable, intelligent, and future-ready CRM solutions. By continuously evolving with emerging technologies and nurturing client success, we envision a world where digital transformation is seamless and impactful for every business we serve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="container">
+    <div class="values-hdr reveal">
+      <div class="eyebrow"><i class="fa-solid fa-star"></i>Our Core Values</div>
+      <h2 class="stitle">What We Stand For</h2>
+      <p class="ssub">The principles that guide every project, every relationship, and every line of code we write.</p>
+    </div>
+    <div class="values-grid">
+      <div class="val-card reveal">
+        <h3>Innovation</h3><p>We constantly push the boundaries of what Salesforce can do, exploring new solutions and staying ahead of the platform's evolution to bring our clients a genuine competitive edge.</p></div>
+      <div class="val-card reveal">
+        <h3>Client-Centric Approach</h3><p>Your success is our priority. We take time to understand each client's unique challenges and objectives, building tailored solutions that deliver measurable ROI, not just technical outputs.</p></div>
+      <div class="val-card reveal">
+        <h3>Quality Assurance</h3><p>Rigorous QA standards at every development stage ensure our solutions are thoroughly tested, production-ready, and delivered with zero compromise on quality.</p></div>
+      <div class="val-card reveal">
+        <h3>Collaboration</h3><p>Great solutions are built together. We work closely with clients and within our team to share knowledge, align goals, and deliver outcomes that exceed expectations.</p></div>
+      <div class="val-card reveal">
+        <h3>Integrity</h3><p>We uphold transparency and trust in everything we do, from honest project scoping to open communication throughout delivery, building long-term relationships on solid ground.</p></div>
+      <div class="val-card reveal">
+        <h3>On-Time Delivery</h3><p>Solutions only create value when they are live. Our agile workflows and experienced team ensure every project ships on schedule without ever sacrificing quality.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TECH STACK -->
+<section class="tech-section">
+  <div class="container">
+    <div class="tech-hdr reveal">
+      <div class="eyebrow"><i class="fa-solid fa-code"></i>Technologies</div>
+      <h2 class="stitle">Our Technology Stack</h2>
+      <p class="ssub">We work across the full Salesforce ecosystem and surrounding toolchain to deliver complete, integrated solutions.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-block reveal">
+        <h4><i class="fa-solid fa-cloud"></i>Salesforce Ecosystem</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Sales Cloud</span><span class="tech-tag">Service Cloud</span>
+          <span class="tech-tag">Experience Cloud</span><span class="tech-tag">Marketing Cloud</span>
+          <span class="tech-tag">Field Service Lightning</span><span class="tech-tag">Nonprofit Cloud</span>
+          <span class="tech-tag">Salesforce CPQ</span><span class="tech-tag">MuleSoft</span>
+          <span class="tech-tag">Pardot</span>
+        </div>
+      </div>
+      <div class="tech-block reveal">
+        <h4><i class="fa-solid fa-code"></i>Development Frameworks</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Apex</span><span class="tech-tag">Lightning Web Components</span>
+          <span class="tech-tag">Visualforce</span><span class="tech-tag">JavaScript</span>
+          <span class="tech-tag">REST/SOAP APIs</span><span class="tech-tag">MuleSoft Anypoint</span>
+          <span class="tech-tag">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="tech-block reveal">
+        <h4><i class="fa-solid fa-wrench"></i>DevOps &amp; Tools</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Git / GitHub / Bitbucket</span>
+          <span class="tech-tag">Jira / Confluence</span>
+          <span class="tech-tag">VS Code</span>
+          <span class="tech-tag">Salesforce CLI</span>
+          <span class="tech-tag">Salesforce Flow</span>
+          <span class="tech-tag">Process Builder</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CERTIFICATIONS -->
+<section class="certs-section">
+  <div class="container">
+    <div class="certs-inner">
+      <div class="reveal-left">
+        <div class="eyebrow"><i class="fa-solid fa-certificate"></i>Certifications</div>
+        <h2 class="stitle">Certified Across the Salesforce Platform</h2>
+        <p class="ssub" style="margin-bottom:28px">Our team holds certifications spanning the full Salesforce ecosystem, backed by years of hands-on delivery experience.</p>
+        <a href="contact.html" class="btn btn-sf"><i class="fa-solid fa-envelope"></i>Talk to a Certified Expert</a>
+      </div>
+      <div class="cert-list reveal-right">
+        <div class="cert-item"><div class="cert-icon"><i class="fa-solid fa-code"></i></div><span>Salesforce Certified Platform Developer I &amp; II</span></div>
+        <div class="cert-item"><div class="cert-icon"><i class="fa-solid fa-gear"></i></div><span>Salesforce Certified Administrator</span></div>
+        <div class="cert-item"><div class="cert-icon"><i class="fa-solid fa-star"></i></div><span>Salesforce Certified Advanced Administrator</span></div>
+        <div class="cert-item"><div class="cert-icon"><i class="fa-solid fa-chart-line"></i></div><span>Salesforce Certified Sales Cloud Consultant</span></div>
+        <div class="cert-item"><div class="cert-icon"><i class="fa-solid fa-headset"></i></div><span>Salesforce Certified Service Cloud Consultant</span></div>
+        <div class="cert-item"><div class="cert-icon"><i class="fa-solid fa-truck"></i></div><span>Salesforce Certified Field Service Consultant</span></div>
+        <div class="cert-item"><div class="cert-icon"><i class="fa-solid fa-plug"></i></div><span>MuleSoft Certified Developer</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- TEAM -->
+<section class="team-section" id="team">
+  <div class="container">
+    <div class="team-hdr reveal">
+      <div class="eyebrow"><i class="fa-solid fa-users"></i>Our People</div>
+      <h2 class="stitle">Meet the Team</h2>
+      <p class="ssub">Certified Salesforce professionals dedicated to delivering exceptional solutions for every client we serve.</p>
+    </div>
+      <!-- Group photo at top of team section -->
+      <div class="team-group-photo reveal" style="border-radius:var(--r3);overflow:hidden;box-shadow:var(--s3);margin-bottom:52px;line-height:0;position:relative">
+        <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780484829/company_pics_1_jpmsst.png" alt="TwinForce team group photo" loading="lazy" style="width:100%;height:380px;object-fit:cover;display:block"/>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:20px 28px;background:linear-gradient(to top,rgba(10,22,40,.75),transparent);color:#fff;display:flex;align-items:flex-end;justify-content:space-between">
+          <div>
+            <div style="font-size:1rem;font-weight:700;margin-bottom:2px">The TwinForce Team</div>
+            <div style="font-size:.82rem;color:rgba(255,255,255,.75)">20+ certified Salesforce professionals, Dhaka, Bangladesh</div>
+          </div>
+          <div style="display:flex;gap:16px;text-align:center">
+            <div><div style="font-size:1.5rem;font-weight:800;color:#7dd3fc">20+</div><div style="font-size:.72rem;color:rgba(255,255,255,.7)">Team Members</div></div>
+            <div><div style="font-size:1.5rem;font-weight:800;color:#7dd3fc">6+</div><div style="font-size:.72rem;color:rgba(255,255,255,.7)">Certifications</div></div>
+          </div>
+        </div>
+      </div>
+    <div class="team-grid">
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#0176d3,#014486)">SI</div>
+        <h3>Saiful Islam</h3>
+        <span class="team-role">Managing Director</span><br/>
+        <span class="team-exp">12+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Sales Cloud</span><span class="team-skill">Service Cloud</span><span class="team-skill">Field Service</span><span class="team-skill">MuleSoft</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#0ea8f0,#0176d3)">ST</div>
+        <h3>Md. Sarwar Alam Tushar</h3>
+        <span class="team-role">Sr. Salesforce Developer</span><br/>
+        <span class="team-exp">7+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">NPSP</span><span class="team-skill">Marketing Cloud</span><span class="team-skill">Apex</span><span class="team-skill">LWC</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">AT</div>
+        <h3>Ahnaf Tawzar</h3>
+        <span class="team-role">Sr. Salesforce Developer</span><br/>
+        <span class="team-exp">7+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Apex</span><span class="team-skill">LWC</span><span class="team-skill">NPSP</span><span class="team-skill">Enterprise</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#10b981,#047857)">PP</div>
+        <h3>Partho Pratim Saha</h3>
+        <span class="team-role">Sr. Salesforce Developer</span><br/>
+        <span class="team-exp">5+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Apex</span><span class="team-skill">Visualforce</span><span class="team-skill">Flow</span><span class="team-skill">NPSP</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">AS</div>
+        <h3>Ahnaf Sayed</h3>
+        <span class="team-role">Sr. Salesforce Developer</span><br/>
+        <span class="team-exp">5+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Apex</span><span class="team-skill">LWC</span><span class="team-skill">Marketing Cloud</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#ef4444,#b91c1c)">SS</div>
+        <h3>Sanaullah Sani</h3>
+        <span class="team-role">Sr. Salesforce Developer</span><br/>
+        <span class="team-exp">5+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Sales Cloud</span><span class="team-skill">Service Cloud</span><span class="team-skill">MuleSoft</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#ec4899,#be185d)">MN</div>
+        <h3>Mosammat Nilufa</h3>
+        <span class="team-role">Salesforce Developer</span><br/>
+        <span class="team-exp">2+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Apex</span><span class="team-skill">LWC</span><span class="team-skill">MuleSoft</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#0176d3,#0ea8f0)">MH</div>
+        <h3>Mahmudul Hasan</h3>
+        <span class="team-role">Salesforce Developer</span><br/>
+        <span class="team-exp">3+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Apex</span><span class="team-skill">Flow</span><span class="team-skill">Automation</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#6366f1,#4338ca)">AH</div>
+        <h3>Asiful Haque</h3>
+        <span class="team-role">Software Engineer</span><br/>
+        <span class="team-exp">2+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Node.js</span><span class="team-skill">Next.js</span><span class="team-skill">AI Automation</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#14b8a6,#0f766e)">HC</div>
+        <h3>Himel Chandra Das</h3>
+        <span class="team-role">Salesforce Developer</span><br/>
+        <span class="team-exp">2+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Apex</span><span class="team-skill">Experience Cloud</span><span class="team-skill">Python</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#f97316,#c2410c)">TS</div>
+        <h3>Tanvir Hossen Shishir</h3>
+        <span class="team-role">Salesforce Developer</span><br/>
+        <span class="team-exp">2+ Years Experience</span>
+        <div class="team-skills"><span class="team-skill">Apex</span><span class="team-skill">NPSP</span><span class="team-skill">Stripe</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)">AR</div>
+        <h3>Ayesha Rahman</h3>
+        <span class="team-role">Jr. Salesforce Developer</span><br/>
+        <span class="team-exp">1 Year Experience</span>
+        <div class="team-skills"><span class="team-skill">Page Layouts</span><span class="team-skill">Record Types</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8)">IA</div>
+        <h3>Ishan Ahmad</h3>
+        <span class="team-role">Jr. Salesforce Developer</span><br/>
+        <span class="team-exp">1 Year Experience</span>
+        <div class="team-skills"><span class="team-skill">Process Builder</span><span class="team-skill">Flows</span><span class="team-skill">Change Sets</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)">IH</div>
+        <h3>Ishtiaq Hossen</h3>
+        <span class="team-role">Jr. Salesforce Developer</span><br/>
+        <span class="team-exp">1 Year Experience</span>
+        <div class="team-skills"><span class="team-skill">Apex Triggers</span><span class="team-skill">LWC</span><span class="team-skill">App Builder</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#f59e0b,#b45309)">TA</div>
+        <h3>Toukir Ahmed</h3>
+        <span class="team-role">Business Development</span><br/>
+        <span class="team-exp">1 Year Experience</span>
+        <div class="team-skills"><span class="team-skill">Biz Development</span><span class="team-skill">B2B Sales</span><span class="team-skill">Data Analysis</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#10b981,#065f46)">SH</div>
+        <h3>Samrat Mahmud Hasan Shuvo</h3>
+        <span class="team-role">Jr. Salesforce Developer</span><br/>
+        <span class="team-exp">1 Year Experience</span>
+        <div class="team-skills"><span class="team-skill">Tableau</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#ec4899,#9d174d)">AS</div>
+        <h3>Aysha Akter Sumi</h3>
+        <span class="team-role">Jr. Salesforce Developer</span><br/>
+        <span class="team-exp">1 Year Experience</span>
+        <div class="team-skills"><span class="team-skill">React.js</span><span class="team-skill">Node.js</span><span class="team-skill">Full-Stack</span></div>
+      </div>
+
+      <div class="team-card reveal">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#64748b,#334155)">NP</div>
+        <h3>Md Nayeem Hossain Plabon</h3>
+        <span class="team-role">HR &amp; Admin</span><br/>
+        <span class="team-exp">1 Year Experience</span>
+        <div class="team-skills"><span class="team-skill">Human Resources</span><span class="team-skill">Operations</span></div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-s">
+  <div class="cta-in container reveal">
+    <h2>Ready to Build Something Great?</h2>
+    <p>Let's talk about your Salesforce goals and how TwinForce can help you achieve them with a tailored, certified approach.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-or"><i class="fa-solid fa-envelope"></i>Get In Touch</a>
+      <a href="project.html" class="btn btn-wo"><i class="fa-solid fa-briefcase"></i>View Our Projects</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FOOTER — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="fg">
+      <div class="fb">
+        <div class="fblogo-wrap">
+          <img class="fblogo" src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="130" height="32" style="height:32px;width:auto;display:block"/>
+        </div>
+        <p>Helping businesses unlock their Salesforce potential with customized, results-driven solutions.</p>
+        <div class="fsc">
+          <a href="https://www.facebook.com/twinforcesolutions" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@TwinforceTutorials" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://bd.linkedin.com/company/twinforce-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h5>Useful Links</h5>
+        <ul>
+          <li><a href="project.html"><i class="fa-solid fa-chevron-right"></i>Projects</a></li>
+          <li><a href="career.html"><i class="fa-solid fa-chevron-right"></i>Career</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html"><i class="fa-solid fa-chevron-right"></i>Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Support &amp; Help</h5>
+        <ul>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact Us</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>&copy; 2025 TwinForce Solutions Limited. All rights reserved.</p>
+      <p>Mirpur-12, Pallabi, Dhaka &nbsp;&middot;&nbsp; <a href="https://twinforce.net">twinforce.net</a></p>
+    </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<script>
+/* ── Navbar scroll ── */
+const nb=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+/* ── Mobile nav ── */
+const hbg=document.getElementById('hamburger'),mn=document.getElementById('mobnav');
+hbg.addEventListener('click',()=>mn.classList.toggle('open'));
+mn.addEventListener('click',e=>{if(e.target===mn)mn.classList.remove('open')});
+
+/* ── Scroll reveal ── */
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>{
+  new IntersectionObserver(([e])=>{
+    if(e.isIntersecting){e.target.classList.add('visible');}
+  },{threshold:.1,rootMargin:'0px 0px -40px 0px'}).observe(el);
+});
+
+/* ── Hero particle canvas ── */
+/* ── FIX 3+4: Interactive canvas particle network ── */
+(function(){
+  const canvas=document.getElementById('heroCanvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  let W,H,pts=[],mouse={x:-9999,y:-9999},raf;
+  function resize(){W=canvas.width=canvas.offsetWidth;H=canvas.height=canvas.offsetHeight;}
+  resize();
+  new ResizeObserver(resize).observe(canvas.parentElement);
+  const count=window.innerWidth<680?40:65;
+  for(let i=0;i<count;i++){pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*1.8+.8,pulse:Math.random()*Math.PI*2});}
+  window.addEventListener('mousemove',e=>{const rect=canvas.getBoundingClientRect();mouse.x=e.clientX-rect.left;mouse.y=e.clientY-rect.top;},{passive:true});
+  canvas.addEventListener('touchmove',e=>{const rect=canvas.getBoundingClientRect();mouse.x=e.touches[0].clientX-rect.left;mouse.y=e.touches[0].clientY-rect.top;},{passive:true});
+  let frame=0;
+  function draw(){
+    raf=requestAnimationFrame(draw);ctx.clearRect(0,0,W,H);frame++;
+    for(let i=0;i<pts.length;i++){
+      const p=pts[i];p.pulse+=.02;
+      const dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<90&&d>0){p.x+=dx/d*.9;p.y+=dy/d*.9;}
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      for(let j=i+1;j<pts.length;j++){const dx2=p.x-pts[j].x,dy2=p.y-pts[j].y,d2=Math.sqrt(dx2*dx2+dy2*dy2);if(d2<130){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(pts[j].x,pts[j].y);ctx.strokeStyle='rgba(125,211,252,'+(1-d2/130)*.2+')';ctx.lineWidth=.7;ctx.stroke();}}
+      const r=p.r+(Math.sin(p.pulse)*.4);ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);ctx.fillStyle='rgba(255,255,255,.5)';ctx.fill();
+    }
+  }
+  draw();
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else draw();});
+})();
+
+/* ── Gray boxes mouse parallax ── */
+(function(){
+  const boxes=document.querySelectorAll('.hbox');
+  if(!boxes.length)return;
+  const hero=document.querySelector('.hero');
+  if(!hero)return;
+  const cfg=[{depth:22,rot:12},{depth:34,rot:-8},{depth:16,rot:16}];
+  window.addEventListener('mousemove',e=>{
+    const r=hero.getBoundingClientRect();
+    if(e.clientY<r.top||e.clientY>r.bottom)return;
+    const cx=r.left+r.width/2,cy=r.top+r.height/2;
+    const dx=(e.clientX-cx)/(r.width/2),dy=(e.clientY-cy)/(r.height/2);
+    boxes.forEach((box,i)=>{const{depth,rot}=cfg[i];box.style.transform=`translate(${dx*depth}px,${dy*depth}px) rotate(${rot+dx*6}deg)`;});
+  },{passive:true});
+  hero.addEventListener('mouseleave',()=>{const rots=[12,-8,16];boxes.forEach((box,i)=>{box.style.transform=`rotate(${rots[i]}deg)`;});});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Explore TwinForce Solutions Limited's portfolio of Salesforce projects delivered for clients across the US, Australia, Europe, Canada and beyond."/>
+<title>Projects | TwinForce Solutions Limited</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{
+  --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
+  --acc:#ff6b35;--acc-h:#e55a26;
+  --t9:#0a1628;--t7:#1e3a5f;--t5:#4a6080;--t4:#8099b3;
+  --bg:#f0f6fc;--bw:#ffffff;--bd:#cce1f5;
+  --r1:8px;--r2:12px;--r3:18px;--r4:24px;
+  --s1:0 2px 8px rgba(1,118,211,.08);
+  --s2:0 8px 32px rgba(1,118,211,.12);
+  --s3:0 20px 60px rgba(1,118,211,.16);
+  --tr:.25s cubic-bezier(.4,0,.2,1);
+  --font:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--font);color:var(--t9);background:var(--bg);line-height:1.6;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.73rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sf);background:var(--sf-l);border:1px solid var(--bd);padding:5px 14px;border-radius:50px;margin-bottom:14px}
+.eyebrow i{font-size:.68rem}
+.stitle{font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;line-height:1.2;color:var(--t9);margin-bottom:14px;letter-spacing:-.5px}
+.ssub{font-size:1rem;color:var(--t5);line-height:1.75;max-width:570px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:var(--r1);font-weight:700;font-size:.93rem;transition:all var(--tr);border:2px solid transparent;white-space:nowrap}
+.btn-sf{background:var(--sf);color:#fff;border-color:var(--sf)}
+.btn-sf:hover{background:var(--sf-d);border-color:var(--sf-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(1,118,211,.35)}
+.btn-or{background:var(--acc);color:#fff;border-color:var(--acc)}
+.btn-or:hover{background:var(--acc-h);border-color:var(--acc-h);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,107,53,.35)}
+.btn-ghost{background:transparent;color:var(--sf);border-color:var(--sf)}
+.btn-ghost:hover{background:var(--sf-l)}
+.btn-wo{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-wo:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+/* =============================================
+   NAVBAR — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+============================================= */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:999;padding:12px 20px;transition:padding .35s ease}
+.nw{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  background:#fff;
+  border:1px solid var(--bd);border-radius:var(--r4);
+  padding:0 28px;height:68px;
+  box-shadow:var(--s1);
+  transition:all .35s ease;
+  gap:16px;
+}
+.navbar.scrolled{padding:0}
+.navbar.scrolled .nw{
+  border-radius:0;max-width:100%;padding:0 40px;
+  border-top:none;border-left:none;border-right:none;
+  border-bottom:1px solid var(--bd);
+  box-shadow:0 4px 20px rgba(1,118,211,.1);
+}
+/* FIX 1: Bigger logo */
+.nl img{height:48px;width:auto;display:block}
+/* FIX 2: Nav links pushed to the right, between logo and button */
+.nlinks{display:flex;align-items:center;gap:2px;margin-left:auto}
+.nlinks a,.ndrop-btn{font-size:.88rem;font-weight:600;color:var(--t7);padding:8px 13px;border-radius:var(--r1);transition:all var(--tr);background:none;border:none;display:flex;align-items:center;gap:4px;cursor:pointer}
+.nlinks a:hover,.ndrop-btn:hover,.nlinks a.active{color:var(--sf);background:var(--sf-l)}
+.ndrop-btn i{font-size:.58rem;transition:transform var(--tr)}
+.ndrop:hover .ndrop-btn i{transform:rotate(180deg)}
+.ndrop{position:relative}
+.nactions{display:flex;align-items:center;gap:10px;flex-shrink:0;margin-left:12px}
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:1px solid var(--bd);border-radius:var(--r1);padding:7px;width:38px;height:38px;align-items:center;justify-content:center;cursor:pointer}
+.hbg span{display:block;width:18px;height:2px;background:var(--t7);border-radius:2px;transition:all var(--tr)}
+.mobnav{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,.45)}
+.mobnav.open{display:block}
+.mobpanel{position:absolute;right:0;top:0;bottom:0;width:280px;background:#fff;padding:80px 20px 32px;overflow-y:auto;display:flex;flex-direction:column;gap:3px;box-shadow:-20px 0 60px rgba(1,118,211,.15)}
+.mobpanel a{font-size:.95rem;font-weight:600;color:var(--t7);padding:11px 14px;border-radius:var(--r1);display:block;transition:all var(--tr)}
+.mobpanel a:hover{background:var(--sf-l);color:var(--sf)}
+.mobsec{font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--t4);padding:16px 14px 6px;display:block}
+/* END NAVBAR */
+
+/* =============================================
+   COMPACT HERO — 1/3 height, reactive background
+   KEEP THIS BLOCK IDENTICAL ON ALL SUBPAGES
+============================================= */
+.hero{
+  min-height:33vh;
+  background:linear-gradient(140deg,#001e42 0%,#003d82 35%,#0176d3 65%,#0ea8f0 100%);
+  display:flex;align-items:center;
+  padding:118px 0 44px;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 70% 40%,rgba(14,168,240,.25) 0%,transparent 70%),
+             radial-gradient(ellipse 50% 50% at 20% 70%,rgba(255,107,53,.12) 0%,transparent 60%);
+  pointer-events:none;
+}
+.hbg-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.15) 1.5px,transparent 1.5px);background-size:40px 40px;mask-image:radial-gradient(ellipse at 60% 50%,black 30%,transparent 80%)}
+.hblob{position:absolute;border-radius:50%;opacity:.12;mix-blend-mode:screen}
+.hblob.b1{width:600px;height:600px;background:radial-gradient(circle,#7dd3fc,transparent 70%);top:-260px;right:-180px;animation:blobmove 14s ease-in-out infinite}
+.hblob.b2{width:360px;height:360px;background:radial-gradient(circle,#ff6b35,transparent 70%);bottom:-180px;left:-80px;animation:blobmove 18s ease-in-out infinite reverse;opacity:.1}
+.hblob.b3{width:220px;height:220px;background:radial-gradient(circle,#38bdf8,transparent 70%);top:20%;left:42%;animation:blobmove 10s ease-in-out infinite;opacity:.15}
+@keyframes blobmove{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-20px) scale(1.05)}50%{transform:translate(-10px,30px) scale(.95)}75%{transform:translate(-30px,-10px) scale(1.03)}}
+.hgeo{position:absolute;pointer-events:none}
+.hgeo.g1{width:54px;height:54px;border:2px solid rgba(255,255,255,.12);border-radius:0;top:24%;right:18%;animation:geospin 20s linear infinite}
+.hgeo.g2{width:36px;height:36px;border:2px solid rgba(255,107,53,.2);border-radius:50%;bottom:24%;right:30%;animation:geospin 15s linear infinite reverse}
+.hgeo.g3{width:70px;height:2px;background:rgba(255,255,255,.1);top:60%;left:8%;animation:geospin 25s linear infinite;transform-origin:center}
+@keyframes geospin{0%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(180deg) translateY(-15px)}100%{transform:rotate(360deg) translateY(0)}}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+/* Centered single-column content */
+.hero-in{position:relative;z-index:1;text-align:center;width:100%}
+.hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 15px;border-radius:50px;margin-bottom:16px}
+.hbadge i{color:#7dd3fc}
+.hero h1{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:14px;letter-spacing:-.6px}
+.hlite{background:linear-gradient(100deg,#7dd3fc 0%,#bae6fd 50%,#e0f2fe 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdesc{font-size:1.02rem;color:rgba(255,255,255,.8);margin:0 auto;max-width:560px;line-height:1.75}
+.hbreadcrumb{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;font-size:.84rem;color:rgba(255,255,255,.6)}
+.hbreadcrumb a{color:rgba(255,255,255,.82);transition:color var(--tr)}
+.hbreadcrumb a:hover{color:#fff}
+.hbreadcrumb i{font-size:.6rem}
+
+
+/* Gray logo-color floating boxes — square like logo, no border-radius */
+.hbox{
+  position:absolute;
+  border-radius:0;
+  pointer-events:none;
+  z-index:1;
+  will-change:transform;
+  transition:transform .12s cubic-bezier(.25,.46,.45,.94);
+}
+.hbox.filled{background:rgba(93,93,94,.28);border:none;}
+.hbox.outline{background:rgba(93,93,94,.08);border:2px solid rgba(93,93,94,.5);}
+.hbox.bx1{width:60px;height:60px;bottom:20%;right:12%;animation:boxfloat1 7s ease-in-out infinite}
+.hbox.bx2{width:38px;height:38px;bottom:8%;right:26%;animation:boxfloat2 9.5s ease-in-out infinite}
+.hbox.bx3{width:48px;height:48px;top:28%;right:5%;animation:boxfloat3 11s ease-in-out infinite}
+@keyframes boxfloat1{
+  0%,100%{transform:translateY(0) rotate(12deg)}
+  33%{transform:translateY(-14px) rotate(20deg)}
+  66%{transform:translateY(8px) rotate(6deg)}
+}
+@keyframes boxfloat2{
+  0%,100%{transform:translateY(0) rotate(-8deg)}
+  40%{transform:translateY(10px) rotate(-18deg)}
+  70%{transform:translateY(-8px) rotate(0deg)}
+}
+@keyframes boxfloat3{
+  0%,100%{transform:translateY(0) rotate(16deg)}
+  25%{transform:translateY(-10px) rotate(26deg)}
+  75%{transform:translateY(12px) rotate(8deg)}
+}
+
+/* =============================================
+   STATS STRIP
+============================================= */
+.pstats{background:#fff;border-bottom:1px solid var(--bd);padding:36px 0}
+.pstats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.pstat .num{font-size:2.2rem;font-weight:800;color:var(--sf);line-height:1;margin-bottom:5px}
+.pstat .lbl{font-size:.78rem;font-weight:600;color:var(--t5);text-transform:uppercase;letter-spacing:.5px}
+
+/* =============================================
+   FILTER BAR
+============================================= */
+.proj-main{padding:80px 0;background:var(--bg)}
+.filter-bar{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:48px}
+.filter-btn{font-size:.84rem;font-weight:700;color:var(--t5);background:#fff;border:1px solid var(--bd);padding:9px 20px;border-radius:50px;transition:all var(--tr);cursor:pointer}
+.filter-btn:hover{border-color:var(--sf);color:var(--sf)}
+.filter-btn.active{background:var(--sf);color:#fff;border-color:var(--sf)}
+
+/* =============================================
+   PROJECT CARDS
+============================================= */
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pcard{background:#fff;border:1px solid var(--bd);border-radius:var(--r3);overflow:hidden;transition:all var(--tr);display:flex;flex-direction:column;position:relative}
+.pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sf),#38bdf8);transform:scaleX(0);transform-origin:left;transition:transform .4s ease;z-index:2}
+.pcard:hover{transform:translateY(-7px);box-shadow:var(--s3);border-color:transparent}
+.pcard:hover::before{transform:scaleX(1)}
+/* Logo zone */
+.pcard-logo{height:150px;background:var(--logo-bg,#f0f6fc);display:flex;align-items:center;justify-content:center;border-bottom:2px solid var(--logo-acc,var(--bd));padding:20px 24px;position:relative;overflow:hidden;transition:background var(--tr)}
+.pcard-logo img{max-height:112px;max-width:90%;width:auto;height:auto;object-fit:contain;position:relative;z-index:1;transition:transform var(--tr);display:block}
+.pcard:hover .pcard-logo img{transform:scale(1.07)}
+/* Card accent top-bar uses logo color */
+.pcard::before{background:linear-gradient(90deg,var(--logo-acc,var(--sf)),color-mix(in srgb,var(--logo-acc,var(--sf)) 60%,#38bdf8))}
+/* Tag uses logo accent color */
+.pcard .ptag{color:var(--logo-acc,var(--sf));background:var(--logo-bg,var(--sf-l))}
+/* Fallback icon logo */
+.pcard-logo.icon-logo{background:linear-gradient(135deg,var(--sf),var(--sf-d))}
+.pcard-logo.icon-logo .fallback{display:flex;flex-direction:column;align-items:center;gap:7px;position:relative;z-index:1}
+.pcard-logo.icon-logo .fallback i{font-size:1.9rem;color:#fff}
+.pcard-logo.icon-logo .fallback span{font-size:.95rem;font-weight:800;color:#fff}
+/* Card body */
+.pcard-body{padding:22px;display:flex;flex-direction:column;gap:11px;flex:1}
+.pcard-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.ptag{font-size:.68rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--sf);background:var(--sf-l);padding:4px 11px;border-radius:50px}
+.pcard-region{font-size:.74rem;color:var(--t4);font-weight:600;display:flex;align-items:center;gap:4px}
+.pcard-region i{font-size:.68rem;color:var(--acc)}
+.pcard h3{font-size:1rem;font-weight:700;color:var(--t9);line-height:1.3}
+.pcard p{font-size:.85rem;color:var(--t5);line-height:1.7;flex:1}
+.pcard-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.pchip{font-size:.69rem;font-weight:700;color:var(--t7);background:var(--bg);border:1px solid var(--bd);padding:3px 9px;border-radius:50px}
+
+/* =============================================
+   CLIENTS LOGO BAND
+============================================= */
+.logo-band{background:#fff;padding:72px 0;border-top:1px solid var(--bd)}
+.logo-band-hdr{text-align:center;margin-bottom:44px}
+.logo-band-hdr .ssub{margin:0 auto}
+.logo-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.logo-cell{background:#fff;border:1px solid var(--bd);border-radius:var(--r2);height:90px;display:flex;align-items:center;justify-content:center;padding:12px 16px;transition:all var(--tr)}
+.logo-cell:hover{border-color:var(--sf-m);box-shadow:var(--s1);transform:translateY(-3px)}
+.logo-cell img{max-height:54px;max-width:80%;width:auto;height:auto;object-fit:contain;transition:transform var(--tr)}
+.logo-cell:hover img{transform:scale(1.07)}
+
+/* =============================================
+   CTA
+============================================= */
+.cta-s{padding:90px 0;background:linear-gradient(150deg,#001e42 0%,#0176d3 55%,#0ea8f0 100%);position:relative;overflow:hidden;text-align:center}
+.cta-s::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:32px 32px}
+.cta-in{position:relative;z-index:1}
+.cta-s h2{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;margin-bottom:14px;letter-spacing:-.5px}
+.cta-s p{font-size:1.05rem;color:rgba(255,255,255,.8);max-width:540px;margin:0 auto 34px;line-height:1.75}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+/* =============================================
+   SCROLL REVEAL
+============================================= */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-24px);transition:opacity .6s ease,transform .6s ease}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+
+/* =============================================
+   FOOTER — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+============================================= */
+.footer{background:#5d5d5e;color:rgba(255,255,255,.6);padding:40px 0 0}
+.fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.2);align-items:start}
+.fblogo-wrap{display:inline-block;background:#fff;border-radius:var(--r1);padding:8px 16px;margin-bottom:14px;line-height:0}
+.fblogo{height:32px;width:auto;display:block}
+.fb p{font-size:.83rem;line-height:1.7;max-width:250px;color:rgba(255,255,255,.75);margin-bottom:0}
+.fsc{display:flex;gap:8px;margin-top:14px}
+.fsc a{width:32px;height:32px;border-radius:var(--r1);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:.85rem;transition:all var(--tr)}
+.fsc a:hover{background:var(--sf);border-color:var(--sf);color:#fff;transform:translateY(-2px)}
+.fcol h5{font-size:.71rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px}
+.fcol ul li{margin-bottom:8px}
+.fcol ul li a{font-size:.82rem;color:rgba(255,255,255,.72);transition:color var(--tr);display:flex;align-items:center;gap:6px}
+.fcol ul li a i{font-size:.58rem;color:var(--sf);flex-shrink:0}
+.fcol ul li a:hover{color:var(--sf)}
+.fbot{padding:14px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.fbot p{font-size:.78rem;color:rgba(255,255,255,.55)}
+.fbot a{color:rgba(255,255,255,.6);transition:color var(--tr)}
+.fbot a:hover{color:var(--sf)}
+/* END FOOTER */
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media(max-width:1024px){
+  .proj-grid{grid-template-columns:repeat(2,1fr)}
+  .logo-grid{grid-template-columns:repeat(3,1fr)}
+  .fg{grid-template-columns:1fr 1fr;gap:24px}
+  .pstats-grid{grid-template-columns:repeat(2,1fr);gap:28px 24px}
+}
+@media(max-width:680px){
+  .nlinks,.nactions .btn-sf,.nactions .btn-ghost{display:none}
+  .hbg{display:flex}
+  .proj-grid{grid-template-columns:1fr}
+  .logo-grid{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:1fr}
+  .navbar.scrolled .nw{padding:0 16px}
+  .proj-main,.logo-band{padding:60px 0}
+  .hero{padding:115px 0 55px;min-height:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================================================
+     NAVBAR — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+================================================ -->
+<nav class="navbar" id="navbar">
+  <div class="nw">
+    <a href="index.html" class="nl" aria-label="TwinForce Home">
+      <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="150" height="48"/>
+    </a>
+    <!-- FIX 2: nlinks has margin-left:auto so they push to the right -->
+    <ul class="nlinks">
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="career.html">Career</a></li>
+    </ul>
+    <div class="nactions">
+      <a href="project.html" class="btn btn-ghost" style="padding:9px 20px;font-size:.87rem">Projects</a>
+      <a href="contact.html" class="btn btn-sf" style="padding:9px 20px;font-size:.87rem">Get In Touch</a>
+      <button class="hbg" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobnav" id="mobnav">
+  <div class="mobpanel">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="project.html">Projects</a>
+    <a href="career.html">Career</a>
+    <a href="contact.html" style="color:var(--sf);margin-top:8px">Contact Us</a>
+  </div>
+</div>
+<!-- END NAVBAR -->
+
+<!-- ================================================
+     COMPACT HERO — reactive background, page content
+================================================ -->
+<section class="hero">
+  <div class="hbg-wrap">
+    <div class="hdots"></div>
+    <div class="hblob b1"></div>
+    <div class="hblob b2"></div>
+    <div class="hblob b3"></div>
+    <div class="hgeo g1"></div>
+    <div class="hgeo g2"></div>
+    <div class="hgeo g3"></div>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hbox filled bx1"></div>
+    <div class="hbox outline bx2"></div>
+    <div class="hbox filled bx3"></div>
+  </div>
+  <div class="container hero-in">
+    <div class="hbadge"><i class="fa-solid fa-briefcase"></i>Our Portfolio</div>
+    <h1>Salesforce <span class="hlite">Projects</span></h1>
+    <p class="hdesc">From robotics to finance, agriculture to travel, explore how TwinForce has delivered tailored Salesforce solutions for clients across the globe.</p>
+    <div class="hbreadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fa-solid fa-chevron-right"></i>
+      <span>Projects</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS STRIP -->
+<div class="pstats">
+  <div class="container">
+    <div class="pstats-grid">
+      <div class="pstat"><div class="num">12+</div><div class="lbl">Projects Delivered</div></div>
+      <div class="pstat"><div class="num">5+</div><div class="lbl">Countries Served</div></div>
+      <div class="pstat"><div class="num">9+</div><div class="lbl">Industries</div></div>
+      <div class="pstat"><div class="num">100%</div><div class="lbl">Client Focused</div></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- PROJECTS MAIN -->
+<section class="proj-main">
+  <div class="container">
+
+    <div class="filter-bar reveal" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="sales">Sales Cloud</button>
+      <button class="filter-btn" data-filter="experience">Experience Cloud</button>
+      <button class="filter-btn" data-filter="integration">Integration</button>
+      <button class="filter-btn" data-filter="automation">Automation</button>
+    </div>
+
+    <div class="proj-grid" id="projGrid">
+
+      <!-- Bear Robotics -->
+      <div class="pcard reveal" style="--logo-bg:#e8f0fa;--logo-acc:#1a365d" data-cat="sales automation">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_10_m60nvs.png" alt="Bear Robotics" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Robotics</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>USA</span></div>
+          <h3>Bear Robotics</h3>
+          <p>Enhanced Salesforce sales processes by configuring product line items, pricing workflows, and business automation to improve operational efficiency.</p>
+          <div class="pcard-tags"><span class="pchip">Sales Cloud</span><span class="pchip">Automation</span><span class="pchip">CPQ</span></div>
+        </div>
+      </div>
+
+      <!-- AgVantage -->
+      <div class="pcard reveal" style="--logo-bg:#e8f5ec;--logo-acc:#276749" data-cat="experience automation">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_11_xmljr7.png" alt="AgVantage Commodities" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Agriculture</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>Australia</span></div>
+          <h3>AgVantage Commodities</h3>
+          <p>Built a Salesforce commodity trading marketplace with Experience Cloud portals, bid and offer management, trading workflow automation, and Marketing Cloud email communications.</p>
+          <div class="pcard-tags"><span class="pchip">Experience Cloud</span><span class="pchip">Marketing Cloud</span></div>
+        </div>
+      </div>
+
+      <!-- Travel Raro -->
+      <div class="pcard reveal" style="--logo-bg:#e6f7f9;--logo-acc:#0d7a8a" data-cat="experience automation">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_8_kl6jkd.png" alt="Travel Raro" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Travel</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>Europe</span></div>
+          <h3>Travel Raro</h3>
+          <p>Designed Salesforce booking workflows, customer self-service portals, and agent dashboards to streamline reservations, payments, trip administration, and promotions.</p>
+          <div class="pcard-tags"><span class="pchip">Experience Cloud</span><span class="pchip">Automation</span></div>
+        </div>
+      </div>
+
+      <!-- Flash Funding -->
+      <div class="pcard reveal" style="--logo-bg:#111111;--logo-acc:#c05621" data-cat="automation">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_1_kflqjw.jpg" alt="Flash Funding Mortgage" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Finance</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>USA</span></div>
+          <h3>Flash Funding Mortgage</h3>
+          <p>Developed and customized Salesforce solutions for mortgage operations including loan application forms, workflow automation, and email notification processes.</p>
+          <div class="pcard-tags"><span class="pchip">Service Cloud</span><span class="pchip">Flow</span></div>
+        </div>
+      </div>
+
+      <!-- Victory Disability -->
+      <div class="pcard reveal" style="--logo-bg:#fce8ec;--logo-acc:#9b2335" data-cat="automation integration">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_9_hdlvdf.png" alt="Victory Disability" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Legal Services</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>USA</span></div>
+          <h3>Victory Disability</h3>
+          <p>Implemented Salesforce automation including lead assignment processes and workflow enhancements, plus external lead management with real-time synchronization.</p>
+          <div class="pcard-tags"><span class="pchip">Lead Mgmt</span><span class="pchip">Integration</span></div>
+        </div>
+      </div>
+
+      <!-- Rouxbe -->
+      <div class="pcard reveal" style="--logo-bg:#fce8ed;--logo-acc:#7b1d34" data-cat="automation">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_6_e7vb7k.png" alt="Rouxbe" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Culinary</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>USA</span></div>
+          <h3>Rouxbe Online Culinary</h3>
+          <p>Created Salesforce automation solutions and designed reports and dashboards to streamline business processes and support data-driven decision-making.</p>
+          <div class="pcard-tags"><span class="pchip">Marketing Cloud</span><span class="pchip">Dashboards</span></div>
+        </div>
+      </div>
+
+      <!-- Harmony Consulting -->
+      <div class="pcard reveal" style="--logo-bg:#ffffff;--logo-acc:#5a21b5" data-cat="sales integration">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483816/Screenshot_20260603164226_zsmgbr.png" alt="Harmony Consulting" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Consulting</span><span class="pcard-region"><i class="fa-solid fa-globe"></i>International</span></div>
+          <h3>Harmony Consulting</h3>
+          <p>Built and configured a Salesforce application implementing Lead-to-Deal processes, Web-to-Lead functionality, business automation, and third-party integrations.</p>
+          <div class="pcard-tags"><span class="pchip">Sales Cloud</span><span class="pchip">Web-to-Lead</span><span class="pchip">Integration</span></div>
+        </div>
+      </div>
+
+      <!-- Fibrenet -->
+      <div class="pcard reveal" style="--logo-bg:#111111;--logo-acc:#1a4fad" data-cat="integration">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603153207_fsp9ao.png" alt="Fibrenet" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Telecom</span><span class="pcard-region"><i class="fa-solid fa-globe"></i>International</span></div>
+          <h3>Fibrenet</h3>
+          <p>Integrated inFlow Inventory with Salesforce, implemented multi-currency automation for products and quotes, and managed large-scale product data migration.</p>
+          <div class="pcard-tags"><span class="pchip">Integration</span><span class="pchip">Data Migration</span><span class="pchip">Multi-Currency</span></div>
+        </div>
+      </div>
+
+      <!-- The Config Team -->
+      <div class="pcard reveal" style="--logo-bg:#ffffff;--logo-acc:#0d7060" data-cat="automation">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603153400_ss86qb.png" alt="The Config Team" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Logistics</span><span class="pcard-region"><i class="fa-solid fa-globe"></i>International</span></div>
+          <h3>The Config Team</h3>
+          <p>Developed reports and dashboards and implemented automation for Account and Opportunity management to improve business visibility and efficiency.</p>
+          <div class="pcard-tags"><span class="pchip">Reports</span><span class="pchip">Dashboards</span><span class="pchip">Automation</span></div>
+        </div>
+      </div>
+
+      <!-- HYGH AG -->
+      <div class="pcard reveal" style="--logo-bg:#111111;--logo-acc:#f59e0b" data-cat="sales">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603154313_pvyzwz.png" alt="HYGH AG" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">AdTech</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>Germany</span></div>
+          <h3>HYGH AG</h3>
+          <p>Developed dynamic user interfaces using Lightning Web Components for Opportunity and Quote Line Item management, improving user experience and sales operations.</p>
+          <div class="pcard-tags"><span class="pchip">LWC</span><span class="pchip">Sales Cloud</span></div>
+        </div>
+      </div>
+
+      <!-- Montreal Life -->
+      <div class="pcard reveal" style="--logo-bg:#ffffff;--logo-acc:#1c3a82" data-cat="automation">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603154411_r8tvk3.png" alt="Montreal Life Financial" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Finance</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>Canada</span></div>
+          <h3>Montreal Life Financial Group</h3>
+          <p>Implemented Salesforce solutions facilitating smoother financial operations and significantly improved client interactions for this financial services group.</p>
+          <div class="pcard-tags"><span class="pchip">Service Cloud</span><span class="pchip">Automation</span></div>
+        </div>
+      </div>
+
+      <!-- abiturma -->
+      <div class="pcard reveal" style="--logo-bg:#ffffff;--logo-acc:#c23b0c" data-cat="experience">
+        <div class="pcard-logo">
+          <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603154513_tubs8g.png" alt="abiturma" loading="lazy"/>
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-top"><span class="ptag">Education</span><span class="pcard-region"><i class="fa-solid fa-location-dot"></i>Germany</span></div>
+          <h3>abiturma.de</h3>
+          <p>Partnered to create tailored Salesforce solutions supporting student and tutoring management goals, streamlining operations in the online education sector.</p>
+          <div class="pcard-tags"><span class="pchip">Experience Cloud</span><span class="pchip">Education</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CLIENTS LOGO BAND -->
+<section class="logo-band">
+  <div class="container">
+    <div class="logo-band-hdr reveal">
+      <div class="eyebrow"><i class="fa-solid fa-handshake"></i>Our Clients</div>
+      <h2 class="stitle">Trusted by Companies Worldwide</h2>
+      <p class="ssub">We have partnered with organizations across robotics, agriculture, finance, travel, education and more.</p>
+    </div>
+    <div class="logo-grid reveal">
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_10_m60nvs.png" alt="Bear Robotics" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_11_xmljr7.png" alt="AgVantage" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_8_kl6jkd.png" alt="Travel Raro" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_1_kflqjw.jpg" alt="Flash Funding" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_9_hdlvdf.png" alt="Victory Disability" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780405606/image_6_e7vb7k.png" alt="Rouxbe" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483816/Screenshot_20260603164226_zsmgbr.png" alt="Harmony Consulting" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603153207_fsp9ao.png" alt="Fibrenet" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603153400_ss86qb.png" alt="The Config Team" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603154313_pvyzwz.png" alt="HYGH AG" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603154411_r8tvk3.png" alt="Montreal Life" loading="lazy"/></div>
+      <div class="logo-cell"><img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1780483815/Screenshot_20260603154513_tubs8g.png" alt="abiturma" loading="lazy"/></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-s">
+  <div class="cta-in container reveal">
+    <h2>Have a Salesforce Project in Mind?</h2>
+    <p>Let's discuss how TwinForce can build a tailored Salesforce solution that drives growth and delivers measurable ROI for your business.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-or"><i class="fa-solid fa-envelope"></i>Start a Project</a>
+      <a href="about.html" class="btn btn-wo"><i class="fa-solid fa-building"></i>About TwinForce</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FOOTER — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
+================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="fg">
+      <div class="fb">
+        <div class="fblogo-wrap">
+          <img class="fblogo" src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="130" height="32" style="height:32px;width:auto;display:block"/>
+        </div>
+        <p>Helping businesses unlock their Salesforce potential with customized, results-driven solutions.</p>
+        <div class="fsc">
+          <a href="https://www.facebook.com/twinforcesolutions" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@TwinforceTutorials" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://bd.linkedin.com/company/twinforce-solutions" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="fcol">
+        <h5>Useful Links</h5>
+        <ul>
+          <li><a href="project.html"><i class="fa-solid fa-chevron-right"></i>Projects</a></li>
+          <li><a href="career.html"><i class="fa-solid fa-chevron-right"></i>Career</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html"><i class="fa-solid fa-chevron-right"></i>Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h5>Support &amp; Help</h5>
+        <ul>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact Us</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <p>&copy; 2025 TwinForce Solutions Limited. All rights reserved.</p>
+      <p>Mirpur-12, Pallabi, Dhaka &nbsp;&middot;&nbsp; <a href="https://twinforce.net">twinforce.net</a></p>
+    </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<script>
+/* ── Navbar scroll ── */
+const nb=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',scrollY>60),{passive:true});
+
+/* ── Mobile nav ── */
+const hbg=document.getElementById('hamburger'),mn=document.getElementById('mobnav');
+hbg.addEventListener('click',()=>mn.classList.toggle('open'));
+mn.addEventListener('click',e=>{if(e.target===mn)mn.classList.remove('open')});
+
+/* ── FIX 4: Scroll reveal with IntersectionObserver ── */
+const allReveal=document.querySelectorAll('.reveal,.reveal-left,.reveal-right');
+const revIO=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revIO.unobserve(e.target);}});
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+allReveal.forEach(el=>revIO.observe(el));
+
+
+/* ── Scroll reveal ── */
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>{
+  new IntersectionObserver(([e])=>{if(e.isIntersecting){e.target.classList.add('visible');}},{threshold:.1,rootMargin:'0px 0px -40px 0px'}).observe(el);
+});
+/* ── Project filter ── */
+const filterBar=document.getElementById('filterBar');
+const cards=document.querySelectorAll('#projGrid .pcard');
+if(filterBar){filterBar.addEventListener('click',e=>{
+  const btn=e.target.closest('.filter-btn');
+  if(!btn)return;
+  filterBar.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const f=btn.dataset.filter;
+  let shown=0;
+  cards.forEach(card=>{
+    const show=f==='all'||card.dataset.cat.includes(f);
+    card.style.display=show?'flex':'none';
+    if(show)shown++;
+  });
+});}
+/* ── FIX 3+4: Interactive canvas particle network ── */
+(function(){
+  const canvas=document.getElementById('heroCanvas');
+  if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  let W,H,pts=[],mouse={x:-9999,y:-9999},raf;
+  function resize(){
+    W=canvas.width=canvas.offsetWidth;
+    H=canvas.height=canvas.offsetHeight;
+  }
+  resize();
+  new ResizeObserver(resize).observe(canvas.parentElement);
+
+  /* Reduced particle count for performance */
+  const count=window.innerWidth<680?40:65;
+  for(let i=0;i<count;i++){
+    pts.push({
+      x:Math.random()*W,y:Math.random()*H,
+      vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,
+      r:Math.random()*1.8+.8,
+      pulse:Math.random()*Math.PI*2
+    });
+  }
+  window.addEventListener('mousemove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    mouse.x=e.clientX-rect.left;
+    mouse.y=e.clientY-rect.top;
+  },{passive:true});
+  /* Touch support */
+  canvas.addEventListener('touchmove',e=>{
+    const rect=canvas.getBoundingClientRect();
+    mouse.x=e.touches[0].clientX-rect.left;
+    mouse.y=e.touches[0].clientY-rect.top;
+  },{passive:true});
+
+  let frame=0;
+  function draw(){
+    raf=requestAnimationFrame(draw);
+    ctx.clearRect(0,0,W,H);
+    frame++;
+    for(let i=0;i<pts.length;i++){
+      const p=pts[i];
+      p.pulse+=.02;
+      /* Mouse repel */
+      const dx=p.x-mouse.x,dy=p.y-mouse.y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<90&&d>0){const f=(.9-d/90);p.x+=dx/d*f*1.5;p.y+=dy/d*f*1.5;}
+      p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;
+      if(p.y<0||p.y>H)p.vy*=-1;
+      /* Connections */
+      for(let j=i+1;j<pts.length;j++){
+        const dx2=p.x-pts[j].x,dy2=p.y-pts[j].y;
+        const d2=Math.sqrt(dx2*dx2+dy2*dy2);
+        if(d2<130){
+          ctx.beginPath();
+          ctx.moveTo(p.x,p.y);ctx.lineTo(pts[j].x,pts[j].y);
+          ctx.strokeStyle='rgba(125,211,252,'+(1-d2/130)*.2+')';
+          ctx.lineWidth=.7;ctx.stroke();
+        }
+      }
+      /* Pulsing dot */
+      const r=p.r+(Math.sin(p.pulse)*.4);
+      ctx.beginPath();ctx.arc(p.x,p.y,r,0,Math.PI*2);
+      ctx.fillStyle='rgba(255,255,255,.5)';ctx.fill();
+    }
+  }
+  draw();
+  /* Pause when tab hidden to save battery */
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden)cancelAnimationFrame(raf);else draw();
+  });
+})();
+/* ── Gray boxes mouse parallax ── */
+(function(){
+  const boxes = document.querySelectorAll('.hbox');
+  if(!boxes.length) return;
+  const hero = document.querySelector('.hero');
+  if(!hero) return;
+  const cfg = [
+    {depth:22, rot:12},
+    {depth:34, rot:-8},
+    {depth:16, rot:16}
+  ];
+  window.addEventListener('mousemove', e => {
+    const r = hero.getBoundingClientRect();
+    if(e.clientY < r.top || e.clientY > r.bottom) return;
+    const cx = r.left + r.width / 2;
+    const cy = r.top  + r.height / 2;
+    const dx = (e.clientX - cx) / (r.width  / 2);
+    const dy = (e.clientY - cy) / (r.height / 2);
+    boxes.forEach((box, i) => {
+      const {depth, rot} = cfg[i];
+      const tx = dx * depth;
+      const ty = dy * depth;
+      const extraRot = dx * 6;
+      box.style.transform = `translate(${tx}px,${ty}px) rotate(${rot + extraRot}deg)`;
+    });
+  }, {passive:true});
+  hero.addEventListener('mouseleave', () => {
+    const rots = [12, -8, 16];
+    boxes.forEach((box,i) => {
+      box.style.transform = `rotate(${rots[i]}deg)`;
+    });
+  });
+})();
+
+
+</script>
+</body>
+</html>
