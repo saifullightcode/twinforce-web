@@ -9,8 +9,10 @@
 <link rel="apple-touch-icon" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&font-display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"/></noscript>
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/></noscript>
 <style>
 :root{
   --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
@@ -240,18 +242,18 @@ button{font-family:inherit;cursor:pointer}
 .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.2);align-items:start}
 .fblogo-wrap{display:inline-block;background:#fff;border-radius:var(--r1);padding:8px 16px;margin-bottom:14px;line-height:0}
 .fblogo{height:32px;width:auto;display:block}
-.fb p{font-size:.83rem;line-height:1.7;max-width:250px;color:rgba(255,255,255,.75);margin-bottom:0}
+.fb p{font-size:.83rem;line-height:1.7;max-width:250px;color:rgba(255,255,255,.88);margin-bottom:0}
 .fsc{display:flex;gap:8px;margin-top:14px}
-.fsc a{width:32px;height:32px;border-radius:var(--r1);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);font-size:.85rem;transition:all var(--tr)}
+.fsc a{width:32px;height:32px;border-radius:var(--r1);background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;transition:all var(--tr)}
 .fsc a:hover{background:var(--sf);border-color:var(--sf);color:#fff;transform:translateY(-2px)}
 .fcol h5{font-size:.71rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:12px}
 .fcol ul li{margin-bottom:8px}
-.fcol ul li a{font-size:.82rem;color:rgba(255,255,255,.72);transition:color var(--tr);display:flex;align-items:center;gap:6px}
+.fcol ul li a{font-size:.82rem;color:rgba(255,255,255,.88);transition:color var(--tr);display:flex;align-items:center;gap:6px}
 .fcol ul li a i{font-size:.58rem;color:var(--sf);flex-shrink:0}
 .fcol ul li a:hover{color:var(--sf)}
 .fbot{padding:14px 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.fbot p{font-size:.78rem;color:rgba(255,255,255,.55)}
-.fbot a{color:rgba(255,255,255,.6);transition:color var(--tr)}
+.fbot p{font-size:.78rem;color:rgba(255,255,255,.75)}
+.fbot a{color:#fff;text-decoration:underline;transition:color var(--tr)}
 .fbot a:hover{color:var(--sf)}
 /* END FOOTER */
 
@@ -293,7 +295,7 @@ button{font-family:inherit;cursor:pointer}
 <nav class="navbar" id="navbar">
   <div class="nw">
     <a href="index.html" class="nl" aria-label="TwinForce Home">
-      <img src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="150" height="48"/>
+      <img src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto,w_300/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="150" height="48" fetchpriority="high"/>
     </a>
     <ul class="nlinks">
       <li><a href="index.html">Home</a></li>
@@ -318,6 +320,7 @@ button{font-family:inherit;cursor:pointer}
 </div>
 <!-- END NAVBAR -->
 
+<main id="main-content">
 
 <!-- HERO -->
 <section class="hero">
@@ -692,6 +695,8 @@ button{font-family:inherit;cursor:pointer}
 </section>
 
 
+</main>
+
 <!-- ================================================
      FOOTER — KEEP THIS BLOCK IDENTICAL ON ALL PAGES
 ================================================ -->
@@ -700,7 +705,7 @@ button{font-family:inherit;cursor:pointer}
     <div class="fg">
       <div class="fb">
         <div class="fblogo-wrap">
-          <img class="fblogo" src="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="130" height="32" style="height:32px;width:auto;display:block"/>
+          <img class="fblogo" src="https://res.cloudinary.com/du42kbmmn/image/upload/f_auto,q_auto,w_260/v1775490671/T_1_zpzl6l.png" alt="TwinForce Solutions Limited" width="130" height="32" style="height:32px;width:auto;display:block"/>
         </div>
         <p>Helping businesses unlock their Salesforce potential with customized, results-driven solutions.</p>
         <div class="fsc">
@@ -742,7 +747,8 @@ button{font-family:inherit;cursor:pointer}
 <script>
 /* ── Navbar scroll ── */
 const nb=document.getElementById('navbar');
-window.addEventListener('scroll',()=>nb.classList.toggle('scrolled',scrollY>60),{passive:true});
+let lastScroll=0,ticking=false;
+window.addEventListener('scroll',()=>{lastScroll=scrollY;if(!ticking){requestAnimationFrame(()=>{nb.classList.toggle('scrolled',lastScroll>60);ticking=false;});ticking=true;}},{passive:true});
 
 /* ── Mobile nav ── */
 const hbg=document.getElementById('hamburger'),mn=document.getElementById('mobnav');
