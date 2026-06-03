@@ -377,8 +377,7 @@ button{font-family:inherit;cursor:pointer}
               <input type="hidden" name="company" value="TwinForce Solutions Limited"/>
               <input type="hidden" id="00NOW00000ASK1P" name="00NOW00000ASK1P" value="TF_February_2026"/>
 
-
-              <!-- Personal Information -->
+              <!-- ── PERSONAL INFORMATION ── -->
               <div class="form-section-title"><i class="fa-solid fa-user"></i>Personal Information</div>
 
               <div class="form-row">
@@ -424,7 +423,12 @@ button{font-family:inherit;cursor:pointer}
                 <textarea id="address" name="00NOW00000ASK1G" placeholder="Enter your full village/house, road, and area details" rows="2" required></textarea>
               </div>
 
-              <!-- Academic Qualification -->
+              <div class="form-group">
+                <label for="linkedin">LinkedIn Profile</label>
+                <input id="linkedin" name="00NOW00000B2sHJ" maxlength="255" type="text" placeholder="e.g., linkedin.com/in/yourname"/>
+              </div>
+
+              <!-- ── ACADEMIC QUALIFICATION ── -->
               <div class="form-section-title" style="margin-top:12px"><i class="fa-solid fa-book-open"></i>Academic Qualification</div>
 
               <div class="form-row">
@@ -434,7 +438,7 @@ button{font-family:inherit;cursor:pointer}
                 </div>
                 <div class="form-group">
                   <label for="degree">Degree <span class="req">*</span></label>
-                  <textarea id="degree" name="00NOW00000ASK1I" placeholder="e.g., B.Sc. in CSE" rows="1" style="min-height:44px;resize:none" required></textarea>
+                  <input id="degree" name="00NOW00000ASK1I" maxlength="255" type="text" placeholder="e.g., B.Sc. in CSE" required/>
                 </div>
               </div>
 
@@ -451,7 +455,7 @@ button{font-family:inherit;cursor:pointer}
                 </div>
               </div>
 
-              <!-- Technical Proficiency -->
+              <!-- ── TECHNICAL PROFICIENCY ── -->
               <div class="form-section-title" style="margin-top:12px"><i class="fa-solid fa-code"></i>Technical Proficiency</div>
               <p style="font-size:.82rem;color:var(--t5);margin-bottom:14px">Select all areas where you have experience:</p>
 
@@ -478,7 +482,7 @@ button{font-family:inherit;cursor:pointer}
               <button type="submit" class="form-submit-btn" id="submitBtn" style="margin-top:28px">
                 <i class="fa-solid fa-paper-plane"></i>&nbsp; Submit Application
               </button>
-              <p style="font-size:.78rem;color:var(--t4);text-align:center;margin-top:12px">We'll review your application and respond via email.</p>
+              <p style="font-size:.78rem;color:var(--t4);text-align:center;margin-top:12px">We will review your application and respond via email.</p>
 
             </form>
           </div>
@@ -560,7 +564,6 @@ function toggleCheck(el){
   cb.checked = !cb.checked;
   el.classList.toggle('checked', cb.checked);
 }
-// Also handle direct checkbox clicks
 document.querySelectorAll('.checkbox-item input').forEach(cb=>{
   cb.addEventListener('change', e=>{
     e.stopPropagation();
@@ -568,9 +571,9 @@ document.querySelectorAll('.checkbox-item input').forEach(cb=>{
   });
 });
 
-/* ── On submit: collect tech checkboxes into hidden field, show toast ── */
+/* ── On submit: format date + validate checkboxes ── */
 document.getElementById('careerForm').addEventListener('submit', function(e){
-  // Format date of birth for Salesforce (MM/DD/YYYY)
+  // Format date of birth MM/DD/YYYY for Salesforce
   const picker = document.getElementById('date_picker');
   const hiddenDob = document.getElementById('00NOW00000ASK1H');
   if(picker && picker.value){
@@ -596,18 +599,17 @@ document.getElementById('careerForm').addEventListener('submit', function(e){
     }
     return;
   }
-  // Clear error if fixed
+  // Clear error
   document.getElementById('techCheckboxes').style.outline = '';
   const prevErr = document.getElementById('techError');
   if(prevErr) prevErr.remove();
 
-  // Show toast after short delay (let form submit first)
+  // Show toast
   setTimeout(()=>{
     const toast = document.getElementById('toast');
     toast.classList.add('show');
     setTimeout(()=>toast.classList.remove('show'), 3400);
   }, 200);
-  // Note: form submits normally to Salesforce. Do NOT call e.preventDefault()
 });
 
 /* ── Hero particle canvas ── */
