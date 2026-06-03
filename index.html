@@ -12,11 +12,12 @@
 <link rel="preconnect" href="https://res.cloudinary.com"/>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
 <link rel="preload" as="image" href="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" fetchpriority="high"/>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=optional" rel="stylesheet"/></noscript>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'"/>
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/></noscript>
 <style>
+@font-face{font-family:'PJS Fallback';src:local('Segoe UI'),local('Arial');size-adjust:105%;ascent-override:95%;descent-override:24%;line-gap-override:0%}
 :root{
   --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
   --acc:#ff6b35;--acc-h:#e55a26;
@@ -27,7 +28,7 @@
   --s2:0 8px 32px rgba(1,118,211,.12);
   --s3:0 20px 60px rgba(1,118,211,.16);
   --tr:.25s cubic-bezier(.4,0,.2,1);
-  --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --font:'Plus Jakarta Sans','PJS Fallback',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -116,7 +117,7 @@ button{font-family:inherit;cursor:pointer}
 .hblob{position:absolute;border-radius:50%;opacity:.12;mix-blend-mode:screen;will-change:transform;transform:translateZ(0);backface-visibility:hidden;contain:strict}
 .hblob.b1{width:700px;height:700px;background:radial-gradient(circle,#7dd3fc,transparent 70%);top:-200px;right:-180px;animation:blobmove 14s ease-in-out infinite}
 .hblob.b2{width:400px;height:400px;background:radial-gradient(circle,#ff6b35,transparent 70%);bottom:-100px;left:-80px;animation:blobmove 18s ease-in-out infinite reverse;opacity:.1}
-.hblob.b3{width:250px;height:250px;background:radial-gradient(circle,#38bdf8,transparent 70%);top:30%;left:42%;animation:blobmove 10s ease-in-out infinite;opacity:.15;transform:translateZ(0);will-change:transform}
+.hblob.b3{width:250px;height:250px;background:radial-gradient(circle,#38bdf8,transparent 70%);top:35vh;left:42vw;animation:blobmove 10s ease-in-out infinite;opacity:.15;transform:translateZ(0);will-change:transform}
 @keyframes blobmove{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-20px) scale(1.05)}50%{transform:translate(-10px,30px) scale(.95)}75%{transform:translate(-30px,-10px) scale(1.03)}}
 /* Diagonal right panel tint */
 .hpanel-bg{position:absolute;top:0;right:0;bottom:0;width:42%;background:rgba(255,255,255,.03);clip-path:polygon(8% 0,100% 0,100% 100%,0% 100%);pointer-events:none}
@@ -997,14 +998,25 @@ ctrs.forEach(c=>cio.observe(c));
 /* ── FIX 3+4: Hero 3D tilt on stats panel ── */
 const panel=document.getElementById('statsPanel');
 if(panel&&window.matchMedia('(pointer:fine)').matches){
+  const inner=panel.querySelector('.hpanel');
+  let panelRect=panel.getBoundingClientRect();
+  new ResizeObserver(()=>{panelRect=panel.getBoundingClientRect();}).observe(panel);
+  window.addEventListener('scroll',()=>{panelRect=panel.getBoundingClientRect();},{passive:true});
+  let tiltRaf=false,tiltE=null;
   panel.addEventListener('mousemove',e=>{
-    const r=panel.getBoundingClientRect();
-    const x=((e.clientX-r.left)/r.width-.5)*14;
-    const y=((e.clientY-r.top)/r.height-.5)*-14;
-    panel.querySelector('.hpanel').style.transform=`perspective(800px) rotateY(${x}deg) rotateX(${y}deg) scale(1.02)`;
+    tiltE=e;
+    if(tiltRaf)return;
+    tiltRaf=true;
+    requestAnimationFrame(()=>{
+      tiltRaf=false;
+      const r=panelRect;
+      const x=((tiltE.clientX-r.left)/r.width-.5)*14;
+      const y=((tiltE.clientY-r.top)/r.height-.5)*-14;
+      inner.style.transform=`perspective(800px) rotateY(${x}deg) rotateX(${y}deg) scale(1.02)`;
+    });
   });
   panel.addEventListener('mouseleave',()=>{
-    panel.querySelector('.hpanel').style.transform='perspective(800px) rotateY(0) rotateX(0) scale(1)';
+    inner.style.transform='perspective(800px) rotateY(0) rotateX(0) scale(1)';
   });
 }
 
