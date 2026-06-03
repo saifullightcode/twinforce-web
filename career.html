@@ -374,8 +374,9 @@ button{font-family:inherit;cursor:pointer}
               <input type="hidden" name="oid" value="00DdN00000roILE"/>
               <input type="hidden" name="retURL" value="http://twinforce.net/career.html"/>
               <input type="hidden" name="lead_source" value="TwinForce Website (Intern)"/>
-              <!-- Technical proficiency collected into description -->
-              <input type="hidden" id="techHidden" name="description" value=""/>
+              <input type="hidden" name="company" value="TwinForce Solutions Limited"/>
+              <input type="hidden" id="00NOW00000ASK1P" name="00NOW00000ASK1P" value="TF_February_2026"/>
+
 
               <!-- Personal Information -->
               <div class="form-section-title"><i class="fa-solid fa-user"></i>Personal Information</div>
@@ -404,8 +405,9 @@ button{font-family:inherit;cursor:pointer}
 
               <div class="form-row">
                 <div class="form-group">
-                  <label for="dob">Date of Birth <span class="req">*</span></label>
-                  <input id="dob" name="00NOW00000ASK1H" type="date" required/>
+                  <label for="date_picker">Date of Birth <span class="req">*</span></label>
+                  <input id="date_picker" name="date_picker_visible" type="date" required/>
+                  <input type="hidden" id="00NOW00000ASK1H" name="00NOW00000ASK1H"/>
                 </div>
                 <div class="form-group">
                   <label for="gender">Gender <span class="req">*</span></label>
@@ -455,28 +457,20 @@ button{font-family:inherit;cursor:pointer}
 
               <div class="checkbox-group" id="techCheckboxes">
                 <div class="checkbox-item" onclick="toggleCheck(this)">
-                  <input type="checkbox" value="OOP" tabindex="-1"/>
+                  <input type="checkbox" id="00NOW00000ASK1M" name="00NOW00000ASK1M" value="1"/>
                   <span>Experience in OOP</span>
                 </div>
                 <div class="checkbox-item" onclick="toggleCheck(this)">
-                  <input type="checkbox" value="HTML &amp; CSS" tabindex="-1"/>
+                  <input type="checkbox" id="00NOW00000ASK1J" name="00NOW00000ASK1J" value="1"/>
                   <span>Experience in HTML &amp; CSS</span>
                 </div>
                 <div class="checkbox-item" onclick="toggleCheck(this)">
-                  <input type="checkbox" value="JavaScript" tabindex="-1"/>
+                  <input type="checkbox" id="00NOW00000ASK1K" name="00NOW00000ASK1K" value="1"/>
                   <span>Experience in JavaScript</span>
                 </div>
                 <div class="checkbox-item" onclick="toggleCheck(this)">
-                  <input type="checkbox" value="MySQL / SQL" tabindex="-1"/>
+                  <input type="checkbox" id="00NOW00000ASK1L" name="00NOW00000ASK1L" value="1"/>
                   <span>Experience in MySQL / SQL</span>
-                </div>
-                <div class="checkbox-item" onclick="toggleCheck(this)">
-                  <input type="checkbox" value="Apex" tabindex="-1"/>
-                  <span>Experience in Apex</span>
-                </div>
-                <div class="checkbox-item" onclick="toggleCheck(this)">
-                  <input type="checkbox" value="Lightning Web Components" tabindex="-1"/>
-                  <span>Experience in LWC</span>
                 </div>
               </div>
 
@@ -576,17 +570,22 @@ document.querySelectorAll('.checkbox-item input').forEach(cb=>{
 
 /* ── On submit: collect tech checkboxes into hidden field, show toast ── */
 document.getElementById('careerForm').addEventListener('submit', function(e){
+  // Format date of birth for Salesforce (MM/DD/YYYY)
+  const picker = document.getElementById('date_picker');
+  const hiddenDob = document.getElementById('00NOW00000ASK1H');
+  if(picker && picker.value){
+    const [year, month, day] = picker.value.split('-');
+    hiddenDob.value = month + '/' + day + '/' + year;
+  }
+
   // Validate at least one tech skill selected
-  const selected = [...document.querySelectorAll('.checkbox-item input:checked')]
-    .map(cb => cb.value);
-  if(selected.length === 0){
+  const anyChecked = document.querySelector('#techCheckboxes input[type=checkbox]:checked');
+  if(!anyChecked){
     e.preventDefault();
-    // Highlight the checkbox group
     const grp = document.getElementById('techCheckboxes');
     grp.style.outline = '2px solid #ef4444';
     grp.style.borderRadius = '8px';
     grp.scrollIntoView({behavior:'smooth', block:'center'});
-    // Show inline error
     let err = document.getElementById('techError');
     if(!err){
       err = document.createElement('p');
@@ -597,12 +596,10 @@ document.getElementById('careerForm').addEventListener('submit', function(e){
     }
     return;
   }
-  // Clear any previous error
-  const grp2 = document.getElementById('techCheckboxes');
-  grp2.style.outline = '';
+  // Clear error if fixed
+  document.getElementById('techCheckboxes').style.outline = '';
   const prevErr = document.getElementById('techError');
   if(prevErr) prevErr.remove();
-  document.getElementById('techHidden').value = 'Technical Proficiency: ' + selected.join(', ');
 
   // Show toast after short delay (let form submit first)
   setTimeout(()=>{
