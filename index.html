@@ -7,16 +7,14 @@
 <title>TwinForce Solutions Limited</title>
 <link rel="icon" type="image/png" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
 <link rel="apple-touch-icon" href="https://res.cloudinary.com/du42kbmmn/image/upload/r_20/v1775490671/T_knamhb.png"/>
-<link rel="preload" as="image" href="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" fetchpriority="high"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap&font-display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"/></noscript>
-<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-<noscript><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/></noscript></noscript>
+<link rel="preconnect" href="https://res.cloudinary.com"/>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+<link rel="preload" as="image" href="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" fetchpriority="high"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
-@font-face{font-display:swap}
 :root{
   --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
   --acc:#ff6b35;--acc-h:#e55a26;
@@ -109,11 +107,11 @@ button{font-family:inherit;cursor:pointer}
              radial-gradient(ellipse 50% 50% at 20% 70%,rgba(255,107,53,.12) 0%,transparent 60%);
   pointer-events:none;
 }
-.hbg-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.hbg-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none;contain:strict}
 /* Dot matrix */
 .hdots{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.15) 1.5px,transparent 1.5px);background-size:40px 40px;mask-image:radial-gradient(ellipse at 60% 50%,black 30%,transparent 80%)}
 /* Morphing blob shapes */
-.hblob{position:absolute;border-radius:50%;opacity:.12;mix-blend-mode:screen;will-change:transform;contain:layout style}
+.hblob{position:absolute;border-radius:50%;opacity:.12;mix-blend-mode:screen;will-change:transform;transform:translateZ(0);backface-visibility:hidden;contain:strict}
 .hblob.b1{width:700px;height:700px;background:radial-gradient(circle,#7dd3fc,transparent 70%);top:-200px;right:-180px;animation:blobmove 14s ease-in-out infinite}
 .hblob.b2{width:400px;height:400px;background:radial-gradient(circle,#ff6b35,transparent 70%);bottom:-100px;left:-80px;animation:blobmove 18s ease-in-out infinite reverse;opacity:.1}
 .hblob.b3{width:250px;height:250px;background:radial-gradient(circle,#38bdf8,transparent 70%);top:30%;left:42%;animation:blobmove 10s ease-in-out infinite;opacity:.15;transform:translateZ(0);will-change:transform}
