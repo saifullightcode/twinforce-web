@@ -12,8 +12,10 @@
 <link rel="preconnect" href="https://res.cloudinary.com"/>
 <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
 <link rel="preload" as="image" href="https://res.cloudinary.com/du42kbmmn/image/upload/v1775490671/T_1_zpzl6l.png" fetchpriority="high"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/></noscript>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/></noscript>
 <style>
 :root{
   --sf:#0176d3;--sf-d:#014486;--sf-l:#e8f4fd;--sf-m:#cce6fb;
@@ -25,7 +27,7 @@
   --s2:0 8px 32px rgba(1,118,211,.12);
   --s3:0 20px 60px rgba(1,118,211,.16);
   --tr:.25s cubic-bezier(.4,0,.2,1);
-  --font:'Plus Jakarta Sans',system-ui,sans-serif;
+  --font:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
@@ -340,6 +342,23 @@ button{font-family:inherit;cursor:pointer}
 .fbot a{color:#fff;text-decoration:underline;transition:color var(--tr)}
 .fbot a:hover{color:var(--sf)}
 /* END FOOTER */
+/* =============================================
+   SCROLL ARROW BUTTON
+============================================= */
+.scroll-fab{
+  position:fixed;bottom:28px;right:28px;z-index:990;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--sf);color:#fff;border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;
+  box-shadow:0 4px 18px rgba(1,118,211,.45);
+  transition:all var(--tr);
+  opacity:0;pointer-events:none;
+}
+.scroll-fab.visible{opacity:1;pointer-events:auto}
+.scroll-fab:hover{background:var(--sf-d);transform:translateY(-3px);box-shadow:0 8px 24px rgba(1,118,211,.55)}
+.scroll-fab i{transition:transform .25s ease}
+
 
 /* =============================================
    SECTION DIVIDERS & BODY VISUAL VARIETY
@@ -590,7 +609,7 @@ button{font-family:inherit;cursor:pointer}
         <div class="sblk"><div class="snum" data-target="4">0<span>+</span></div><div class="slbl">Years Experience</div></div>
         <div class="sblk"><div class="snum" data-target="5">0<span>+</span></div><div class="slbl">Countries Served</div></div>
         <div class="sblk"><div class="snum" data-target="20">0<span>+</span></div><div class="slbl">Expert Members</div></div>
-        <div class="sblk"><div class="snum" data-target="8">0<span>+</span></div><div class="slbl">Projects Done</div></div>
+        <div class="sblk"><div class="snum" data-target="30">0<span>+</span></div><div class="slbl">Projects Done</div></div>
         <div class="spart"><i class="fa-solid fa-award"></i><span>Salesforce Consulting Partner with multiple certified developers and consultants</span></div>
       </div>
     </div>
@@ -1076,24 +1095,32 @@ if(panel&&window.matchMedia('(pointer:fine)').matches){
     {depth:34, rot:-8},
     {depth:16, rot:16}
   ];
+  // Cache hero rect to avoid forced reflow on every mousemove
+  let heroRect = hero.getBoundingClientRect();
+  let rafPending = false;
+  let lastMouse = null;
+  new ResizeObserver(() => { heroRect = hero.getBoundingClientRect(); }).observe(hero);
+  window.addEventListener('scroll', () => { heroRect = hero.getBoundingClientRect(); }, {passive:true});
   window.addEventListener('mousemove', e => {
-    const r = hero.getBoundingClientRect();
-    if(e.clientY < r.top || e.clientY > r.bottom) return;
-    const cx = r.left + r.width / 2;
-    const cy = r.top  + r.height / 2;
-    const dx = (e.clientX - cx) / (r.width  / 2);
-    const dy = (e.clientY - cy) / (r.height / 2);
-    boxes.forEach((box, i) => {
-      const {depth, rot} = cfg[i];
-      const tx = dx * depth;
-      const ty = dy * depth;
-      // Tilt rotation based on mouse distance from center
-      const extraRot = dx * 6;
-      box.style.transform = `translate(${tx}px,${ty}px) rotate(${rot + extraRot}deg)`;
+    lastMouse = e;
+    if(rafPending) return;
+    rafPending = true;
+    requestAnimationFrame(() => {
+      rafPending = false;
+      if(!lastMouse) return;
+      const r = heroRect;
+      if(lastMouse.clientY < r.top || lastMouse.clientY > r.bottom) return;
+      const cx = r.left + r.width / 2;
+      const cy = r.top  + r.height / 2;
+      const dx = (lastMouse.clientX - cx) / (r.width  / 2);
+      const dy = (lastMouse.clientY - cy) / (r.height / 2);
+      boxes.forEach((box, i) => {
+        const {depth, rot} = cfg[i];
+        box.style.transform = `translate(${dx*depth}px,${dy*depth}px) rotate(${rot+dx*6}deg)`;
+      });
     });
   }, {passive:true});
   hero.addEventListener('mouseleave', () => {
-    // Return to base rotation without translate
     const rots = [12, -8, 16];
     boxes.forEach((box,i) => {
       box.style.transform = `rotate(${rots[i]}deg)`;
@@ -1101,6 +1128,39 @@ if(panel&&window.matchMedia('(pointer:fine)').matches){
   });
 })();
 
+
+/* ── Scroll to top / bottom button ── */
+(function(){
+  const fab = document.getElementById('scrollFab');
+  const icon = document.getElementById('scrollFabIcon');
+  if(!fab) return;
+  let atBottom = false;
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    atBottom = scrolled > maxScroll - 80;
+    fab.classList.toggle('visible', scrolled > 300);
+    if(atBottom){
+      icon.className = 'fa-solid fa-arrow-down';
+      fab.setAttribute('aria-label','Scroll to bottom');
+    } else {
+      icon.className = 'fa-solid fa-arrow-up';
+      fab.setAttribute('aria-label','Scroll to top');
+    }
+  }, {passive:true});
+  fab.addEventListener('click', () => {
+    if(atBottom){
+      window.scrollTo({top:0, behavior:'smooth'});
+    } else {
+      window.scrollTo({top:document.documentElement.scrollHeight, behavior:'smooth'});
+    }
+  });
+})();
 </script>
+
+<!-- Scroll to top/bottom button -->
+<button class="scroll-fab" id="scrollFab" aria-label="Scroll to top">
+  <i class="fa-solid fa-arrow-up" id="scrollFabIcon"></i>
+</button>
 </body>
 </html>
