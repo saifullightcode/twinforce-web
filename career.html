@@ -153,17 +153,19 @@ button{font-family:inherit;cursor:pointer}
 
 /* Checkbox group */
 .checkbox-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px}
-.checkbox-item{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r1);padding:11px 14px;cursor:pointer;transition:all var(--tr);user-select:none}
+.checkbox-item{display:flex;align-items:center;gap:10px;background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r1);padding:11px 14px;cursor:pointer;transition:all var(--tr);user-select:none;position:relative}
+.checkbox-item input[type=checkbox]{cursor:pointer;position:relative;z-index:1}
+.checkbox-item span{pointer-events:none}
 .checkbox-item:hover{border-color:var(--sf);background:var(--sf-l)}
 .checkbox-item.checked{border-color:var(--sf);background:var(--sf-l)}
 .checkbox-item input[type=checkbox]{width:16px;height:16px;accent-color:var(--sf);cursor:pointer;flex-shrink:0}
 .checkbox-item span{font-size:.85rem;font-weight:600;color:var(--t7)}
 
 /* Graduated checkbox */
-.grad-row{display:flex;align-items:center;gap:12px;background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r1);padding:11px 14px;cursor:pointer;transition:all var(--tr)}
+.grad-row{display:flex;align-items:center;gap:12px;background:var(--bg);border:1.5px solid var(--bd);border-radius:var(--r1);padding:12px 14px;cursor:pointer;transition:all var(--tr);min-height:44px}
 .grad-row:hover{border-color:var(--sf)}
 .grad-row input[type=checkbox]{width:16px;height:16px;accent-color:var(--sf);cursor:pointer}
-.grad-row label{font-size:.87rem;font-weight:600;color:var(--t7);cursor:pointer}
+.grad-row label{font-size:.87rem;font-weight:600;color:var(--t7);cursor:pointer;line-height:1;margin:0}
 
 /* Submit button */
 .form-submit-btn{width:100%;justify-content:center;margin-top:8px;font-size:1rem;padding:15px;border-radius:var(--r2);background:linear-gradient(135deg,var(--sf),var(--sf-d));border:none;color:#fff;font-weight:700;cursor:pointer;transition:all var(--tr);font-family:var(--font)}
@@ -445,17 +447,19 @@ button{font-family:inherit;cursor:pointer}
                 </div>
               </div>
 
-              <div class="form-row">
+              <div class="form-group">
+                <div class="grad-row">
+                  <input type="checkbox" id="graduated" name="00NOW00000ASK1N" value="1" onchange="toggleGradYear(this)"/>
+                  <label for="graduated">I have already graduated</label>
+                </div>
+              </div>
+
+              <div class="form-row" id="gradYearRow" style="display:none">
                 <div class="form-group">
                   <label for="gradyear">Graduation Year <span class="req">*</span></label>
-                  <input id="gradyear" name="00NOW00000ASK1O" type="text" placeholder="e.g., 2025" required/>
+                  <input id="gradyear" name="00NOW00000ASK1O" type="text" placeholder="e.g., 2025"/>
                 </div>
-                <div class="form-group" style="justify-content:flex-end;padding-bottom:2px">
-                  <div class="grad-row">
-                    <input type="checkbox" id="graduated" name="00NOW00000ASK1N" value="1"/>
-                    <label for="graduated">I have already graduated</label>
-                  </div>
-                </div>
+                <div class="form-group"></div>
               </div>
 
               <!-- ── TECHNICAL PROFICIENCY ── -->
@@ -463,19 +467,19 @@ button{font-family:inherit;cursor:pointer}
               <p style="font-size:.82rem;color:var(--t5);margin-bottom:14px">Select all areas where you have experience:</p>
 
               <div class="checkbox-group" id="techCheckboxes">
-                <div class="checkbox-item" onclick="toggleCheck(this)">
+                <div class="checkbox-item" onclick="toggleCheck(this, event)">
                   <input type="checkbox" id="00NOW00000ASK1M" name="00NOW00000ASK1M" value="1"/>
                   <span>Experience in OOP</span>
                 </div>
-                <div class="checkbox-item" onclick="toggleCheck(this)">
+                <div class="checkbox-item" onclick="toggleCheck(this, event)">
                   <input type="checkbox" id="00NOW00000ASK1J" name="00NOW00000ASK1J" value="1"/>
                   <span>Experience in HTML &amp; CSS</span>
                 </div>
-                <div class="checkbox-item" onclick="toggleCheck(this)">
+                <div class="checkbox-item" onclick="toggleCheck(this, event)">
                   <input type="checkbox" id="00NOW00000ASK1K" name="00NOW00000ASK1K" value="1"/>
                   <span>Experience in JavaScript</span>
                 </div>
-                <div class="checkbox-item" onclick="toggleCheck(this)">
+                <div class="checkbox-item" onclick="toggleCheck(this, event)">
                   <input type="checkbox" id="00NOW00000ASK1L" name="00NOW00000ASK1L" value="1"/>
                   <span>Experience in MySQL / SQL</span>
                 </div>
@@ -565,15 +569,16 @@ document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>{
 });
 
 /* ── Checkbox toggle ── */
-function toggleCheck(el){
+function toggleCheck(el, event){
+  // Don't double-toggle if the click was directly on the checkbox
+  if(event && event.target.tagName === 'INPUT') return;
   const cb = el.querySelector('input[type=checkbox]');
   cb.checked = !cb.checked;
   el.classList.toggle('checked', cb.checked);
 }
 document.querySelectorAll('.checkbox-item input').forEach(cb=>{
-  cb.addEventListener('change', e=>{
-    e.stopPropagation();
-    cb.closest('.checkbox-item').classList.toggle('checked', cb.checked);
+  cb.addEventListener('change', function(){
+    this.closest('.checkbox-item').classList.toggle('checked', this.checked);
   });
 });
 
@@ -662,6 +667,20 @@ document.getElementById('careerForm').addEventListener('submit', function(e){
   },{passive:true});
   hero.addEventListener('mouseleave',()=>{const rots=[12,-8,16];boxes.forEach((box,i)=>{box.style.transform=`rotate(${rots[i]}deg)`;});});
 })();
+
+/* ── Graduation Year toggle ── */
+function toggleGradYear(cb){
+  var row = document.getElementById('gradYearRow');
+  var input = document.getElementById('gradyear');
+  if(cb.checked){
+    row.style.display = 'grid';
+    input.required = true;
+  } else {
+    row.style.display = 'none';
+    input.required = false;
+    input.value = '';
+  }
+}
 </script>
 </body>
 </html>
