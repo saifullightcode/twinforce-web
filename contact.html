@@ -314,6 +314,11 @@ button{font-family:inherit;cursor:pointer}
   75%{transform:translateY(12px) rotate(8deg)}
 }
 </style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+function timestamp(){var response=document.getElementById("g-recaptcha-response");if(response==null||response.value.trim()==""){var elems=JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"]=JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value=JSON.stringify(elems);}}
+setInterval(timestamp,500);
+</script>
 </head>
 <body>
 
@@ -429,7 +434,8 @@ button{font-family:inherit;cursor:pointer}
         </div>
 
         <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DdN00000roILE" method="POST">
-          <input type="hidden" name="oid" value="00DdN00000roILE"/>
+          <input type="hidden" name="captcha_settings" value='{"keyname":"TwinForce","fallback":"true","orgId":"00DdN00000roILE","ts":""}'>
+              <input type="hidden" name="oid" value="00DdN00000roILE"/>
           <input type="hidden" name="retURL" value="http://twinforce.net/contact.html"/>
           <!-- Lead Source — hidden, auto-filled -->
           <input type="hidden" id="lead_source" name="lead_source" value="twinforce_contact"/>
@@ -471,7 +477,10 @@ button{font-family:inherit;cursor:pointer}
             <textarea id="description" name="description" placeholder="Tell us about your project or inquiry..."></textarea>
           </div>
 
-          <button type="submit" class="btn btn-sf form-submit">
+          <div class="form-group" style="margin-top:8px">
+                <div class="g-recaptcha" data-sitekey="6LdgPxQtAAAAAEtbML2idoRyQO5SjmkBEDuTulP9"></div>
+              </div>
+              <button type="submit" class="btn btn-sf form-submit">
             <i class="fa-solid fa-paper-plane"></i>Send Message
           </button>
           <p class="form-note">We'll respond to your inquiry via email as soon as possible.</p>
